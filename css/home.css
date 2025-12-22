@@ -105,37 +105,28 @@ body {
 }
 
 /* =========================
-   HERO SLIDER (BRIGHT VERSION)
+   HERO SLIDER (BRIGHT + IMAGES)
 ========================= */
 
 .hero {
   position: relative;
-  text-align: center;
   overflow: hidden;
 }
 
-/* SLIDE BASE */
-.slide {
+/* FULL-SCREEN SLIDE */
+.hero .slide {
   position: absolute;
-  width: 100%;
-  max-width: 900px;
-  margin: auto;
-  left: 0;
-  right: 0;
+  inset: 0;                 /* 👈 FULL HERO AREA */
   opacity: 0;
   transition: opacity 1s ease;
 
-  /* BACKGROUND IMAGE */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  /* KEEP TEXT POSITION SAME */
-  padding: 48px;
 }
 
 /* ACTIVE SLIDE */
-.slide.active {
+.hero .slide.active {
   opacity: 1;
 }
 
@@ -160,47 +151,53 @@ body {
 }
 
 /* =========================
-   BRIGHT OVERLAY (KEY FIX)
+   BRIGHT OVERLAY (FIXED)
 ========================= */
 
-.slide::before {
+.hero .slide::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.88); /* BRIGHT */
   z-index: 1;
 }
 
 /* =========================
-   TEXT STYLING (UNCHANGED POSITION)
+   TEXT CONTAINER (SAME POSITION)
 ========================= */
 
-.slide h2,
-.slide p,
-.slide button {
+.hero .slide h2,
+.hero .slide p,
+.hero .slide button {
   position: relative;
   z-index: 2;
+
+  /* KEEP OLD POSITION */
+  max-width: 900px;
+  margin-left: 48px;
 }
 
-/* HEADLINE */
-.slide h2 {
+/* =========================
+   TEXT COLORS
+========================= */
+
+.hero .slide h2 {
   font-size: 36px;
   margin-bottom: 16px;
-  color: #000000;
+  color: #000;
 }
 
-/* DESCRIPTION */
-.slide p {
+.hero .slide p {
   font-size: 16px;
-  color: #333333;
+  color: #333;
   line-height: 1.6;
 }
 
 /* =========================
-   BUTTONS (GOLD)
+   BUTTON
 ========================= */
 
-button {
+.hero .slide button {
   margin-top: 24px;
   padding: 14px 32px;
   background: #d4af37;
@@ -208,13 +205,6 @@ button {
   color: #000;
   font-weight: 600;
   cursor: pointer;
-  letter-spacing: 1px;
-}
-
-button.outline {
-  background: transparent;
-  border: 2px solid #d4af37;
-  color: #d4af37;
 }
 
 /* =========================
