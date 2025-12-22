@@ -3,24 +3,53 @@
    Works on ALL pages
 ===================================== */
 
-/* FIX SECTION HEIGHT (HEADER + FOOTER) */
-function setSectionHeight() {
-  const header = document.querySelector('.header');
-  const footer = document.querySelector('.footer');
-  const sections = document.querySelectorAll('.section');
+document.addEventListener("DOMContentLoaded", () => {
 
-  if (!header || !footer) return;
+  /* ===============================
+     FIX SECTION HEIGHT (HEADER + FOOTER)
+  =============================== */
+  function setSectionHeight() {
+    const header = document.querySelector(".site-header");
+    const footer = document.querySelector(".footer");
+    const sections = document.querySelectorAll(".section");
 
-  const height =
-    window.innerHeight - header.offsetHeight - footer.offsetHeight;
+    if (!header || !footer || sections.length === 0) return;
 
-  sections.forEach(section => {
-    section.style.height = height + 'px';
-  });
-}
+    const height =
+      window.innerHeight - header.offsetHeight - footer.offsetHeight;
 
-/* RUN ON LOAD */
-window.addEventListener('load', setSectionHeight);
+    sections.forEach(section => {
+      section.style.minHeight = height + "px";
+    });
+  }
 
-/* RUN ON RESIZE */
-window.addEventListener('resize', setSectionHeight);
+  /* RUN ON LOAD */
+  setSectionHeight();
+
+  /* RUN ON RESIZE */
+  window.addEventListener("resize", setSectionHeight);
+
+  /* ===============================
+     MOBILE MENU TOGGLE
+  =============================== */
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", () => {
+      mainNav.classList.toggle("show");
+    });
+  }
+
+  /* ===============================
+     CLOSE MENU ON LINK CLICK (MOBILE UX)
+  =============================== */
+  if (mainNav) {
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("show");
+      });
+    });
+  }
+
+});
