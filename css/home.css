@@ -277,22 +277,103 @@ button.outline:hover {
 /* =========================
    ABOUT
 ========================= */
-
-.about h2,
-.services h2,
-.process h2,
-.cta h2 {
-  font-size: 32px;
-  color: #d4af37;
-  margin-bottom: 24px;
+.hero {
+  position: relative;
+  height: calc(100vh - 120px); /* adjust if header height differs */
+  overflow: hidden;
 }
 
-.about p {
-  max-width: 900px;
-  color: #ddd;
-  line-height: 1.8;
+/* SINGLE SLIDE */
+.hero-about .slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+  opacity: 1;
+}
+
+/* CONTENT WRAPPER */
+.hero-content {
+  max-width: 650px;
+}
+
+/* MAIN HEADING – GOLD & BOLD */
+.hero-content h1 {
+  font-size: 52px;
+  font-weight: 800;
+  color: #d4af37; /* Luxury Gold */
+  margin-bottom: 20px;
+}
+
+/* BODY TEXT – WHITE */
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ffffff;
   margin-bottom: 16px;
 }
+
+/* SOFT CTA LINKS */
+.hero-links {
+  margin-top: 24px;
+  display: flex;
+  gap: 28px;
+}
+
+.hero-links a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #d4af37;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hero-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background-color: #d4af37;
+  transition: width 0.3s ease;
+}
+
+.hero-links a:hover::after {
+  width: 100%;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .hero-about .slide {
+    padding-left: 6%;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 120px 0 80px;
+  }
+
+  .hero-about .slide {
+    position: relative;
+    padding: 0 6%;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+}
+
 
 /* =========================
    SERVICES
