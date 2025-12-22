@@ -38,6 +38,64 @@ body {
 
 .brand-white { color: #fff; }
 .brand-gold { color: #d4af37; }
+/* =========================
+   HEADER WITH NAVIGATION
+========================= */
+
+.header-inner {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* BRAND */
+.brand h1 {
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+.brand .tagline {
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.nav a:hover {
+  color: #d4af37;
+}
+
+/* GOLD UNDERLINE EFFECT */
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #d4af37;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
 
 /* FOOTER */
 .footer {
