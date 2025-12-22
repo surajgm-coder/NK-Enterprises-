@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   =============================== */
   function setSectionHeight() {
     const header = document.querySelector(".site-header");
-    const footer = document.querySelector(".footer");
+    const footer = document.querySelector(".site-footer");
     const sections = document.querySelectorAll(".section");
 
     // Safety check
