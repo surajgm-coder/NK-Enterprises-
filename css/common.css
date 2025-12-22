@@ -1,16 +1,17 @@
 /* =========================
-   GLOBAL RESET
+   RESET
 ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
-  padding-top: 90px;
-  padding-bottom: 60px;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -21,14 +22,16 @@ body {
   top: 0;
   width: 100%;
   background: #000;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .header-inner {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 6%;
 }
 
 /* BRAND */
@@ -38,11 +41,11 @@ body {
   font-weight: 800;
 }
 
-.brand-white {
-  color: #ffffff;
+.brand-nk {
+  color: #fff;
 }
 
-.brand-gold {
+.brand-enterprises {
   color: #d4af37;
   margin-left: 6px;
 }
@@ -54,9 +57,9 @@ body {
 }
 
 .main-nav a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
@@ -73,8 +76,8 @@ body {
 .main-nav a.active::after {
   content: "";
   position: absolute;
+  bottom: -6px;
   left: 0;
-  bottom: -8px;
   width: 100%;
   height: 2px;
   background: #d4af37;
@@ -82,11 +85,12 @@ body {
 
 /* CTA */
 .header-cta {
+  margin-left: 20px;
+  padding: 8px 18px;
   border: 1px solid #d4af37;
   color: #d4af37;
-  padding: 8px 18px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -96,7 +100,14 @@ body {
   color: #000;
 }
 
-/* MOBILE */
+/* GOLD DIVIDER */
+.header-divider {
+  height: 2px;
+  background: #d4af37;
+  width: 100%;
+}
+
+/* MOBILE TOGGLE */
 .menu-toggle {
   display: none;
   font-size: 26px;
@@ -104,11 +115,12 @@ body {
   cursor: pointer;
 }
 
-/* GOLD DIVIDER */
-.header-divider {
-  height: 2px;
-  background: #d4af37;
-  width: 100%;
+/* =========================
+   PAGE WRAPPER
+========================= */
+.page-wrapper {
+  margin-top: 92px;
+  margin-bottom: 60px;
 }
 
 /* =========================
@@ -118,37 +130,39 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #000;
   height: 60px;
+  background: #000;
 }
 
 .footer-inner {
+  max-width: 1400px;
+  margin: auto;
   height: 100%;
+  padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 6%;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* FOOTER CONTENT */
-.footer-brand {
+.footer-logo {
   color: #d4af37;
   font-weight: 700;
 }
 
-.footer-center {
+.footer-copy {
   color: #d4af37;
 }
 
-.footer-right a {
+.footer-social a {
   color: #d4af37;
   margin-left: 14px;
   text-decoration: none;
   transition: opacity 0.3s ease;
 }
 
-.footer-right a:hover {
+.footer-social a:hover {
   opacity: 0.7;
 }
 
@@ -156,27 +170,26 @@ body {
    RESPONSIVE
 ========================= */
 @media (max-width: 900px) {
-
   .main-nav {
     position: absolute;
-    top: 90px;
+    top: 72px;
     right: 0;
     background: #000;
     flex-direction: column;
     width: 220px;
-    display: none;
     padding: 20px;
+    display: none;
   }
 
   .main-nav.show {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
-  }
-
   .header-cta {
     display: none;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 }
