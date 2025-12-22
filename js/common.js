@@ -7,26 +7,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ===============================
      FIX SECTION HEIGHT (HEADER + FOOTER)
+     Ensures sections fit between header & footer
   =============================== */
   function setSectionHeight() {
     const header = document.querySelector(".site-header");
     const footer = document.querySelector(".footer");
     const sections = document.querySelectorAll(".section");
 
+    // Safety check
     if (!header || !footer || sections.length === 0) return;
 
-    const height =
+    const availableHeight =
       window.innerHeight - header.offsetHeight - footer.offsetHeight;
 
     sections.forEach(section => {
-      section.style.minHeight = height + "px";
+      section.style.minHeight = availableHeight + "px";
     });
   }
 
-  /* RUN ON LOAD */
+  /* RUN ON INITIAL LOAD */
   setSectionHeight();
 
-  /* RUN ON RESIZE */
+  /* RUN ON WINDOW RESIZE */
   window.addEventListener("resize", setSectionHeight);
 
   /* ===============================
@@ -42,7 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ===============================
-     CLOSE MENU ON LINK CLICK (MOBILE UX)
+     CLOSE MOBILE MENU AFTER CLICK
+     (Better UX)
   =============================== */
   if (mainNav) {
     mainNav.querySelectorAll("a").forEach(link => {
