@@ -66,3 +66,18 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .header {
+    height: 64px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .page-wrapper {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+}
