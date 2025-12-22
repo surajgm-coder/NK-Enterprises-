@@ -105,24 +105,32 @@ body {
 }
 
 /* =========================
-   HERO SLIDER (BRIGHT + IMAGES)
+   HERO SECTION – FINAL FIX
 ========================= */
 
+/* HERO MUST HAVE HEIGHT */
 .hero {
   position: relative;
+  height: 100vh;              /* 🔥 THIS WAS MISSING */
   overflow: hidden;
 }
 
-/* FULL-SCREEN SLIDE */
+/* SLIDE COVERS FULL HERO */
 .hero .slide {
   position: absolute;
-  inset: 0;                 /* 👈 FULL HERO AREA */
+  inset: 0;
   opacity: 0;
   transition: opacity 1s ease;
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-left: 48px;         /* keeps your text position */
 }
 
 /* ACTIVE SLIDE */
@@ -151,19 +159,19 @@ body {
 }
 
 /* =========================
-   BRIGHT OVERLAY (FIXED)
+   BRIGHT OVERLAY
 ========================= */
 
 .hero .slide::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.88); /* BRIGHT */
+  background: rgba(255, 255, 255, 0.88);
   z-index: 1;
 }
 
 /* =========================
-   TEXT CONTAINER (SAME POSITION)
+   TEXT (UNCHANGED POSITION)
 ========================= */
 
 .hero .slide h2,
@@ -171,16 +179,10 @@ body {
 .hero .slide button {
   position: relative;
   z-index: 2;
-
-  /* KEEP OLD POSITION */
-  max-width: 900px;
-  margin-left: 48px;
+  max-width: 700px;
 }
 
-/* =========================
-   TEXT COLORS
-========================= */
-
+/* TEXT COLORS */
 .hero .slide h2 {
   font-size: 36px;
   margin-bottom: 16px;
@@ -193,10 +195,7 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   BUTTON
-========================= */
-
+/* BUTTON */
 .hero .slide button {
   margin-top: 24px;
   padding: 14px 32px;
