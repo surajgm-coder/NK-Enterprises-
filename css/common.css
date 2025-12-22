@@ -10,74 +10,112 @@ body {
   color: #fff;
 }
 
+/* HEADER */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 80px;
+  height: 100px;
   background: #000;
+  border-bottom: 1px solid #d4af37;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  border-bottom: 1px solid #d4af37;
 }
-/* ===== HEADER TEXT LOGO ===== */
 
-.logo-text {
+.header-text h1 {
   font-size: 28px;
-  font-weight: 700;
   letter-spacing: 2px;
 }
 
-.brand-white {
-  color: #ffffff;
+.tagline {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+  text-align: center;
 }
 
-.brand-gold {
-  color: #d4af37; /* Gold */
-  margin-left: 6px;
-}
+.brand-white { color: #fff; }
+.brand-gold { color: #d4af37; }
 
+/* FOOTER */
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 80px;
+  border-top: 1px solid #d4af37;
   background: #000;
   text-align: center;
-  border-top: 1px solid #d4af37;
+  padding-top: 10px;
 }
 
-.footer img {
-  height: 32px;
-  margin-top: 10px;
+.footer-logo {
+  color: #d4af37;
+  font-weight: bold;
 }
 
+/* LAYOUT */
 .page-wrapper {
-  margin-top: 80px;
+  margin-top: 100px;
   margin-bottom: 80px;
 }
 
 .section {
-  height: calc(100vh - 160px);
+  height: calc(100vh - 180px);
   padding: 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+button {
+  background: #d4af37;
+  color: #000;
+  border: none;
+  padding: 14px 32px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button.outline {
+  background: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+}
+
+/* HERO SLIDER */
+.hero {
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* SERVICES */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid #d4af37;
+  padding: 24px;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-  .header {
-    height: 64px;
-  }
-
-  .logo-text {
-    font-size: 20px;
-    letter-spacing: 1px;
-  }
-
-  .page-wrapper {
-    margin-top: 64px;
-    margin-bottom: 64px;
-  }
+  .header { height: 80px; }
+  .header-text h1 { font-size: 20px; }
+  .section { padding: 24px; }
 }
