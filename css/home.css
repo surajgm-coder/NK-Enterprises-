@@ -391,30 +391,34 @@ button.outline:hover {
   }
 }
 /* =========================
-   SERVICES
+   SERVICES (FIT BETWEEN HEADER & FOOTER)
 ========================= */
 .our-services {
   position: relative;
-  display: block;
   width: 100%;
-  clear: both;
+  display: flex;
+  align-items: center;
 
-  background-image: url("image/home/services-home");
+  /* 👇 VIEWPORT FIT */
+  min-height: calc(100vh - 140px); 
+  /* adjust 140px = header + footer total height */
+
+  background-image: url("image/home/servises-home");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  padding: 90px 0;
+  padding: 80px 0;
   overflow: hidden;
 }
 
-/* WHITE OVERLAY */
+/* WHITE / SOFT OVERLAY */
 .services-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     rgba(255, 255, 255, 0.78),
-    rgba(255, 255, 255, 0.85)
+    rgba(255, 255, 255, 0.88)
   );
   z-index: 1;
 }
@@ -465,12 +469,6 @@ button.outline:hover {
   transition: all 0.35s ease;
 }
 
-/* FIX COLLAPSING HEIGHT ISSUE */
-.service-box * {
-  position: relative;
-  z-index: 1;
-}
-
 .service-box h3 {
   color: #d4af37;
   font-size: 21px;
@@ -487,8 +485,8 @@ button.outline:hover {
 .service-box:hover {
   transform: translateY(-6px);
   box-shadow:
-    0 12px 28px rgba(0, 0, 0, 0.12),
-    0 0 14px rgba(212, 175, 55, 0.45);
+    0 12px 28px rgba(0,0,0,0.12),
+    0 0 14px rgba(212,175,55,0.45);
 }
 
 /* RESPONSIVE */
@@ -499,15 +497,14 @@ button.outline:hover {
 }
 
 @media (max-width: 600px) {
+  .our-services {
+    min-height: auto; /* mobile = content-based */
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
   }
-
-  .services-header h2 {
-    font-size: 30px;
-  }
 }
-
 
 /* =========================
    PROCESS
