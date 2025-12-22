@@ -1,75 +1,127 @@
-/* =========================
-   HERO SLIDER – NK ENTERPRISES
-========================= */
+/* =====================================
+   HOME JS – NK ENTERPRISES
+   HERO SLIDER + COMMON LOGIC
+===================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const slides = document.querySelectorAll(".hero-slide");
-  const dots = document.querySelectorAll(".hero-dots .dot");
-  const nextBtn = document.querySelector(".hero-arrow.next");
-  const prevBtn = document.querySelector(".hero-arrow.prev");
+  /* =====================================
+     FIX SECTION HEIGHT (HEADER + FOOTER)
+  ===================================== */
+  function setSectionHeight() {
+    const header = document.querySelector('.header');
+    const footer = document.querySelector('.footer');
+    const sections = document.querySelectorAll('.section');
 
+    if (!header || !footer) return;
+
+    const height =
+      window.innerHeight - header.offsetHeight - footer.offsetHeight;
+
+    sections.forEach(section => {
+      section.style.height = height + 'px';
+    });
+  }
+
+  setSectionHeight();
+  window.addEventListener('resize', setSectionHeight);
+
+  /* =====================================
+     HERO SLIDER
+  ===================================== */
+
+  const hero = document.querySelector('.hero');
+  if (!hero) return; // safety check
+
+  const slides = hero.querySelectorAll('.slide');
   let currentIndex = 0;
-  const intervalTime = 6000;
+  const slideInterval = 6000;
   let autoSlide;
 
-  // Show slide
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
+  /* ---------- CREATE DOTS ---------- */
+  const dotsWrapper = document.createElement('div');
+  dotsWrapper.className = 'hero-dots';
 
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
+  slides.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.className = 'dot';
+    if (index === 0) dot.classList.add('active');
+
+    dot.addEventListener('click', () => {
+      showSlide(index);
+      restartAutoSlide();
+    });
+
+    dotsWrapper.appendChild(dot);
+  });
+
+  hero.appendChild(dotsWrapper);
+  const dots = dotsWrapper.querySelectorAll('.dot');
+
+  /* ---------- CREATE ARROWS ---------- */
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'hero-arrow prev';
+  prevBtn.innerHTML = '&#10094;';
+
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'hero-arrow next';
+  nextBtn.innerHTML = '&#10095;';
+
+  hero.appendChild(prevBtn);
+  hero.appendChild(nextBtn);
+
+  /* ---------- SLIDE FUNCTIONS ---------- */
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
 
     currentIndex = index;
   }
 
-  // Next slide
   function nextSlide() {
     let index = currentIndex + 1;
     if (index >= slides.length) index = 0;
     showSlide(index);
   }
 
-  // Previous slide
   function prevSlide() {
     let index = currentIndex - 1;
     if (index < 0) index = slides.length - 1;
     showSlide(index);
   }
 
-  // Auto slide
+  /* ---------- AUTO SLIDE ---------- */
   function startAutoSlide() {
-    autoSlide = setInterval(nextSlide, intervalTime);
+    autoSlide = setInterval(nextSlide, slideInterval);
   }
 
   function stopAutoSlide() {
     clearInterval(autoSlide);
   }
 
-  // Arrow events
-  nextBtn.addEventListener("click", () => {
+  function restartAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+  }
+
+  /* ---------- EVENTS ---------- */
+  nextBtn.addEventListener('click', () => {
     nextSlide();
-    stopAutoSlide();
-    startAutoSlide();
+    restartAutoSlide();
   });
 
-  prevBtn.addEventListener("click", () => {
+  prevBtn.addEventListener('click', () => {
     prevSlide();
-    stopAutoSlide();
-    startAutoSlide();
+    restartAutoSlide();
   });
 
-  // Dot navigation
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      showSlide(index);
-      stopAutoSlide();
-      startAutoSlide();
-    });
-  });
+  hero.addEventListener('mouseenter', stopAutoSlide);
+  hero.addEventListener('mouseleave', startAutoSlide);
 
-  // Init
+  /* ---------- INIT ---------- */
   showSlide(0);
   startAutoSlide();
 
