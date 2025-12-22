@@ -16,9 +16,10 @@ body {
   top: 0;
   width: 100%;
   background: #000;
-  z-index: 999;
+  z-index: 1000;
 }
 
+/* INNER WRAP */
 .header-inner {
   max-width: 1400px;
   margin: 0 auto;
@@ -33,14 +34,17 @@ body {
   text-decoration: none;
   font-size: 26px;
   font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
 }
 
-.brand-white {
+.brand-nk {
   color: #ffffff;
 }
 
-.brand-gold {
+.brand-enterprises {
   color: #d4af37;
+  margin-left: 4px;
 }
 
 /* NAVIGATION */
@@ -54,13 +58,17 @@ body {
   color: #ffffff;
   text-decoration: none;
   font-size: 15px;
+  font-weight: 500;
   position: relative;
+  transition: color 0.3s ease;
 }
 
+/* HOVER */
 .main-nav a:hover {
   color: #d4af37;
 }
 
+/* ACTIVE PAGE */
 .main-nav a.active::after {
   content: "";
   position: absolute;
@@ -75,49 +83,67 @@ body {
 .nav-cta {
   border: 1px solid #d4af37;
   padding: 8px 18px;
-  color: #d4af37;
+  color: #d4af37 !important;
+  font-weight: 600;
 }
 
-/* MENU BUTTON */
+.nav-cta:hover {
+  background: #d4af37;
+  color: #000 !important;
+}
+
+/* MOBILE MENU BUTTON */
 .menu-toggle {
   display: none;
   flex-direction: column;
   gap: 5px;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .menu-toggle span {
   width: 26px;
   height: 2px;
-  background: #fff;
+  background: #ffffff;
 }
 
-/* DIVIDER */
+/* GOLD DIVIDER */
 .header-divider {
   height: 1px;
+  width: 100%;
   background: #d4af37;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media (max-width: 992px) {
   .menu-toggle {
     display: flex;
   }
 
   .main-nav {
-    display: none;
     position: absolute;
     top: 100%;
     right: 0;
     width: 100%;
     background: #000;
     flex-direction: column;
-    padding: 20px;
+    align-items: flex-start;
+    padding: 20px 24px;
+    display: none;
+  }
+
+  .main-nav a {
+    width: 100%;
+    padding: 12px 0;
   }
 
   .main-nav.show {
     display: flex;
+  }
+
+  .nav-cta {
+    margin-top: 10px;
   }
 }
 
