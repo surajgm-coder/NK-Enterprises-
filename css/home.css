@@ -277,6 +277,9 @@ button.outline:hover {
 /* =========================
    ABOUT
 ========================= */
+/* =========================
+   ABOUT
+========================= */
 .hero {
   position: relative;
   height: calc(100vh - 120px); /* adjust if header height differs */
@@ -300,20 +303,32 @@ button.outline:hover {
   max-width: 650px;
 }
 
-/* MAIN HEADING – GOLD & BOLD */
+/* MAIN HEADING – GOLD & BOLD (WITH BLACK EDGE) */
 .hero-content h1 {
   font-size: 52px;
   font-weight: 800;
   color: #d4af37; /* Luxury Gold */
   margin-bottom: 20px;
+
+  /* VISIBILITY BOOST */
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+     0  6px 18px rgba(0, 0, 0, 0.6);
 }
 
-/* BODY TEXT – WHITE */
+/* BODY TEXT – WHITE (WITH SOFT BLACK SHADOW) */
 .hero-content p {
   font-size: 16px;
   line-height: 1.7;
   color: #ffffff;
   margin-bottom: 16px;
+
+  /* VISIBILITY BOOST */
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.85);
 }
 
 /* SOFT CTA LINKS */
@@ -330,6 +345,10 @@ button.outline:hover {
   text-decoration: none;
   position: relative;
   transition: all 0.3s ease;
+
+  /* VISIBILITY BOOST */
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.9);
 }
 
 .hero-links a::after {
