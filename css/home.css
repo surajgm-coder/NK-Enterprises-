@@ -1,78 +1,30 @@
-.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 50px;
-    background: #0B0B0B;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1000;
-}
-
-.logo-text .white { color: #fff; }
-.logo-text .gold { color: #C9A24D; }
-
-.nav a {
-    margin-left: 20px;
-}
-.nav a:hover {
-    color: #C9A24D;
-}
-
-.hero-slider {
-    height: 100vh;
-    position: relative;
-    margin-top: 70px;
+.hero {
+  text-align: center;
 }
 
 .slide {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+  position: absolute;
+  width: 100%;
 }
 
 .slide.active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  opacity: 1;
 }
 
-.slide .content {
-    text-align: center;
-    max-width: 700px;
+button {
+  margin-top: 20px;
+  padding: 14px 32px;
+  background: #d4af37;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.about, .services, .process, .cta {
-    padding: 80px 50px;
-    text-align: center;
+button.outline {
+  background: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
 }
-
-h5 {
-    color: #C9A24D;
-    margin-bottom: 10px;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 20px;
-}
-
-.card {
-    border: 1px solid #C9A24D;
-    padding: 30px;
-}
-
-.steps {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.footer {
-    padding: 30px;
-    text-align: center;
-}
-
