@@ -259,40 +259,20 @@ button.outline:hover {
 }
 
 /* ================= HERO CONTROLS ================= */
-.hero-dots {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+.hero-content {
+  position: relative;
+  max-width: 620px;
+  padding: 36px 40px;
+
+  /* BLURRY GLASS PATCH */
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border-left: 4px solid #d4af37;
+  border-radius: 4px;
 }
 
-.hero-dots .dot {
-  width: 10px;
-  height: 10px;
-  background: #aaa;
-  border-radius: 50%;
-  margin: 0 6px;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.hero-dots .dot.active {
-  background: #d4af37;
-}
-
-.hero-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: #d4af37;
-  cursor: pointer;
-}
-
-.hero-arrow.prev { left: 24px; }
-.hero-arrow.next { right: 24px; }
 
 /* =========================
    ABOUT
