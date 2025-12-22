@@ -208,12 +208,8 @@ body {
   transition: opacity 1s ease;
 }
 
-.slide::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.75);
-}
+/* ❌ FOG REMOVED COMPLETELY */
+/* .slide::before REMOVED */
 
 .slide.active {
   opacity: 1;
@@ -225,21 +221,29 @@ body {
   max-width: 620px;
 }
 
+/* MAIN HEADING – GOLD & BOLD */
 .hero-content h1 {
   font-size: 48px;
-  color: #000;
+  font-weight: 800;
+  color: #d4af37; /* Luxury Gold */
 }
 
+/* SUBHEADING – BLACK */
 .hero-content h3 {
-  color: #d4af37;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
   margin: 14px 0;
 }
 
+/* DESCRIPTION – BLACK */
 .hero-content p {
-  color: #222;
+  font-size: 16px;
+  color: #000;
   line-height: 1.7;
 }
 
+/* BUTTON – UNCHANGED STRUCTURE */
 button.outline {
   margin-top: 20px;
   padding: 14px 32px;
@@ -247,6 +251,11 @@ button.outline {
   border: 2px solid #d4af37;
   color: #d4af37;
   cursor: pointer;
+}
+
+button.outline:hover {
+  background: #d4af37;
+  color: #000;
 }
 
 /* ================= HERO CONTROLS ================= */
@@ -284,7 +293,6 @@ button.outline {
 
 .hero-arrow.prev { left: 24px; }
 .hero-arrow.next { right: 24px; }
-
 
 /* =========================
    ABOUT
