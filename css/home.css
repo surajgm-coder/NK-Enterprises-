@@ -272,15 +272,17 @@ button.outline:hover {
   border-left: 4px solid #d4af37;
   border-radius: 4px;
 }
-
-
 /* =========================
-   ABOUT – HERO ABOUT (FIXED)
+   ABOUT – HERO ABOUT (FINAL, NO DESIGN CHANGE)
 ========================= */
 
 .hero-about {
   position: relative;
-  min-height: calc(100vh - 120px); /* header height */
+
+  /* ✅ FIX FOR FIXED HEADER OVERLAP */
+  padding-top: 120px; /* MUST match header height */
+
+  min-height: calc(100vh - 120px);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -302,11 +304,11 @@ button.outline:hover {
   max-width: 650px;
 }
 
-/* MAIN HEADING – DARK GOLD (NO OUTLINE) */
+/* MAIN HEADING – DARK GOLD */
 .hero-about .hero-content h1 {
   font-size: 52px;
   font-weight: 800;
-  color: #b8962e; /* Dark Luxury Gold */
+  color: #b8962e;
   margin-bottom: 20px;
 }
 
@@ -364,7 +366,8 @@ button.outline:hover {
 @media (max-width: 768px) {
   .hero-about {
     min-height: auto;
-    padding: 120px 0 80px;
+    padding-top: 120px; /* still account for header */
+    padding-bottom: 80px;
   }
 
   .hero-about .slide {
