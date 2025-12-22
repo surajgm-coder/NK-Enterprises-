@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("common.html")
-    .then(response => response.text())
-    .then(data => {
-      document.body.insertAdjacentHTML("afterbegin", data);
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("../html/common.html")
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML("afterbegin", data);
+        })
+        .catch(error => console.error("Error loading header/footer:", error));
 });
-
