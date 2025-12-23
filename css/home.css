@@ -5,52 +5,61 @@
 
 
 /* =========================================================
-   1. HERO SECTION (HOME HERO / SLIDER BASE)
+   1. HERO-LIKE BASE (ALL HOME SECTIONS)
 ========================================================= */
-/* This block defines the hero-like base used by sections */
-
 .hero-like {
   height: calc(100vh - var(--nk-header-height) - var(--nk-footer-height));
   background-size: cover;
   background-position: center;
   position: relative;
+  display: flex;
+  align-items: center;           /* vertical center */
 }
 
-/* Overlay */
+/* Dark overlay */
 .hero-like::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.6);
 }
 
-/* Hero Content */
+/* =========================================================
+   2. SHARED CONTENT PANEL (LEFT-CENTER)
+========================================================= */
 .hero-content {
-  position: absolute;
-  left: 8%;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 640px;
+  position: relative;
+  margin-left: 8%;
+  max-width: 620px;
+  padding: 3.5rem 3.5rem;
   color: #ffffff;
+  z-index: 2;
+
+  /* background patch */
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  border-left: 6px solid var(--gold);
 }
 
-/* Hero Heading */
+/* =========================================================
+   3. SHARED TYPOGRAPHY (SAME SIZE EVERYWHERE)
+========================================================= */
 .hero-content h1 {
   color: var(--gold);
-  font-size: 3.2rem;
+  font-size: 3.1rem;
   line-height: 1.15;
   margin-bottom: 1.2rem;
 }
 
-/* Hero Paragraph */
 .hero-content p {
   font-size: 1.05rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
 }
 
+
 /* =========================================================
-   2. ABOUT SECTION (HOME)
+   4. ABOUT SECTION
 ========================================================= */
 .hero-like.about {
   background-image: url('../images/home/about-home.png');
@@ -58,69 +67,65 @@
 
 
 /* =========================================================
-   3. SERVICES SECTION (HOME)
+   5. SERVICES SECTION
 ========================================================= */
 .hero-like.services {
   background-image: url('../images/home/services-home.png');
 }
 
-/* Service Cards */
 .hero-like.services .card-row {
   display: flex;
-  gap: 24px;
-  margin-top: 3rem;
+  gap: 20px;
+  margin-top: 2.5rem;
 }
 
 .hero-like.services .premium-card {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(201, 164, 76, 0.35);
-  padding: 30px;
-  border-radius: 12px;
+  padding: 24px;
+  border-radius: 10px;
   color: #ffffff;
   font-weight: 600;
   backdrop-filter: blur(8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
 }
 
 .hero-like.services .premium-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
 }
 
 
 /* =========================================================
-   4. PRODUCTS SECTION (HOME)
+   6. PRODUCTS SECTION
 ========================================================= */
 .hero-like.products {
   background-image: url('../images/home/product-home.png');
 }
 
-/* Product Cards (same style, scoped separately for safety) */
 .hero-like.products .card-row {
   display: flex;
-  gap: 24px;
-  margin-top: 3rem;
+  gap: 20px;
+  margin-top: 2.5rem;
 }
 
 .hero-like.products .premium-card {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(201, 164, 76, 0.35);
-  padding: 30px;
-  border-radius: 12px;
+  padding: 24px;
+  border-radius: 10px;
   color: #ffffff;
   font-weight: 600;
   backdrop-filter: blur(8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
 }
 
 .hero-like.products .premium-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
 }
 
 
 /* =========================================================
-   5. PROCESS + CTA SECTION (HOME)
+   7. PROCESS + CTA
 ========================================================= */
 .process-vertical {
   display: flex;
@@ -138,4 +143,33 @@
 .process-block.gold {
   background: var(--gold);
   color: #000000;
+}
+
+
+/* =========================================================
+   8. MOBILE FIX
+========================================================= */
+@media (max-width: 768px) {
+  .hero-like {
+    height: auto;
+    padding: 5rem 0;
+  }
+
+  .hero-content {
+    margin-left: 5%;
+    max-width: 90%;
+    padding: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .card-row {
+    flex-wrap: wrap;
+  }
 }
