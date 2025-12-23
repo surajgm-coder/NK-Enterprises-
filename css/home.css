@@ -30,19 +30,22 @@
   left: 8%;
   top: 50%;
   transform: translateY(-50%);
-  max-width: 700px;
+  max-width: 640px;        /* slightly reduced */
   color: #ffffff;
 }
 
+/* Hero Heading */
 .hero-content h1 {
   color: var(--gold);
-  font-size: 4.6rem;
-  margin-bottom: 1.5rem;
+  font-size: 3.2rem;       /* ~51px ✔ */
+  line-height: 1.15;       /* tighter for large text ✔ */
+  margin-bottom: 1.2rem;
 }
 
+/* Hero Paragraph */
 .hero-content p {
-  font-size: 1.3rem;
-  line-height: 1.7;
+  font-size: 1.05rem;      /* ~17px ✔ */
+  line-height: 1.6;        /* readable, not loose ✔ */
   margin-bottom: 1.5rem;
 }
 
