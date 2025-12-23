@@ -6,9 +6,10 @@
   <title>NK Enterprises - Premium Furniture & Interior Solutions</title>
   <link rel="stylesheet" href="css/common.css"/>
   <link rel="stylesheet" href="css/home.css"/>
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
   <!-- HEADER -->
   <header class="nk-header">
     <div class="nk-header-inner container">
@@ -16,7 +17,7 @@
         <span class="nk-brand-nk">NK</span>
         <span class="nk-brand-ent">Enterprises</span>
       </a>
-
+      <button class="menu-toggle">&#9776;</button> <!-- Mobile toggle button -->
       <nav class="nk-nav">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About Us</a>
@@ -25,13 +26,10 @@
         <a href="#">Projects</a>
         <a href="contact.html">Contact Us</a>
       </nav>
-
       <a href="contact.html" class="nk-cta">Get a Quote</a>
     </div>
   </header>
-
   <div class="nk-divider"></div>
-
   <!-- HERO SLIDER -->
   <section class="hero">
     <div class="slider">
@@ -44,7 +42,6 @@
           <a href="#" class="slide-cta">Learn More</a>
         </div>
       </div>
-
       <!-- Slide 2 -->
       <div class="slide" style="background-image: url('images/home/hero2.png');">
         <div class="slide-content">
@@ -54,7 +51,6 @@
           <a href="products.html" class="slide-cta">View Products</a>
         </div>
       </div>
-
       <!-- Slide 3 -->
       <div class="slide" style="background-image: url('images/home/hero3.png');">
         <div class="slide-content">
@@ -64,7 +60,6 @@
           <a href="services.html" class="slide-cta">Our Services</a>
         </div>
       </div>
-
       <!-- Slide 4 -->
       <div class="slide" style="background-image: url('images/home/hero4.png');">
         <div class="slide-content">
@@ -75,7 +70,6 @@
         </div>
       </div>
     </div>
-
     <!-- Navigation Dots -->
     <div class="slider-dots">
       <span class="dot active"></span>
@@ -84,7 +78,6 @@
       <span class="dot"></span>
     </div>
   </section>
-
   <!-- ABOUT / WHO WE ARE -->
   <section class="section about dark">
     <div class="container">
@@ -98,7 +91,6 @@
       </div>
     </div>
   </section>
-
   <!-- OUR SERVICES -->
   <section class="section services light">
     <div class="container">
@@ -112,7 +104,6 @@
       </ul>
     </div>
   </section>
-
   <!-- OUR PRODUCTS -->
   <section class="section products dark">
     <div class="container">
@@ -125,7 +116,6 @@
       </div>
     </div>
   </section>
-
   <!-- PROCESS + CTA SPLIT SECTION -->
   <section class="split-section">
     <!-- Left: Process (White) -->
@@ -141,7 +131,6 @@
         </ol>
       </div>
     </div>
-
     <!-- Right: CTA (Gold) -->
     <div class="split-right">
       <div class="split-content">
@@ -154,55 +143,55 @@
       </div>
     </div>
   </section>
-
   <!-- FOOTER -->
   <footer class="nk-footer">
     <div class="nk-footer-divider"></div>
     <div class="nk-footer-inner container">
       <div class="footer-left">
-        <span class="nk-brand">
-          <span class="nk-brand-nk">NK</span>
-          <span class="nk-brand-ent">Enterprises</span>
-        </span>
+        <img src="images/logo.png" alt="NK Enterprises" class="footer-logo">
       </div>
       <div class="footer-center">
         © 2025 NK Enterprises. All Rights Reserved.
       </div>
       <div class="footer-right">
         <span>Follow Us:</span>
-        <a href="#">YouTube</a>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
   </footer>
-
-  <!-- JavaScript for Hero Slider -->
+  <!-- JavaScript for Hero Slider and Mobile Toggle -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const slides = document.querySelectorAll(".slide");
       const dots = document.querySelectorAll(".dot");
       let index = 0;
-
       function showSlide(i) {
         slides.forEach(s => s.classList.remove("active"));
         dots.forEach(d => d.classList.remove("active"));
         slides[i].classList.add("active");
         dots[i].classList.add("active");
       }
-
       // Auto-play every 5 seconds
       setInterval(() => {
         index = (index + 1) % slides.length;
         showSlide(index);
       }, 5000);
-
       // Manual navigation via dots
       dots.forEach((dot, i) => {
         dot.addEventListener("click", () => {
           index = i;
           showSlide(index);
         });
+      });
+
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.nk-nav');
+      menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('show');
       });
     });
   </script>
