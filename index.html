@@ -3,40 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NK Enterprises - Premium Furniture & Interior Solutions</title>
-  <link rel="stylesheet" href="css/common.css"/>
-  <link rel="stylesheet" href="css/home.css"/>
+  <title>NK Enterprises</title>
+  
+  <!-- Common styles (header, footer, global) -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- Page specific styles -->
+  <link rel="stylesheet" href="css/home.css">
+  
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="nk-header">
-    <div class="nk-header-inner container">
-      <a href="index.html" class="nk-brand">
-        <span class="nk-brand-nk">NK</span>
-        <span class="nk-brand-ent">Enterprises</span>
-      </a>
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="logo-container">
+    <img src="image/logo.png" alt="NK Enterprises Logo" class="logo-img">
+    <span class="logo-text">NK Enterprises</span>
+  </div>
 
-      <nav class="nk-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="products.html">Products</a>
-        <a href="services.html">Services</a>
-        <a href="#">Projects</a>
-        <a href="contact.html">Contact Us</a>
-      </nav>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
 
-      <a href="contact.html" class="nk-cta">Get a Quote</a>
-    </div>
-  </header>
-
-  <div class="nk-divider"></div>
+  <a href="#" class="btn-quote">Get a Quote</a>
+</header>
 
   <!-- HERO SLIDER -->
   <section class="hero">
     <div class="slider">
       <!-- Slide 1 -->
-      <div class="slide active" style="background-image: url('/images/home/hero1.png');">
+      <div class="slide active" style="background-image: url('images/home/hero1.png');">
         <div class="slide-content">
           <h1>NK Enterprises</h1>
           <h2>Delivering Quality, Reliability, and Excellence</h2>
@@ -46,7 +50,7 @@
       </div>
 
       <!-- Slide 2 -->
-      <div class="slide" style="background-image: url('/images/home/hero2.png');">
+      <div class="slide" style="background-image: url('images/home/hero2.png');">
         <div class="slide-content">
           <h1>Premium Products You Can Trust</h1>
           <h2>Built to Perform. Designed to Last.</h2>
@@ -56,7 +60,7 @@
       </div>
 
       <!-- Slide 3 -->
-      <div class="slide" style="background-image: url('/images/home/hero3.png');">
+      <div class="slide" style="background-image: url('images/home/hero3.png');">
         <div class="slide-content">
           <h1>Professional Services That Deliver Results</h1>
           <h2>Reliable Support at Every Step</h2>
@@ -66,7 +70,7 @@
       </div>
 
       <!-- Slide 4 -->
-      <div class="slide" style="background-image: url('/images/home/hero4.png');">
+      <div class="slide" style="background-image: url('images/home/hero4.png');">
         <div class="slide-content">
           <h1>Your Trusted Business Partner</h1>
           <h2>Committed to Long-Term Success</h2>
@@ -155,28 +159,27 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="nk-footer">
-    <div class="nk-footer-divider"></div>
-    <div class="nk-footer-inner container">
-      <div class="footer-left">
-        <span class="nk-brand">
-          <span class="nk-brand-nk">NK</span>
-          <span class="nk-brand-ent">Enterprises</span>
-        </span>
-      </div>
-      <div class="footer-center">
-        © 2025 NK Enterprises. All Rights Reserved.
-      </div>
-      <div class="footer-right">
-        <span>Follow Us:</span>
-        <a href="#">YouTube</a>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-      </div>
-    </div>
-  </footer>
+<!-- ================= FOOTER ================= -->
+<footer>
+  <img src="image/logo.png" alt="NK Enterprises Logo" class="footer-logo">
 
+  <div class="social-icons">
+    <a href="https://youtube.com/" target="_blank" title="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://facebook.com/" target="_blank" title="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://instagram.com/" target="_blank" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+  <p>© 2025 NK Enterprises. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
   <!-- JavaScript for Hero Slider -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
