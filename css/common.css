@@ -1,18 +1,16 @@
 :root {
   --nk-header-height: 66px;
-  --nk-footer-height: 62px;
+  --nk-footer-height: 66px; /* Matched to header */
   --gold: #c9a44c;
   --black: #000;
   --white: #fff;
   --dark-text: #111;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--dark-text);
@@ -21,13 +19,11 @@ body {
   padding-bottom: var(--nk-footer-height);
   background: #f9f9f9;
 }
-
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
-
 /* HEADER */
 .nk-header {
   position: fixed;
@@ -36,34 +32,29 @@ body {
   background: var(--black);
   z-index: 1000;
 }
-
 .nk-header-inner {
   padding: 22px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .nk-brand {
   text-decoration: none;
   display: flex;
   align-items: baseline;
 }
-
 .nk-brand-nk {
   color: var(--white);
   font-size: 26px;
   font-weight: 800;
   letter-spacing: 1px;
 }
-
 .nk-brand-ent {
   color: var(--gold);
   font-size: 20px;
   font-weight: 700;
   margin-left: 6px;
 }
-
 .nk-nav a {
   color: var(--white);
   text-decoration: none;
@@ -73,12 +64,10 @@ body {
   position: relative;
   transition: color 0.3s ease;
 }
-
 .nk-nav a:hover,
 .nk-nav a.active {
   color: var(--gold);
 }
-
 .nk-nav a.active::after {
   content: "";
   position: absolute;
@@ -88,7 +77,6 @@ body {
   height: 2px;
   background: var(--gold);
 }
-
 .nk-cta {
   background: var(--gold);
   color: var(--black);
@@ -99,16 +87,13 @@ body {
   transition: background 0.3s ease;
   border-radius: 4px;
 }
-
 .nk-cta:hover {
   background: #b8943f;
 }
-
 .nk-divider {
   height: 2px;
   background: var(--gold);
 }
-
 /* FOOTER */
 .nk-footer {
   position: fixed;
@@ -118,69 +103,117 @@ body {
   z-index: 999;
   color: var(--white);
 }
-
 .nk-footer-divider {
   height: 2px;
   background: var(--gold);
 }
-
 .nk-footer-inner {
-  padding: 12px 20px;
+  padding: 22px 20px; /* Matched to header for consistency */
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
 }
-
-.footer-left .nk-brand {
-  font-size: 1.1em;
+.footer-left {
+  display: flex;
+  align-items: center;
 }
-
+.footer-logo {
+  height: auto;
+  max-height: 30px; /* Fits within 66px height with padding */
+}
 .footer-center {
   text-align: center;
 }
-
-.footer-right a {
-  color: var(--gold);
-  margin-left: 12px;
-  text-decoration: none;
+.footer-right {
+  display: flex;
+  align-items: center;
 }
-
+.footer-right span {
+  margin-right: 10px;
+}
+.footer-right a {
+  text-decoration: none;
+  margin-left: 12px;
+}
+.footer-right a i {
+  color: var(--gold);
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.footer-right a:hover i {
+  color: #b8943f; /* Darker gold on hover */
+}
 /* General Section Styles */
 .section {
   padding: 80px 0;
   min-height: 60vh;
 }
-
 .section h2 {
   color: var(--gold);
   font-size: 2.8rem;
   margin-bottom: 1.5rem;
   font-weight: bold;
 }
-
 .section p {
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1.2rem;
 }
-
 .section.dark {
   background: var(--black);
   color: var(--white);
 }
-
 .section.light {
   background: var(--white);
 }
-
 .section-links a {
   color: var(--gold);
   margin-right: 2rem;
   text-decoration: none;
   font-weight: 600;
 }
-
 .section-links a:hover {
   text-decoration: underline;
+}
+/* Mobile Responsive (Header Toggle) */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 15px; /* Space before CTA */
+}
+@media (max-width: 768px) {
+  .nk-header-inner {
+    flex-wrap: wrap;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nk-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: var(--nk-header-height);
+    left: 0;
+    width: 100%;
+    background: var(--black);
+    z-index: 999;
+  }
+  .nk-nav.show {
+    display: flex;
+  }
+  .nk-nav a {
+    padding: 15px 20px;
+    margin: 0;
+    border-bottom: 1px solid var(--gold);
+    text-align: center;
+  }
+  .nk-cta {
+    margin-left: auto;
+  }
 }
