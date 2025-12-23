@@ -1,162 +1,88 @@
-/* =========================================
-   CORE VARIABLES & RESET
-========================================= */
-:root {
-    --gold: #c9a44c;
-    --dark: #0f0f0f;
-    --overlay: rgba(15, 15, 15, 0.62);
-    --glass: rgba(20, 20, 20, 0.45);
-    --white: #ffffff;
-    --header-h: 90px;
+/* HERO-LIKE SHARED SECTIONS */
+.hero-like {
+  height: calc(100vh - var(--nk-header-height) - var(--nk-footer-height));
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-    font-family: 'Inter', sans-serif;
-    color: var(--white);
-    background: #0a0a0a;
-    overflow-x: hidden;
+.hero-like::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
 }
 
-/* Full height sections with overlay */
-.full-section, .hero-section {
-    height: 100vh;
-    min-height: 780px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+.hero-content {
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 700px;
+  color: #fff;
 }
 
-.full-section::before, .hero-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--overlay);
-    z-index: 1;
+.hero-content h1 {
+  color: var(--gold);
+  font-size: 4.6rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Centered content block - same style everywhere */
-.content-block, .slide-content {
-    position: absolute;
-    z-index: 2;
-    left: 7%;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 620px;
-    padding: 3rem 3.5rem;
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    border: 1px solid rgba(201,164,76,0.22);
-    box-shadow: 0 15px 50px rgba(0,0,0,0.55);
+.hero-content p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4.2rem;
-    font-weight: 900;
-    color: var(--gold);
-    line-height: 1.05;
-    margin-bottom: 1.2rem;
+/* Backgrounds */
+.hero-like.about {
+  background-image: url('../images/home/about-home.png');
+}
+.hero-like.services {
+  background-image: url('../images/home/services-home.png');
+}
+.hero-like.products {
+  background-image: url('../images/home/product-home.png');
 }
 
-h2 {
-    font-size: 2.3rem;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 1.8rem;
+/* PREMIUM CARDS */
+.card-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 3rem;
 }
 
-p {
-    font-size: 1.22rem;
-    line-height: 1.75;
-    margin-bottom: 1.5rem;
+.premium-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(201,164,76,0.35);
+  padding: 30px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
 }
 
-/* Cards - 3D premium style */
-.premium-cards {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 2.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    z-index: 3;
-    width: 92%;
-    max-width: 1400px;
+.premium-card:hover {
+  transform: translateY(-8px);
 }
 
-.card {
-    background: rgba(30,30,30,0.75);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(201,164,76,0.3);
-    border-radius: 16px;
-    padding: 2rem 1.8rem;
-    width: 320px;
-    transition: all 0.4s ease;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-    transform: translateY(20px);
+/* PROCESS SECTION */
+.process-vertical {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--nk-header-height) - var(--nk-footer-height));
 }
 
-.card:hover {
-    transform: translateY(0) scale(1.03);
-    box-shadow: 0 25px 60px rgba(201,164,76,0.25);
+.process-block {
+  flex: 1;
+  padding: 6rem 10%;
+  background: #fff;
+  color: #111;
 }
 
-.card h3 {
-    color: var(--gold);
-    font-size: 1.7rem;
-    margin-bottom: 1rem;
-}
-
-/* Process + CTA - Vertical stack */
-.process-cta-section {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.process-block, .cta-block {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6rem 3rem;
-}
-
-.process-block { background: #111; color: var(--white); }
-.cta-block   { background: var(--gold); color: #000; }
-
-.content {
-    max-width: 720px;
-    text-align: center;
-}
-
-.btn {
-    display: inline-block;
-    padding: 1.1rem 2.8rem;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    margin: 0.8rem;
-    transition: 0.3s;
-}
-
-.btn.primary   { background: #000; color: #fff; }
-.btn.secondary { border: 2px solid #000; color: #000; background: transparent; }
-
-.btn:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .premium-cards { gap: 1.8rem; }
-    .card { width: 300px; }
-}
-
-@media (max-width: 768px) {
-    h1 { font-size: 3.4rem; }
-    .content-block, .slide-content { left: 5%; padding: 2.5rem; max-width: 90%; }
-    .premium-cards { flex-direction: column; align-items: center; bottom: 8%; }
+.process-block.gold {
+  background: var(--gold);
+  color: #000;
 }
