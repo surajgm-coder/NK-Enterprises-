@@ -30,25 +30,24 @@
   left: 8%;
   top: 50%;
   transform: translateY(-50%);
-  max-width: 640px;        /* slightly reduced */
+  max-width: 640px;
   color: #ffffff;
 }
 
 /* Hero Heading */
 .hero-content h1 {
   color: var(--gold);
-  font-size: 3.2rem;       /* ~51px ✔ */
-  line-height: 1.15;       /* tighter for large text ✔ */
+  font-size: 3.2rem;
+  line-height: 1.15;
   margin-bottom: 1.2rem;
 }
 
 /* Hero Paragraph */
 .hero-content p {
-  font-size: 1.05rem;      /* ~17px ✔ */
-  line-height: 1.6;        /* readable, not loose ✔ */
+  font-size: 1.05rem;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
-
 
 /* =========================================================
    2. ABOUT SECTION (HOME)
