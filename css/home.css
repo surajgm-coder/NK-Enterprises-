@@ -92,6 +92,50 @@
   background: var(--gold);
 }
 
+/* === Background Images for All Sections === */
+.section.about {
+  background-image: url('../images/home/about-home.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.section.services {
+  background-image: url('../images/home/services-home.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.section.products {
+  background-image: url('../images/home/about-home.png'); /* fallback - change later if you add product-specific home image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Overlays for better text readability */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* adjust 0.35–0.55 for best contrast */
+  z-index: 1;
+}
+
+.section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* For dark sections make text stand out more if needed */
+.section.dark h2,
+.section.dark p,
+.section.dark li {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+
 /* Split Section (Process + CTA) */
 .split-section {
   display: flex;
@@ -104,10 +148,12 @@
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
+  position: relative;
 }
 
 .split-left {
   background: var(--white);
+  /* Optional: add subtle background if you have one later */
 }
 
 .split-right {
@@ -117,6 +163,8 @@
 
 .split-content {
   max-width: 500px;
+  position: relative;
+  z-index: 2;
 }
 
 .split-content h2 {
@@ -168,11 +216,13 @@
   .split-section {
     flex-direction: column;
   }
+
   .slide-content {
     left: 5%;
     padding: 1.5rem;
     max-width: 90%;
   }
+
   .slide h1 { font-size: 2.8rem; }
   .slide h2 { font-size: 1.6rem; }
 }
