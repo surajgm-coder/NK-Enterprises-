@@ -1,13 +1,25 @@
+:root {
+  --nk-header-height: 66px;
+  --nk-footer-height: 62px;
+  --gold: #c9a44c;
+  --black: #000;
+  --white: #fff;
+  --dark-text: #111;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  color: #333;
-  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark-text);
+  /* Required for fixed header & footer */
+  padding-top: var(--nk-header-height);
+  padding-bottom: var(--nk-footer-height);
+  background: #f9f9f9;
 }
 
 .container {
@@ -16,52 +28,159 @@ body {
   margin: auto;
 }
 
-.header {
-  background: #0b3c5d;
-  padding: 15px 0;
+/* HEADER */
+.nk-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--black);
+  z-index: 1000;
 }
 
-.nav {
+.nk-header-inner {
+  padding: 22px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nk-brand {
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+}
+
+.nk-brand-nk {
+  color: var(--white);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nk-brand-ent {
+  color: var(--gold);
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.nk-nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 14px;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nk-nav a:hover,
+.nk-nav a.active {
+  color: var(--gold);
+}
+
+.nk-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+}
+
+.nk-cta {
+  background: var(--gold);
+  color: var(--black);
+  padding: 10px 22px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  border-radius: 4px;
+}
+
+.nk-cta:hover {
+  background: #b8943f;
+}
+
+.nk-divider {
+  height: 2px;
+  background: var(--gold);
+}
+
+/* FOOTER */
+.nk-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--black);
+  z-index: 999;
+  color: var(--white);
+}
+
+.nk-footer-divider {
+  height: 2px;
+  background: var(--gold);
+}
+
+.nk-footer-inner {
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 14px;
 }
 
-.logo {
-  color: #fff;
+.footer-left .nk-brand {
+  font-size: 1.1em;
 }
 
-nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.btn {
-  background: #f4b400;
-  color: #000;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 15px;
-}
-
-.btn-outline {
-  border: 2px solid #0b3c5d;
-  color: #0b3c5d;
-  padding: 8px 18px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 15px;
-}
-
-.footer {
-  background: #0b3c5d;
-  color: #fff;
+.footer-center {
   text-align: center;
-  padding: 20px 0;
+}
+
+.footer-right a {
+  color: var(--gold);
+  margin-left: 12px;
+  text-decoration: none;
+}
+
+/* General Section Styles */
+.section {
+  padding: 80px 0;
+  min-height: 60vh;
+}
+
+.section h2 {
+  color: var(--gold);
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.section.dark {
+  background: var(--black);
+  color: var(--white);
+}
+
+.section.light {
+  background: var(--white);
+}
+
+.section-links a {
+  color: var(--gold);
+  margin-right: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section-links a:hover {
+  text-decoration: underline;
 }
