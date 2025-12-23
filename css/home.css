@@ -137,3 +137,33 @@
   background: var(--gold);
   color: #000000;
 }
+/* =========================================================
+   MOBILE FIX – HERO SECTIONS
+========================================================= */
+@media (max-width: 768px) {
+
+  .hero-like {
+    height: auto;
+    padding: 5rem 0 4rem;
+  }
+
+  .hero-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+}
