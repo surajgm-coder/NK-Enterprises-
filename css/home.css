@@ -1,4 +1,14 @@
-/* HERO-LIKE SHARED SECTIONS */
+/* =========================================================
+   HOME PAGE CSS
+   (Header & Footer styles are in common.css)
+========================================================= */
+
+
+/* =========================================================
+   1. HERO SECTION (HOME HERO / SLIDER BASE)
+========================================================= */
+/* This block defines the hero-like base used by sections */
+
 .hero-like {
   height: calc(100vh - var(--nk-header-height) - var(--nk-footer-height));
   background-size: cover;
@@ -6,20 +16,22 @@
   position: relative;
 }
 
+/* Overlay */
 .hero-like::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0, 0, 0, 0.65);
 }
 
+/* Hero Content */
 .hero-content {
   position: absolute;
   left: 8%;
   top: 50%;
   transform: translateY(-50%);
   max-width: 700px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .hero-content h1 {
@@ -34,41 +46,80 @@
   margin-bottom: 1.5rem;
 }
 
-/* Backgrounds */
+
+/* =========================================================
+   2. ABOUT SECTION (HOME)
+========================================================= */
 .hero-like.about {
   background-image: url('../images/home/about-home.png');
 }
+
+
+/* =========================================================
+   3. SERVICES SECTION (HOME)
+========================================================= */
 .hero-like.services {
   background-image: url('../images/home/services-home.png');
 }
-.hero-like.products {
-  background-image: url('../images/home/product-home.png');
-}
 
-/* PREMIUM CARDS */
-.card-row {
+/* Service Cards */
+.hero-like.services .card-row {
   display: flex;
   gap: 24px;
   margin-top: 3rem;
 }
 
-.premium-card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(201,164,76,0.35);
+.hero-like.services .premium-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(201, 164, 76, 0.35);
   padding: 30px;
   border-radius: 12px;
-  color: #fff;
+  color: #ffffff;
   font-weight: 600;
   backdrop-filter: blur(8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-  transition: transform 0.3s;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
 }
 
-.premium-card:hover {
+.hero-like.services .premium-card:hover {
   transform: translateY(-8px);
 }
 
-/* PROCESS SECTION */
+
+/* =========================================================
+   4. PRODUCTS SECTION (HOME)
+========================================================= */
+.hero-like.products {
+  background-image: url('../images/home/product-home.png');
+}
+
+/* Product Cards (same style, scoped separately for safety) */
+.hero-like.products .card-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 3rem;
+}
+
+.hero-like.products .premium-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(201, 164, 76, 0.35);
+  padding: 30px;
+  border-radius: 12px;
+  color: #ffffff;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.hero-like.products .premium-card:hover {
+  transform: translateY(-8px);
+}
+
+
+/* =========================================================
+   5. PROCESS + CTA SECTION (HOME)
+========================================================= */
 .process-vertical {
   display: flex;
   flex-direction: column;
@@ -78,11 +129,11 @@
 .process-block {
   flex: 1;
   padding: 6rem 10%;
-  background: #fff;
-  color: #111;
+  background: #ffffff;
+  color: #111111;
 }
 
 .process-block.gold {
   background: var(--gold);
-  color: #000;
+  color: #000000;
 }
