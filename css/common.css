@@ -1,10 +1,6 @@
 :root {
   --nk-header-height: 66px;
   --nk-footer-height: 62px;
-  --gold: #c9a44c;
-  --black: #000;
-  --white: #fff;
-  --dark-text: #111;
 }
 
 * {
@@ -15,11 +11,11 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--dark-text);
-  /* Required for fixed header & footer */
+  color: #111;
+
+  /* REQUIRED FOR FIXED HEADER & FOOTER (HERO FIX) */
   padding-top: var(--nk-header-height);
   padding-bottom: var(--nk-footer-height);
-  background: #f9f9f9;
 }
 
 .container {
@@ -28,22 +24,28 @@ body {
   margin: auto;
 }
 
-/* HEADER */
+/* ===============================
+   HEADER – CORPORATE
+================================ */
+
 .nk-header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--black);
+  background: #000;
   z-index: 1000;
 }
 
 .nk-header-inner {
+  max-width: 1200px;
+  margin: auto;
   padding: 22px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* BRAND */
 .nk-brand {
   text-decoration: none;
   display: flex;
@@ -51,21 +53,22 @@ body {
 }
 
 .nk-brand-nk {
-  color: var(--white);
+  color: #ffffff;
   font-size: 26px;
   font-weight: 800;
   letter-spacing: 1px;
 }
 
 .nk-brand-ent {
-  color: var(--gold);
+  color: #c9a44c;
   font-size: 20px;
   font-weight: 700;
   margin-left: 6px;
 }
 
+/* NAVIGATION */
 .nk-nav a {
-  color: var(--white);
+  color: #ffffff;
   text-decoration: none;
   margin: 0 14px;
   font-size: 15px;
@@ -74,9 +77,8 @@ body {
   transition: color 0.3s ease;
 }
 
-.nk-nav a:hover,
-.nk-nav a.active {
-  color: var(--gold);
+.nk-nav a:hover {
+  color: #c9a44c;
 }
 
 .nk-nav a.active::after {
@@ -86,101 +88,96 @@ body {
   bottom: -6px;
   width: 100%;
   height: 2px;
-  background: var(--gold);
+  background: #c9a44c;
 }
 
+/* CTA */
 .nk-cta {
-  background: var(--gold);
-  color: var(--black);
+  background: #c9a44c;
+  color: #000;
   padding: 10px 22px;
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
   transition: background 0.3s ease;
-  border-radius: 4px;
 }
 
 .nk-cta:hover {
   background: #b8943f;
 }
 
+/* GOLD DIVIDER */
 .nk-divider {
   height: 2px;
-  background: var(--gold);
+  background: #c9a44c;
 }
 
-/* FOOTER */
+/* ===============================
+   FIXED FOOTER – FINAL
+================================ */
+
 .nk-footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: var(--black);
+  background: #000;
   z-index: 999;
-  color: var(--white);
 }
 
+/* DIVIDER */
 .nk-footer-divider {
   height: 2px;
-  background: var(--gold);
+  width: 100%;
+  background: #c9a44c;
 }
 
+/* CONTENT */
 .nk-footer-inner {
-  padding: 12px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.nk-footer-left img {
+  max-height: 32px;
+}
+
+/* COPYRIGHT */
+.nk-footer-center {
+  flex: 1;
+  text-align: center;
+  color: #c9a44c;
   font-size: 14px;
 }
 
-.footer-left .nk-brand {
-  font-size: 1.1em;
+/* SOCIAL ICONS */
+.nk-footer-right {
+  display: flex;
+  gap: 16px;
 }
 
-.footer-center {
-  text-align: center;
+/* GOLD ICON */
+.gold-social {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top, #ffe9a3, #d4af37, #b8962e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.footer-right a {
-  color: var(--gold);
-  margin-left: 12px;
-  text-decoration: none;
+.gold-social svg {
+  width: 16px;
+  height: 16px;
+  fill: #000;
 }
 
-/* General Section Styles */
-.section {
-  padding: 80px 0;
-  min-height: 60vh;
-}
-
-.section h2 {
-  color: var(--gold);
-  font-size: 2.8rem;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-}
-
-.section p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
-}
-
-.section.dark {
-  background: var(--black);
-  color: var(--white);
-}
-
-.section.light {
-  background: var(--white);
-}
-
-.section-links a {
-  color: var(--gold);
-  margin-right: 2rem;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.section-links a:hover {
-  text-decoration: underline;
+.gold-social:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(212,175,55,.45);
 }
