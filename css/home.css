@@ -1,50 +1,246 @@
-<!-- HEADER -->
-<header class="nk-header">
-    <div class="nk-header-inner container">
-        <a href="index.html" class="nk-brand">
-            <span class="nk-brand-nk">NK</span>
-            <span class="nk-brand-ent">Enterprises</span>
-        </a>
+.hero {
+    height: calc(100vh - var(--nk-header-height) - var(--nk-footer-height));
+    position: relative;
+    overflow: hidden;
+}
 
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+.slider {
+    position: relative;
+    height: 100%;
+}
 
-        <nav class="nk-nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="products.html">Products</a>
-            <a href="services.html">Services</a>
-            <a href="#">Projects</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
 
-        <a href="contact.html" class="nk-cta">Get a Quote</a>
-    </div>
-    <div class="nk-divider"></div>
-</header>
+.slide.active { opacity: 1; }
 
-<!-- ... your other content (hero, sections, etc.) ... -->
+.slide-content {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 680px;
+    color: var(--white);
+    padding: 3rem 3.5rem;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    border: 1px solid rgba(201,164,76,0.25);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
 
-<!-- FOOTER -->
-<footer class="nk-footer">
-    <div class="nk-footer-inner container">
-        <div class="footer-left">
-            <!-- Optional: if you have a small logo image, otherwise keep text -->
-            <span class="footer-brand">
-                <span class="nk-brand-nk">NK</span>
-                <span class="nk-brand-ent">Enterprises</span>
-            </span>
-        </div>
+.slide h1 {
+    color: var(--gold);
+    font-size: 4.8rem;
+    margin-bottom: 0.8rem;
+    line-height: 1;
+    font-weight: bold;
+}
 
-        <div class="footer-center">
-            © 2025 NK Enterprises. All Rights Reserved.
-        </div>
+.slide h2 {
+    color: var(--white);
+    font-size: 2.8rem;
+    margin-bottom: 1.6rem;
+    font-weight: semi-bold;
+}
 
-        <div class="footer-right">
-            <span>Follow Us:</span>
-            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-    </div>
-</footer>
+.slide p {
+    font-size: 1.35rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+.slide-cta {
+    background: var(--gold);
+    color: var(--black);
+    padding: 14px 36px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.slide-cta:hover {
+    background: #d4b16f;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(201,164,76,0.5);
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 14px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background: var(--gold);
+    transform: scale(1.3);
+}
+
+/* Section content positioning */
+.section-content {
+    max-width: 680px;
+    padding: 3rem 3.5rem;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    border: 1px solid rgba(201,164,76,0.25);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    color: var(--black);
+}
+
+.section-content h2 {
+    color: var(--gold);
+}
+
+.section-content p {
+    color: var(--black);
+}
+
+/* Cards for services and products */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    padding: 0 25px;
+}
+
+.card {
+    background: rgba(255,255,255,0.9);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    perspective: 1000px;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: rotateY(10deg) scale(1.05);
+}
+
+.card h3 {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--black);
+    font-size: 1rem;
+}
+
+/* Split Section – vertical always */
+.split-section {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - var(--nk-header-height) - var(--nk-footer-height));
+}
+
+.split-left, .split-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 3rem;
+}
+
+.split-left {
+    background: var(--white);
+    color: var(--dark-text);
+}
+
+.split-right {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.split-content {
+    max-width: 520px;
+}
+
+.split-content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--gold);
+}
+
+.split-content ol {
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+.split-content ol strong {
+    color: var(--gold);
+}
+
+.btn {
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn.primary {
+    background: var(--black);
+    color: var(--white);
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 2px solid var(--black);
+    color: var(--black);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 992px) {
+    .cards {
+        grid-template-columns: 1fr;
+        position: relative;
+        bottom: auto;
+    }
+    .section-content {
+        background: rgba(255,255,255,0.8);
+    }
+    .section {
+        height: auto;
+        min-height: calc(100vh - var(--nk-header-height) - var(--nk-footer-height));
+    }
+    .slide-content {
+        left: 10%;
+        width: 80%;
+    }
+}
