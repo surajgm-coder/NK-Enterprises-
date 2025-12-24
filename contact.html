@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NK Enterprises - Contact Us</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="container header-content">
+            <div class="logo">
+                <span class="nk-bold">NK</span>
+                <span class="enterprises-golden">Enterprises</span>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <button class="cta-button">Get a Free Consultation</button>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <img src="images/menu/hamburger.png" alt="Menu" class="hamburger">
+                <img src="images/menu/close-icon.png" alt="Close" class="close-icon">
+            </div>
+        </div>
+        <div class="golden-divider"></div>
+    </header>
 
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <ul class="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><button class="cta-button mobile-cta">Get a Free Consultation</button></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Contact Section -->
+        <section class="contact full-width">
+            <div class="container">
+                <div class="section-patch left-align">
+                    <h1>Contact Us</h1>
+                    <h2>Get in Touch for Your Next Project</h2>
+                    <p>We're here to help! Fill out the form below or reach us via email or phone.</p>
+                    <p>Email: info@nkenterprises.com | Phone: +1-123-456-7890 | Address: 123 Luxury Lane, City, State, ZIP</p>
+                </div>
+                <form class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fixed-footer">
+        <div class="golden-divider"></div>
+        <div class="container footer-content">
+            <img src="images/logo.png" alt="NK Enterprises Logo" class="footer-logo">
+            <p class="copyright">© 2025 NK Enterprises. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/social/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/social/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/social/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/social/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const overlay = document.querySelector('.mobile-nav-overlay');
+        const hamburger = toggle.querySelector('.hamburger');
+        const closeIcon = toggle.querySelector('.close-icon');
+
+        toggle.addEventListener('click', () => {
+            overlay.classList.toggle('active');
+            hamburger.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
