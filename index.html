@@ -1,282 +1,192 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NK Enterprises - Homepage</title>
-  <meta name="description" content="Premium modular solutions for offices, homes, and factories.">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/home.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NK Enterprises - Home</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <div class="logo"><span class="bold">NK</span> <span class="golden">Enterprises</span></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="#projects">Projects & Process</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-    <button class="btn">Get a Free Quote</button>
-    <div class="golden-divider"></div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-slide">
-      <div class="container">
-        <div class="hero-content text-patch">
-          <h1>Elevate Your Spaces with Timeless Elegance</h1>
-          <h2>Transforming Offices, Homes, and Factories</h2>
-          <p>At NK Enterprises, we specialize in premium modular solutions, custom fixtures, and expert interior renovations that blend functionality with luxury.</p>
-          <button class="btn">Explore Our Solutions</button>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <span class="nk-bold">NK</span>
+                <span class="enterprises-golden">Enterprises</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <button class="cta-button">Get a Free Consultation</button>
+            </nav>
         </div>
-      </div>
-    </div>
-    <!-- Repeat for Slide 2,3,4 with respective text from PDF -->
-    <!-- Slide 2 -->
-    <div class="hero-slide" style="display:none;">
-      <div class="container">
-        <div class="hero-content text-patch">
-          <h1>Modular Furniture Redefined</h1>
-          <h2>Custom Designs for Modern Living and Working</h2>
-          <p>Discover adaptable, high-quality furniture systems tailored to your office, home, or industrial needs – durable, stylish, and built to last.</p>
-          <button class="btn">Explore Our Solutions</button>
+        <div class="divider golden-divider"></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="slideshow">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                    <img src="images/home/hero1.png" alt="Transformed Office Space">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h1>Elevate Your Spaces with Timeless Elegance</h1>
+                        <h2>Custom Fixture, Furniture & Modular Solutions</h2>
+                        <p>At NK Enterprises, we transform ordinary spaces into extraordinary environments tailored to your vision.</p>
+                        <button class="cta-button">Discover More</button>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img src="images/home/hero2.png" alt="Home Renovation">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h1>Crafting Perfection for Offices, Homes & Factories</h1>
+                        <h2>Innovative Interior Renovations & Complete Plant Setups</h2>
+                        <p>Experience seamless modifications and enhancements that blend functionality with luxury.</p>
+                        <button class="cta-button">Start Your Project</button>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <img src="images/home/hero3.png" alt="Factory Setup">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h1>Where Design Meets Durability</h1>
+                        <h2>Bespoke Solutions for Modern Living & Working</h2>
+                        <p>From modular furniture to full-scale renovations, we deliver excellence every time.</p>
+                        <button class="cta-button">Contact Us Today</button>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <div class="controls">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us">
+            <div class="section-patch">
+                <h1>About NK Enterprises</h1>
+                <h2>Transforming Spaces with Expertise and Innovation</h2>
+                <p>NK Enterprises is dedicated to working closely with clients to modify and enhance their spaces. We specialize in providing high-quality fixtures, furniture, and modular solutions for offices, homes, and factories. Our comprehensive services also include interior renovation and complete plant setup solutions.</p>
+                <p>With a passion for craftsmanship and a commitment to excellence, we bring your vision to life—creating functional, elegant, and durable environments that stand the test of time. Our team combines innovative design with practical expertise to deliver tailored results that exceed expectations.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="section-patch">
+                <h1>Our Services</h1>
+                <h2>Comprehensive Solutions for Every Space</h2>
+                <p>We offer a full range of services designed to elevate and optimize your environments. From initial consultation to final installation, our expert team ensures seamless execution and superior results.</p>
+            </div>
+            <div class="service-cards">
+                <div class="card">
+                    <img src="images/services/fabrication.png" alt="Interior Renovation">
+                    <h3>Interior Renovation</h3>
+                    <p>Transform existing spaces with modern upgrades, including flooring, walls, lighting, and custom finishes for homes, offices, and factories.</p>
+                </div>
+                <div class="card">
+                    <img src="images/services/office.png" alt="Modular Furniture Design & Installation">
+                    <h3>Modular Furniture Design & Installation</h3>
+                    <p>Customizable, flexible modular solutions that adapt to your changing needs—perfect for efficient and stylish layouts.</p>
+                </div>
+                <div class="card">
+                    <img src="images/services/turnkey.png" alt="Fixture & Furniture Supply">
+                    <h3>Fixture & Furniture Supply</h3>
+                    <p>Premium fixtures and furniture tailored for comfort, durability, and aesthetics in residential, commercial, and industrial settings.</p>
+                </div>
+                <div class="card">
+                    <img src="images/services/home.png" alt="Complete Plant Setup">
+                    <h3>Complete Plant Setup</h3>
+                    <p>End-to-end solutions for factory interiors, including layout planning, equipment integration, and functional enhancements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products">
+            <div class="section-patch">
+                <h1>Our Products</h1>
+                <h2>Premium Modular & Custom Creations</h2>
+                <p>Explore our curated selection of high-quality products designed for versatility and luxury. Each piece is crafted with precision to enhance functionality and style in any space.</p>
+            </div>
+            <div class="product-cards">
+                <div class="card">
+                    <img src="images/products/product1.png" alt="Modular Office Workstations">
+                    <h3>Modular Office Workstations</h3>
+                    <p>Ergonomic, reconfigurable desks and partitions for productive and modern workspaces.</p>
+                </div>
+                <div class="card">
+                    <img src="images/products/product2.png" alt="Home Modular Kitchens & Wardrobes">
+                    <h3>Home Modular Kitchens & Wardrobes</h3>
+                    <p>Space-efficient, customizable storage and cabinetry for elegant home interiors.</p>
+                </div>
+                <div class="card">
+                    <img src="images/products/product3.png" alt="Factory Storage Solutions">
+                    <h3>Factory Storage Solutions</h3>
+                    <p>Durable modular shelving and fixtures built for heavy-duty industrial use.</p>
+                </div>
+                <div class="card">
+                    <img src="images/products/product4.png" alt="Luxury Seating & Tables">
+                    <h3>Luxury Seating & Tables</h3>
+                    <p>Premium furniture collections combining comfort with sophisticated design.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process / CTA Section -->
+        <section class="cta-section">
+            <div class="cta-left">
+                <img src="images/home/project.png" alt="Completed Project">
+            </div>
+            <div class="cta-right">
+                <h1>Ready to Transform Your Space?</h1>
+                <h2>Let's Bring Your Vision to Life</h2>
+                <p>Our streamlined process ensures a hassle-free experience—from consultation and design to installation and final reveal. Partner with NK Enterprises for innovative solutions that perfectly suit your office, home, or factory needs.</p>
+                <button class="cta-button">Get Your Free Quote Today</button>
+                <button class="cta-button">Schedule a Consultation</button>
+                <button class="cta-button">Contact Us Now</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="divider golden-divider"></div>
+        <div class="footer-content">
+            <img src="images/logo.png" alt="NK Enterprises Logo" class="footer-logo">
+            <p class="copyright">© 2025 NK Enterprises. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/icons/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/icons/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/icons/linkedin.png" alt="LinkedIn"></a>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- Slide 3 & 4 similarly -->
-  </section>
+    </footer>
 
-  <!-- About Us Section -->
-  <section id="about">
-    <div class="container text-patch">
-      <h1>About NK Enterprises</h1>
-      <h2>Crafting Exceptional Spaces with Precision</h2>
-      <p>NK Enterprises partners with clients to modify and enhance their spaces. We provide premium fixtures, furniture, and modular solutions for offices, homes, and factories. Our services extend to expert interior work, renovation projects, and complete plant setup solutions. Committed to quality, innovation, and client satisfaction, we deliver tailored designs that combine aesthetic appeal with practical functionality—creating inspiring, high-performance environments.</p>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services">
-    <div class="container">
-      <div class="text-patch">
-        <h1>Our Services</h1>
-        <h2>Comprehensive Solutions for Every Space</h2>
-        <p>We offer end-to-end services, from consultation to installation, ensuring seamless execution and outstanding results.</p>
-      </div>
-      <div class="cards">
-        <div class="card"><h3>Custom Interior Design & Renovation</h3></div>
-        <div class="card"><h3>Modular Furniture Installation</h3></div>
-        <div class="card"><h3>Fixtures & Furniture Supply</h3></div>
-        <div class="card"><h3>Complete Plant Setup Solutions</h3></div>
-        <!-- Add more if needed, each 300px width on desktop -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Products Section -->
-  <section id="products">
-    <div class="container">
-      <div class="text-patch">
-        <h1>Our Products</h1>
-        <h2>Premium Modular Solutions for Modern Needs</h2>
-        <p>Explore our versatile, durable range of modular furniture and fixtures for offices, homes, and industrial settings.</p>
-      </div>
-      <div class="cards">
-        <div class="card"><h3>Modular Office Workstations</h3></div>
-        <div class="card"><h3>Home Modular Furniture</h3></div>
-        <div class="card"><h3>Factory & Industrial Solutions</h3></div>
-        <div class="card"><h3>Executive Fixtures & Accessories</h3></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects & Process Section -->
-  <section id="projects">
-    <div class="container">
-      <div class="text-patch">
-        <h1>Our Projects & Process</h1>
-        <h2>Delivering Excellence in Every Transformation</h2>
-        <p>Explore our recent projects featuring premium modular solutions, custom interiors, renovations, and setups. We follow a client-centric process:</p>
-        <ol class="process-list">
-          <li>Consultation & Vision Alignment</li>
-          <li>Custom Design & 3D Planning</li>
-          <li>Precision Manufacturing</li>
-          <li>Professional Installation</li>
-          <li>Final Perfection & Support</li>
-        </ol>
-      </div>
-      <div class="project-cards">
-        <div class="project-card">
-          <img src="images/home/project1.jpg" alt="Luxury Modern Office Transformation" loading="lazy">
-          <p>Luxury Modern Office Transformation: Complete modular workstations and executive fixtures for a corporate headquarters.</p>
-        </div>
-        <!-- Repeat for 2-6 with respective images and text from PDF -->
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section (Bottom band, above footer) -->
-  <section id="cta">
-    <div class="container">
-      <h1>Ready to Transform Your Space?</h1>
-      <h2>Partner with NK Enterprises for Premium Solutions</h2>
-      <p>Contact us today for a free consultation, customized quote, and expert guidance.</p>
-      <button class="btn">Get a Free Quote</button>
-      <button class="btn">Contact Us Now</button>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <img src="images/logo.png" alt="NK Enterprises Logo" class="logo-img">
-    <p>© 2025 NK Enterprises. All Rights Reserved.</p>
-    <div class="social-icons">
-      <a href="#">Facebook</a>
-      <a href="#">YouTube</a>
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-    </div>
-    <div class="golden-divider"></div> <!-- At top -->
-  </footer>
-
-  <script src="assets/slideshow.js"></script> <!-- Implement slideshow logic -->
+    <!-- Simple JS for slideshow auto/manual (optional, but added for functionality) -->
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        function showSlides() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add('active');
+        }
+        setInterval(showSlides, 5000); // Auto slide every 5 seconds
+    </script>
 </body>
 </html>
-document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.hero-slide');
-    const totalSlides = slides.length;
-
-    if (totalSlides === 0) return;
-
-    let currentSlide = 0;
-    let autoSlideInterval;
-
-    // =============================================
-    //  Basic show/hide function
-    // =============================================
-    function showSlide(index) {
-        // Hide all slides
-        slides.forEach(slide => {
-            slide.style.display = 'none';
-        });
-
-        // Show the selected one
-        slides[index].style.display = 'block';
-    }
-
-    // =============================================
-    //  Navigation functions
-    // =============================================
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        showSlide(currentSlide);
-    }
-
-    // =============================================
-    //  Auto-sliding
-    // =============================================
-    function startAutoSlide() {
-        autoSlideInterval = setInterval(nextSlide, 5000); // change slide every 5 seconds
-    }
-
-    function stopAutoSlide() {
-        clearInterval(autoSlideInterval);
-    }
-
-    // =============================================
-    //  Create navigation buttons (you can also put them in HTML)
-    // =============================================
-    function createNavigation() {
-        const navContainer = document.createElement('div');
-        navContainer.className = 'hero-nav';
-
-        const prevBtn = document.createElement('button');
-        prevBtn.className = 'nav-btn prev';
-        prevBtn.innerHTML = '&#10094;'; // left arrow
-        prevBtn.addEventListener('click', () => {
-            stopAutoSlide();
-            prevSlide();
-            startAutoSlide(); // restart timer
-        });
-
-        const nextBtn = document.createElement('button');
-        nextBtn.className = 'nav-btn next';
-        nextBtn.innerHTML = '&#10095;'; // right arrow
-        nextBtn.addEventListener('click', () => {
-            stopAutoSlide();
-            nextSlide();
-            startAutoSlide();
-        });
-
-        navContainer.appendChild(prevBtn);
-        navContainer.appendChild(nextBtn);
-
-        // Append to hero section
-        document.querySelector('.hero').appendChild(navContainer);
-    }
-
-    // =============================================
-    //  Optional: Dots navigation
-    // =============================================
-    function createDots() {
-        const dotsContainer = document.createElement('div');
-        dotsContainer.className = 'hero-dots';
-
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('span');
-            dot.className = 'dot';
-            if (i === 0) dot.classList.add('active');
-
-            dot.addEventListener('click', () => {
-                stopAutoSlide();
-                currentSlide = i;
-                showSlide(currentSlide);
-                updateDots();
-                startAutoSlide();
-            });
-
-            dotsContainer.appendChild(dot);
-        }
-
-        document.querySelector('.hero').appendChild(dotsContainer);
-    }
-
-    function updateDots() {
-        const dots = document.querySelectorAll('.hero-dots .dot');
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlide);
-        });
-    }
-
-    // =============================================
-    //  Initialize
-    // =============================================
-    function init() {
-        showSlide(0);
-        createNavigation();     // ← navigation arrows
-        createDots();           // ← dots (optional - comment out if not wanted)
-
-        startAutoSlide();
-
-        // Pause on hover (optional)
-        const hero = document.querySelector('.hero');
-        hero.addEventListener('mouseenter', stopAutoSlide);
-        hero.addEventListener('mouseleave', startAutoSlide);
-    }
-
-    init();
-});
