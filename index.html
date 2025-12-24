@@ -1,241 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>NK Enterprises - Premium Furniture & Interior Solutions</title>
-    <!-- Premium consistent fonts across whole website -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome for social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NK Enterprises</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="nk-header">
-        <div class="nk-header-inner container">
-            <a href="index.html" class="nk-brand">
-                <span class="nk-brand-nk">NK</span>
-                <span class="nk-brand-ent">Enterprises</span>
-            </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-            <nav class="nk-nav">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="products.html">Products</a>
-                <a href="services.html">Services</a>
-                <a href="#">Projects</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-            <a href="contact.html" class="nk-cta">Get a Quote</a>
-        </div>
-        <div class="nk-divider"></div>
-    </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="slider">
-            <div class="slide active" style="background-image: url('images/home/hero1.png');">
-                <div class="slide-content">
-                    <h1>NK Enterprises</h1>
-                    <h2>Delivering Quality, Reliability, and Excellence</h2>
-                    <p>We are committed to delivering high-quality products and professional services that align with modern industry standards and exceed client expectations.</p>
-                    <a href="#" class="slide-cta">Learn More</a>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('images/home/hero2.png');">
-                <div class="slide-content">
-                    <h1>Premium Products You Can Trust</h1>
-                    <h2>Built to Perform. Designed to Last.</h2>
-                    <p>Our products are carefully sourced and delivered with a strong focus on durability, quality assurance, and industry compliance.</p>
-                    <a href="products.html" class="slide-cta">View Products</a>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('images/home/hero3.png');">
-                <div class="slide-content">
-                    <h1>Professional Services That Deliver Results</h1>
-                    <h2>Reliable Support at Every Step</h2>
-                    <p>From expert consultation to dependable after-sales support, NK Enterprises ensures consistent service excellence and customer satisfaction.</p>
-                    <a href="services.html" class="slide-cta">Our Services</a>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('images/home/hero4.png');">
-                <div class="slide-content">
-                    <h1>Your Trusted Business Partner</h1>
-                    <h2>Committed to Long-Term Success</h2>
-                    <p>We focus on building long-term partnerships through transparency, consistency, and quality-driven business solutions.</p>
-                    <a href="contact.html" class="slide-cta">Contact Us</a>
-                </div>
-            </div>
-        </div>
-        <div class="slider-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </section>
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-white">NK</span>
+            <span class="logo-gold">Enterprises</span>
+        </a>
 
-    <!-- WHO WE ARE -->
-    <section class="section about">
-        <div class="container">
-            <div class="section-content">
-                <h2>Who We Are</h2>
-                <p>NK Enterprises is a premium furniture, fabrication, and interior solutions company, delivering custom-built environments for corporate offices, retail spaces, and luxury residences.</p>
-                <p>Driven by precision craftsmanship, high-grade materials, and refined aesthetics, we transform ideas into functional, elegant, and enduring spaces.</p>
-                <p>From concept to completion, our experienced team ensures every detail reflects superior quality, structural durability, and timeless design standards.</p>
-                <div class="section-links">
-                    <a href="about.html">Explore About Us →</a>
-                    <a href="products.html">View Our Products →</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        <nav class="nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
 
-    <!-- OUR SERVICES -->
-    <section class="section services">
-        <div class="container">
-            <div class="section-content">
-                <h2>Our Services</h2>
-                <p>We specialize in delivering high-quality furniture, fabrication, and interior solutions tailored to meet the unique requirements of residential, commercial, and retail environments.</p>
-            </div>
-            <div class="service-cards">
-                <div class="service-card">
-                    <img src="images/services/fabrication.png" alt="Custom Furniture">
-                    <h3>Custom Furniture</h3>
-                    <p>Bespoke furniture designed and expertly fabricated to match your space, style, and luxury standards.</p>
-                </div>
-                <div class="service-card">
-                    <img src="images/services/turnkey.png" alt="Retail & Mall Fixtures">
-                    <h3>Retail & Mall Fixtures</h3>
-                    <p>Premium retail fixtures and display units crafted to enhance visual merchandising and elevate brand presence.</p>
-                </div>
-                <div class="service-card">
-                    <img src="images/services/office.png" alt="Office Interiors">
-                    <h3>Office Interiors</h3>
-                    <p>Functional and elegant office interiors, including workstations, meeting areas, and executive cabins, designed for productivity and style.</p>
-                </div>
-                <div class="service-card">
-                    <img src="images/services/home.png" alt="Residential Interiors">
-                    <h3>Residential Interiors</h3>
-                    <p>Complete home interior solutions that blend modern design, comfort, and refined finishes for timeless living spaces.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <a href="contact.html" class="btn-gold">Get a Quote</a>
+    </div>
+    <div class="gold-divider"></div>
+</header>
 
-    <!-- OUR PRODUCTS -->
-    <section class="section products">
-        <div class="container">
-            <div class="section-content">
-                <h2>Our Products</h2>
-                <p>NK Enterprises offers a curated range of premium furniture and interior products designed to meet the demands of modern residential, commercial, and retail spaces.</p>
-                <p>Each product is crafted using high-quality materials, precise fabrication techniques, and refined finishes to ensure durability, functionality, and timeless appeal.</p>
-                <div class="section-links">
-                    <a href="products.html">Explore All Products →</a>
-                    <a href="contact.html">Request a Custom Solution →</a>
-                </div>
-            </div>
-            <div class="product-cards">
-                <div class="product-card">
-                    <img src="images/products/product1.png" alt="Product 1">
-                    <h3>Modern Sofa</h3>
-                    <p>Luxury modern sofa designed for comfort and style.</p>
-                </div>
-                <div class="product-card">
-                    <img src="images/products/product2.png" alt="Product 2">
-                    <h3>Executive Desk</h3>
-                    <p>Premium executive desk for professional environments.</p>
-                </div>
-                <div class="product-card">
-                    <img src="images/products/product3.png" alt="Product 3">
-                    <h3>Display Shelf</h3>
-                    <p>Elegant display shelf for retail and home use.</p>
-                </div>
-                <div class="product-card">
-                    <img src="images/products/product4.png" alt="Product 4">
-                    <h3>Luxury Bed</h3>
-                    <p>Timeless luxury bed with refined finishes.</p>
-                </div>
-            </div>
+<!-- ================= HERO SLIDER ================= -->
+<section class="hero">
+    <div class="hero-slide active" style="background-image:url('images/home/hero1.png')">
+        <div class="hero-content">
+            <h1>NK Enterprises</h1>
+            <h3>Delivering Quality, Reliability, and Excellence</h3>
+            <p>
+                We are committed to delivering high-quality products and professional
+                services that exceed client expectations.
+            </p>
+            <a href="about.html" class="btn-outline">Learn More</a>
         </div>
-    </section>
+    </div>
 
-    <!-- PROCESS + CTA SPLIT -->
-    <section class="split-section">
-        <div class="split-left">
-            <div class="split-content">
-                <h2>Our Process</h2>
-                <ol>
-                    <li><strong>Consultation</strong> — Understanding your vision, objectives, and functional requirements.</li>
-                    <li><strong>Design & Planning</strong> — Developing concepts, layouts, and material selections aligned with your space and style.</li>
-                    <li><strong>Fabrication</strong> — Precision manufacturing using premium materials and expert craftsmanship.</li>
-                    <li><strong>Installation</strong> — Professional on-site execution with attention to detail and timelines.</li>
-                    <li><strong>Final Delivery</strong> — Thorough quality checks followed by seamless handover.</li>
-                </ol>
-            </div>
+    <div class="hero-slide" style="background-image:url('images/home/hero2.png')">
+        <div class="hero-content">
+            <h1>Premium Products You Can Trust</h1>
+            <h3>Built to Perform. Designed to Last.</h3>
+            <p>
+                Our products are carefully sourced with a focus on durability
+                and quality assurance.
+            </p>
+            <a href="products.html" class="btn-outline">View Products</a>
         </div>
-        <div class="split-right">
-            <div class="split-content">
-                <h2>Let’s Build Something Exceptional Together</h2>
-                <p>From furniture and fabrication to complete interior solutions, we create spaces that define luxury, functionality, and long-lasting value.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn primary">Request a Consultation</a>
-                    <a href="#" class="btn secondary">View Our Work</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- FOOTER -->
-    <footer class="nk-footer">
-        <div class="nk-footer-divider"></div>
-        <div class="nk-footer-inner container">
-            <div class="footer-left">
-                <img src="images/logo.png" alt="NK Enterprises" class="footer-logo">
-            </div>
-            <div class="footer-center">
-                © 2025 NK Enterprises. All Rights Reserved.
-            </div>
-            <div class="footer-right">
-                <span>Follow Us:</span>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+    <div class="hero-slide" style="background-image:url('images/home/hero3.png')">
+        <div class="hero-content">
+            <h1>Professional Services</h1>
+            <h3>Reliable Support at Every Step</h3>
+            <p>
+                From consultation to after-sales support,
+                we ensure consistent excellence.
+            </p>
+            <a href="services.html" class="btn-outline">Our Services</a>
         </div>
-    </footer>
+    </div>
 
-    <!-- JavaScript -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Hero slider
-            const slides = document.querySelectorAll(".slide");
-            const dots = document.querySelectorAll(".dot");
-            let index = 0;
-            function showSlide(i) {
-                slides.forEach(s => s.classList.remove("active"));
-                dots.forEach(d => d.classList.remove("active"));
-                slides[i].classList.add("active");
-                dots[i].classList.add("active");
-            }
-            setInterval(() => {
-                index = (index + 1) % slides.length;
-                showSlide(index);
-            }, 5000);
-            dots.forEach((dot, i) => {
-                dot.addEventListener("click", () => {
-                    index = i;
-                    showSlide(index);
-                });
-            });
-            // Mobile menu
-            const toggle = document.querySelector('.menu-toggle');
-            const nav = document.querySelector('.nk-nav');
-            toggle?.addEventListener('click', () => nav.classList.toggle('active'));
-        });
-    </script>
+    <div class="hero-slide" style="background-image:url('images/home/hero4.png')">
+        <div class="hero-content">
+            <h1>Your Trusted Business Partner</h1>
+            <h3>Committed to Long-Term Success</h3>
+            <p>
+                We build partnerships through transparency,
+                consistency, and quality-driven solutions.
+            </p>
+            <a href="contact.html" class="btn-outline">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section-dark" style="background-image:url('images/home/about-home.png')">
+    <div class="section-content">
+        <h2>WHO WE ARE</h2>
+        <p>
+            NK Enterprises is a premium furniture, fabrication, and interior solutions company
+            delivering custom-built environments for offices, retail spaces, and luxury residences.
+        </p>
+        <p>
+            From concept to completion, our experienced team ensures superior quality,
+            durability, and timeless design.
+        </p>
+        <div class="links">
+            <a href="about.html">Explore About Us →</a>
+            <a href="products.html">View Our Products →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="section-light" style="background-image:url('images/home/services-home.png')">
+    <div class="section-content">
+        <h2>OUR SERVICES</h2>
+        <p>
+            We specialize in delivering high-quality furniture, fabrication,
+            and interior solutions tailored to diverse environments.
+        </p>
+        <ul>
+            <li><strong>Custom Furniture</strong> – Bespoke designs built to luxury standards.</li>
+            <li><strong>Retail & Mall Fixtures</strong> – Premium display units.</li>
+            <li><strong>Office Interiors</strong> – Functional, elegant workspaces.</li>
+            <li><strong>Residential Interiors</strong> – Complete home solutions.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="section-dark" style="background-image:url('images/home/products-home.png')">
+    <div class="section-content">
+        <h2>OUR PRODUCTS</h2>
+        <p>
+            We offer a curated range of premium furniture and interior products
+            crafted with precision and high-grade materials.
+        </p>
+        <div class="links">
+            <a href="products.html">Explore All Products →</a>
+            <a href="contact.html">Request a Custom Solution →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PROCESS + CTA ================= -->
+<section class="split-section">
+    <div class="split-left">
+        <h2>OUR PROCESS</h2>
+        <ol>
+            <li>Consultation</li>
+            <li>Design & Planning</li>
+            <li>Fabrication</li>
+            <li>Installation</li>
+            <li>Final Delivery</li>
+        </ol>
+    </div>
+
+    <div class="split-right">
+        <h2>Let’s Build Something Exceptional Together</h2>
+        <p>
+            From furniture to complete interior solutions,
+            we create spaces that define luxury and functionality.
+        </p>
+        <a href="contact.html" class="btn-dark">Request a Consultation</a>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+    <span>© 2025 NK Enterprises. All Rights Reserved.</span>
+</footer>
+
+<script>
+let slides = document.querySelectorAll('.hero-slide');
+let index = 0;
+setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}, 5000);
+</script>
+
 </body>
 </html>
