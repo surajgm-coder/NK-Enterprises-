@@ -10,147 +10,7 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     color: var(--white);
-    background: url('https://www.shutterstock.com/image-vector/abstract-gold-luxury-background-vector-260nw-2612128257.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.full-width {
-    width: 100%;
-}
-
-.left-align {
-    text-align: left;
-}
-
-.fixed-header, .fixed-footer {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-}
-
-.fixed-header {
-    top: 0;
-}
-
-.fixed-footer {
-    bottom: 0;
-}
-
-.header-content, .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 0;
-}
-
-.logo {
-    font-size: 2rem;
-}
-
-.nk-bold {
-    font-weight: bold;
-    color: var(--white);
-}
-
-.enterprises-golden {
-    color: var(--golden);
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    margin: 0 1.5rem;
-}
-
-nav a {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: var(--golden);
-}
-
-.cta-button {
-    background: var(--golden);
-    color: var(--white);
-    border: none;
-    padding: 0.8rem 1.5rem;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: 0.3s;
-}
-
-.cta-button:hover {
-    background: #b8960b;
-}
-
-.cta-button.black-bg {
-    background: var(--black);
-    color: var(--golden);
-}
-
-.golden-divider {
-    height: 3px;
-    background: var(--golden);
-}
-
-.footer-logo {
-    height: 50px;
-}
-
-.copyright {
-    font-size: 1rem;
-}
-
-.social-icons img {
-    height: 30px;
-    margin: 0 0.8rem;
-    filter: brightness(0) saturate(100%) invert(71%) sepia(58%) saturate(1) hue-rotate(0deg) brightness(94%) contrast(92%); /* Golden filter */
-}
-
-.social-icons img:hover {
-    opacity: 0.8;
-}
-
-@media (max-width: 768px) {
-    .header-content, .footer-content {
-        flex-direction: column;
-    }
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-/* common.css - Updated for Mobile Header & Footer */
-:root {
-    --golden: #D4AF37;
-    --dark-overlay: rgba(0, 0, 0, 0.6);
-    --patch-bg: rgba(0, 0, 0, 0.7);
-    --white: #FFFFFF;
-    --black: #000000;
-}
-
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: var(--white);
-    background: url('https://img.freepik.com/premium-vector/gold-background-luxury-gold-abstract-background-with-grainy-texture_794573-1316.jpg') no-repeat center center fixed;
+    background: url('../images/background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -183,6 +43,7 @@ body {
 }
 
 .logo { font-size: 2rem; }
+
 .nk-bold { font-weight: bold; color: var(--white); }
 .enterprises-golden { color: var(--golden); }
 
