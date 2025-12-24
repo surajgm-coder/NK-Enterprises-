@@ -13,25 +13,30 @@
 </head>
 <body>
     <!-- HEADER -->
-    <header class="nk-header">
-        <div class="nk-header-inner container">
-            <a href="index.html" class="nk-brand">
-                <span class="nk-brand-nk">NK</span>
-                <span class="nk-brand-ent">Enterprises</span>
-            </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-            <nav class="nk-nav">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="products.html">Products</a>
-                <a href="services.html">Services</a>
-                <a href="#">Projects</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-            <a href="contact.html" class="nk-cta">Get a Quote</a>
-        </div>
-        <div class="nk-divider"></div>
-    </header>
+<header class="nk-header">
+    <div class="nk-header-inner container">
+        <a href="index.html" class="nk-brand">
+            <span class="nk-brand-nk">NK</span>
+            <span class="nk-brand-ent">Enterprises</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+
+        <nav class="nk-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="#">Projects</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <a href="contact.html" class="nk-cta">Get a Quote</a>
+    </div>
+    <div class="nk-divider"></div>
+</header>
+
+<!-- ... your other content (hero, sections, etc.) ... -->
 
     <!-- HERO -->
     <section class="hero">
@@ -180,24 +185,31 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="nk-footer">
-        <div class="nk-footer-inner container">
-            <div class="footer-left">
-                <img src="images/logo.png" alt="NK Enterprises" class="footer-logo">
-            </div>
-            <div class="footer-center">
-                © 2025 NK Enterprises. All Rights Reserved.
-            </div>
-            <div class="footer-right">
-                <span>Follow Us:</span>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
+   <!-- FOOTER -->
+<footer class="nk-footer">
+    <div class="nk-footer-inner container">
+        <div class="footer-left">
+            <!-- Optional: if you have a small logo image, otherwise keep text -->
+            <span class="footer-brand">
+                <span class="nk-brand-nk">NK</span>
+                <span class="nk-brand-ent">Enterprises</span>
+            </span>
         </div>
-    </footer>
 
+        <div class="footer-center">
+            © 2025 NK Enterprises. All Rights Reserved.
+        </div>
+
+        <div class="footer-right">
+            <span>Follow Us:</span>
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</footer>
+    
     <!-- JavaScript -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
