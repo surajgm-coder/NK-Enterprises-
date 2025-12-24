@@ -1,16 +1,15 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NK Enterprises - Home</title>
+    <title>NK Enterprises - Transforming Spaces</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
+    <header class="fixed-header">
+        <div class="header-content container">
             <div class="logo">
                 <span class="nk-bold">NK</span>
                 <span class="enterprises-golden">Enterprises</span>
@@ -26,18 +25,18 @@
                 <button class="cta-button">Get a Free Consultation</button>
             </nav>
         </div>
-        <div class="divider golden-divider"></div>
+        <div class="golden-divider"></div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="slideshow">
+        <!-- Hero Section - Slideshow -->
+        <section class="hero full-width">
+            <div class="slideshow-container">
                 <!-- Slide 1 -->
-                <div class="slide active">
-                    <img src="images/home/hero1.png" alt="Transformed Office Space">
-                    <div class="overlay"></div>
-                    <div class="slide-content">
+                <div class="slide fade">
+                    <img src="https://www.flipspaces.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fm36fefkw%2Ffs-prod%2F51cabe54576f9c59be72bc83f9adf10a850747f9-917x638.webp&w=1920&q=75" alt="Luxury Office Interior">
+                    <div class="dark-overlay"></div>
+                    <div class="slide-content container left-align">
                         <h1>Elevate Your Spaces with Timeless Elegance</h1>
                         <h2>Custom Fixture, Furniture & Modular Solutions</h2>
                         <p>At NK Enterprises, we transform ordinary spaces into extraordinary environments tailored to your vision.</p>
@@ -45,10 +44,10 @@
                     </div>
                 </div>
                 <!-- Slide 2 -->
-                <div class="slide">
-                    <img src="images/home/hero2.png" alt="Home Renovation">
-                    <div class="overlay"></div>
-                    <div class="slide-content">
+                <div class="slide fade">
+                    <img src="https://www.aprodoor.com/wp-content/uploads/2025/04/Modern-living-room-with-large-windows-and-garden-view.webp" alt="Modern Home Interior">
+                    <div class="dark-overlay"></div>
+                    <div class="slide-content container left-align">
                         <h1>Crafting Perfection for Offices, Homes & Factories</h1>
                         <h2>Innovative Interior Renovations & Complete Plant Setups</h2>
                         <p>Experience seamless modifications and enhancements that blend functionality with luxury.</p>
@@ -56,10 +55,10 @@
                     </div>
                 </div>
                 <!-- Slide 3 -->
-                <div class="slide">
-                    <img src="images/home/hero3.png" alt="Factory Setup">
-                    <div class="overlay"></div>
-                    <div class="slide-content">
+                <div class="slide fade">
+                    <img src="https://www.starrco.com/wp-content/uploads/2023/01/Copy-of-Valeo1-Enhanced.jpg.webp" alt="Factory Plant Setup">
+                    <div class="dark-overlay"></div>
+                    <div class="slide-content container left-align">
                         <h1>Where Design Meets Durability</h1>
                         <h2>Bespoke Solutions for Modern Living & Working</h2>
                         <p>From modular furniture to full-scale renovations, we deliver excellence every time.</p>
@@ -67,126 +66,156 @@
                     </div>
                 </div>
                 <!-- Controls -->
-                <div class="controls">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
-                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </section>
 
         <!-- About Us Section -->
-        <section class="about-us">
-            <div class="section-patch">
-                <h1>About NK Enterprises</h1>
-                <h2>Transforming Spaces with Expertise and Innovation</h2>
-                <p>NK Enterprises is dedicated to working closely with clients to modify and enhance their spaces. We specialize in providing high-quality fixtures, furniture, and modular solutions for offices, homes, and factories. Our comprehensive services also include interior renovation and complete plant setup solutions.</p>
-                <p>With a passion for craftsmanship and a commitment to excellence, we bring your vision to life—creating functional, elegant, and durable environments that stand the test of time. Our team combines innovative design with practical expertise to deliver tailored results that exceed expectations.</p>
+        <section class="about-us full-width">
+            <div class="container">
+                <div class="section-patch left-align">
+                    <h1>About NK Enterprises</h1>
+                    <h2>Transforming Spaces with Expertise and Innovation</h2>
+                    <p>NK Enterprises is dedicated to working closely with clients to modify and enhance their spaces. We specialize in providing high-quality fixtures, furniture, and modular solutions for offices, homes, and factories. Our comprehensive services also include interior renovation and complete plant setup solutions.</p>
+                    <p>With a passion for craftsmanship and a commitment to excellence, we bring your vision to life—creating functional, elegant, and durable environments that stand the test of time. Our team combines innovative design with practical expertise to deliver tailored results that exceed expectations.</p>
+                </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section class="services">
-            <div class="section-patch">
-                <h1>Our Services</h1>
-                <h2>Comprehensive Solutions for Every Space</h2>
-                <p>We offer a full range of services designed to elevate and optimize your environments. From initial consultation to final installation, our expert team ensures seamless execution and superior results.</p>
-            </div>
-            <div class="service-cards">
-                <div class="card">
-                    <img src="images/services/fabrication.png" alt="Interior Renovation">
-                    <h3>Interior Renovation</h3>
-                    <p>Transform existing spaces with modern upgrades, including flooring, walls, lighting, and custom finishes for homes, offices, and factories.</p>
+        <section class="services full-width">
+            <div class="container">
+                <div class="section-patch left-align">
+                    <h1>Our Services</h1>
+                    <h2>Comprehensive Solutions for Every Space</h2>
+                    <p>We offer a full range of services designed to elevate and optimize your environments. From initial consultation to final installation, our expert team ensures seamless execution and superior results.</p>
                 </div>
-                <div class="card">
-                    <img src="images/services/office.png" alt="Modular Furniture Design & Installation">
-                    <h3>Modular Furniture Design & Installation</h3>
-                    <p>Customizable, flexible modular solutions that adapt to your changing needs—perfect for efficient and stylish layouts.</p>
-                </div>
-                <div class="card">
-                    <img src="images/services/turnkey.png" alt="Fixture & Furniture Supply">
-                    <h3>Fixture & Furniture Supply</h3>
-                    <p>Premium fixtures and furniture tailored for comfort, durability, and aesthetics in residential, commercial, and industrial settings.</p>
-                </div>
-                <div class="card">
-                    <img src="images/services/home.png" alt="Complete Plant Setup">
-                    <h3>Complete Plant Setup</h3>
-                    <p>End-to-end solutions for factory interiors, including layout planning, equipment integration, and functional enhancements.</p>
+                <div class="cards-grid">
+                    <div class="card-3d">
+                        <img src="https://cdn.decorilla.com/online-decorating/wp-content/uploads/2024/10/Office-interior-design-services-contemporary-results-by-Decorilla-1024x683.jpeg?width=900" alt="Interior Renovation">
+                        <h3>Interior Renovation</h3>
+                        <p>Transform existing spaces with modern upgrades, including flooring, walls, lighting, and custom finishes for homes, offices, and factories.</p>
+                    </div>
+                    <div class="card-3d">
+                        <img src="https://omo-oss-image.thefastimg.com/portal-saas/new2022071417205406509/cms/image/233fd526-e448-45fe-86ae-6995eceee7e2.jpg" alt="Modular Furniture">
+                        <h3>Modular Furniture Design & Installation</h3>
+                        <p>Customizable, flexible modular solutions that adapt to your changing needs—perfect for efficient and stylish layouts.</p>
+                    </div>
+                    <div class="card-3d">
+                        <img src="https://s2archviz.com/wp-content/uploads/2025/03/Luxury-Executive-Modern-Office-Interior-Design-Saudi-Arabia.webp" alt="Fixture Supply">
+                        <h3>Fixture & Furniture Supply</h3>
+                        <p>Premium fixtures and furniture tailored for comfort, durability, and aesthetics in residential, commercial, and industrial settings.</p>
+                    </div>
+                    <div class="card-3d">
+                        <img src="http://www.starrco.com/wp-content/uploads/2023/01/two-story-inplant-office-1.jpg-1.webp" alt="Plant Setup">
+                        <h3>Complete Plant Setup</h3>
+                        <p>End-to-end solutions for factory interiors, including layout planning, equipment integration, and functional enhancements.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Products Section -->
-        <section class="products">
-            <div class="section-patch">
-                <h1>Our Products</h1>
-                <h2>Premium Modular & Custom Creations</h2>
-                <p>Explore our curated selection of high-quality products designed for versatility and luxury. Each piece is crafted with precision to enhance functionality and style in any space.</p>
-            </div>
-            <div class="product-cards">
-                <div class="card">
-                    <img src="images/products/product1.png" alt="Modular Office Workstations">
-                    <h3>Modular Office Workstations</h3>
-                    <p>Ergonomic, reconfigurable desks and partitions for productive and modern workspaces.</p>
+        <section class="products full-width">
+            <div class="container">
+                <div class="section-patch left-align">
+                    <h1>Our Products</h1>
+                    <h2>Premium Modular & Custom Creations</h2>
+                    <p>Explore our curated selection of high-quality products designed for versatility and luxury. Each piece is crafted with precision to enhance functionality and style in any space.</p>
                 </div>
-                <div class="card">
-                    <img src="images/products/product2.png" alt="Home Modular Kitchens & Wardrobes">
-                    <h3>Home Modular Kitchens & Wardrobes</h3>
-                    <p>Space-efficient, customizable storage and cabinetry for elegant home interiors.</p>
-                </div>
-                <div class="card">
-                    <img src="images/products/product3.png" alt="Factory Storage Solutions">
-                    <h3>Factory Storage Solutions</h3>
-                    <p>Durable modular shelving and fixtures built for heavy-duty industrial use.</p>
-                </div>
-                <div class="card">
-                    <img src="images/products/product4.png" alt="Luxury Seating & Tables">
-                    <h3>Luxury Seating & Tables</h3>
-                    <p>Premium furniture collections combining comfort with sophisticated design.</p>
+                <div class="cards-grid">
+                    <div class="card-3d">
+                        <img src="https://cdn11.bigcommerce.com/s-i16nt17fuj/images/stencil/500x500/products/10772/46787/office-source-variant-collection-4-person-open-concept-cluster-desk-ostyp300__80670.1704996186.jpg?c=2" alt="Office Workstations">
+                        <h3>Modular Office Workstations</h3>
+                        <p>Ergonomic, reconfigurable desks and partitions for productive and modern workspaces.</p>
+                    </div>
+                    <div class="card-3d">
+                        <img src="https://www.asenseinterior.com/assets/uploads/2411c1c5ac734cd939a57138111cc131.jpg" alt="Home Kitchens & Wardrobes">
+                        <h3>Home Modular Kitchens & Wardrobes</h3>
+                        <p>Space-efficient, customizable storage and cabinetry for elegant home interiors.</p>
+                    </div>
+                    <div class="card-3d">
+                        <img src="https://www.apexwarehousesystems.com/wp-content/uploads/2021/05/Row-2.jpg" alt="Factory Storage">
+                        <h3>Factory Storage Solutions</h3>
+                        <p>Durable modular shelving and fixtures built for heavy-duty industrial use.</p>
+                    </div>
+                    <div class="card-3d">
+                        <img src="https://m.media-amazon.com/images/I/81LdbT3ILCL._AC_UF894,1000_QL80_.jpg" alt="Luxury Seating">
+                        <h3>Luxury Seating & Tables</h3>
+                        <p>Premium furniture collections combining comfort with sophisticated design.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Process / CTA Section -->
-        <section class="cta-section">
-            <div class="cta-left">
-                <img src="images/home/project.png" alt="Completed Project">
+        <section class="cta-section full-width">
+            <div class="cta-50-left">
+                <img src="https://images.squarespace-cdn.com/content/v1/650cd9d7534f0926f52d7adc/1718727508211-HNL5SIEDY0ZUPN196EJG/Copy+of+Budget+Calculator+%282%29.png" alt="Completed Project">
             </div>
-            <div class="cta-right">
-                <h1>Ready to Transform Your Space?</h1>
-                <h2>Let's Bring Your Vision to Life</h2>
-                <p>Our streamlined process ensures a hassle-free experience—from consultation and design to installation and final reveal. Partner with NK Enterprises for innovative solutions that perfectly suit your office, home, or factory needs.</p>
-                <button class="cta-button">Get Your Free Quote Today</button>
-                <button class="cta-button">Schedule a Consultation</button>
-                <button class="cta-button">Contact Us Now</button>
+            <div class="cta-50-right golden-bg">
+                <div class="left-align">
+                    <h1>Ready to Transform Your Space?</h1>
+                    <h2>Let's Bring Your Vision to Life</h2>
+                    <p>Our streamlined process ensures a hassle-free experience—from consultation and design to installation and final reveal. Partner with NK Enterprises for innovative solutions that perfectly suit your office, home, or factory needs.</p>
+                    <button class="cta-button black-bg">Get Your Free Quote Today</button>
+                    <button class="cta-button black-bg">Schedule a Consultation</button>
+                    <button class="cta-button black-bg">Contact Us Now</button>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="divider golden-divider"></div>
-        <div class="footer-content">
+    <footer class="fixed-footer">
+        <div class="golden-divider"></div>
+        <div class="footer-content container">
             <img src="images/logo.png" alt="NK Enterprises Logo" class="footer-logo">
             <p class="copyright">© 2025 NK Enterprises. All Rights Reserved.</p>
             <div class="social-icons">
-                <a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="images/icons/youtube.png" alt="YouTube"></a>
-                <a href="#"><img src="images/icons/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="images/icons/linkedin.png" alt="LinkedIn"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Facebook_Logo_2023.png" alt="Facebook"></a> <!-- Replace with golden versions -->
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/YouTube_social_white_simplified_logo.svg" alt="YouTube"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
             </div>
         </div>
     </footer>
 
-    <!-- Simple JS for slideshow auto/manual (optional, but added for functionality) -->
     <script>
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-        function showSlides() {
-            slides.forEach(slide => slide.classList.remove('active'));
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].classList.add('active');
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
         }
-        setInterval(showSlides, 5000); // Auto slide every 5 seconds
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+
+        // Auto slide
+        setInterval(() => plusSlides(1), 6000);
     </script>
 </body>
 </html>
