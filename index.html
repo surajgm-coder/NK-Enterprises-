@@ -3,174 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NK Enterprises</title>
-
-    <!-- CSS -->
+    <title>NK Enterprises | Premium Furniture & Interiors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/home.css">
+    <style>
+        /* Home Specific Layout [cite: 38] */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/home/hero1.png');
+            background-size: cover;
+            display: flex;
+            align-items: center; /* Vertical alignment [cite: 83] */
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, min-minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+        /* 3D Service Cards [cite: 122, 127, 138] */
+        .card-3d {
+            background: var(--glass-overlay);
+            padding: 30px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+        .card-3d:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 15px 35px rgba(201, 162, 77, 0.2);
+            border: 1px solid var(--luxury-gold);
+        }
+
+        /* Process Section (Always Vertical) [cite: 161] */
+        .process-step {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 2px solid var(--luxury-gold);
+        }
+    </style>
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-    <div class="header-inner">
-        <a href="index.html" class="logo">
-            <span class="logo-white">NK</span>
-            <span class="logo-gold">Enterprises</span>
-        </a>
-
-        <nav class="nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="products.html">Products</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-
-        <a href="contact.html" class="btn-gold">Get a Quote</a>
-    </div>
-    <div class="gold-divider"></div>
-</header>
-
-<!-- ================= HERO SLIDER ================= -->
-<section class="hero">
-    <div class="hero-slide active" style="background-image:url('images/home/hero1.png')">
-        <div class="hero-content">
-            <h1>NK Enterprises</h1>
-            <h3>Delivering Quality, Reliability, and Excellence</h3>
-            <p>
-                We are committed to delivering high-quality products and professional
-                services that exceed client expectations.
-            </p>
-            <a href="about.html" class="btn-outline">Learn More</a>
+    <section class="hero">
+        <div class="container">
+            <div class="glass-box" style="max-width: 600px;">
+                <h1>NK ENTERPRISES</h1>
+                <h2 style="color: white; font-size: 1.5rem; margin: 10px 0;">Delivering Quality, Reliability & Excellence</h2>
+                <p>We specialize in premium furniture, fabrication, and interior solutions, delivering refined craftsmanship for corporate offices, retail spaces, and luxury residences.</p>
+                <div style="margin-top: 30px;">
+                    <a href="#" class="btn-gold">View Our Work</a>
+                    <a href="#" class="btn-outline">Get a Consultation</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="hero-slide" style="background-image:url('images/home/hero2.png')">
-        <div class="hero-content">
-            <h1>Premium Products You Can Trust</h1>
-            <h3>Built to Perform. Designed to Last.</h3>
-            <p>
-                Our products are carefully sourced with a focus on durability
-                and quality assurance.
-            </p>
-            <a href="products.html" class="btn-outline">View Products</a>
+    <section style="padding: 100px 0;">
+        <div class="container">
+            <div class="glass-box">
+                <h2>WHO WE ARE</h2>
+                <p style="margin: 20px 0;">NK Enterprises is a premium furniture and interior solutions company committed to creating elegant, functional, and durable spaces. From concept to completion, our team ensures every detail reflects excellence.</p>
+                <a href="about.html" style="color: var(--luxury-gold); text-decoration: none;">Explore About Us →</a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="hero-slide" style="background-image:url('images/home/hero3.png')">
-        <div class="hero-content">
-            <h1>Professional Services</h1>
-            <h3>Reliable Support at Every Step</h3>
-            <p>
-                From consultation to after-sales support,
-                we ensure consistent excellence.
-            </p>
-            <a href="services.html" class="btn-outline">Our Services</a>
+    <section style="background: white; color: black; padding: 100px 0;">
+        <div class="container">
+            <h2 style="color: var(--luxury-gold);">OUR SERVICES</h2>
+            <p>We deliver end-to-end furniture, fabrication, and interior solutions.</p>
+            
+            <div class="service-grid">
+                <div class="card-3d">
+                    <h3 style="font-size: 1.2rem;">Custom Furniture</h3>
+                    <p style="color: #444;">Bespoke furniture crafted to match your space and aesthetic.</p>
+                </div>
+                <div class="card-3d">
+                    <h3 style="font-size: 1.2rem;">Retail & Mall Fixtures</h3>
+                    <p style="color: #444;">High-end display units and fixtures for retail excellence.</p>
+                </div>
+                <div class="card-3d">
+                    <h3 style="font-size: 1.2rem;">Office Interiors</h3>
+                    <p style="color: #444;">Professional workspaces designed for productivity.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="hero-slide" style="background-image:url('images/home/hero4.png')">
-        <div class="hero-content">
-            <h1>Your Trusted Business Partner</h1>
-            <h3>Committed to Long-Term Success</h3>
-            <p>
-                We build partnerships through transparency,
-                consistency, and quality-driven solutions.
-            </p>
-            <a href="contact.html" class="btn-outline">Contact Us</a>
+    <section style="padding: 100px 0;">
+        <div class="container">
+            <div class="glass-box">
+                <h2>OUR PROCESS</h2>
+                <div class="process-step"><strong>1. Consultation</strong> - Understanding your vision.</div>
+                <div class="process-step"><strong>2. Design</strong> - Concepts and layouts.</div>
+                <div class="process-step"><strong>3. Fabrication</strong> - Precision manufacturing.</div>
+                <div class="process-step"><strong>4. Installation</strong> - Professional execution.</div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ================= ABOUT ================= -->
-<section class="section-dark" style="background-image:url('images/home/about-home.png')">
-    <div class="section-content">
-        <h2>WHO WE ARE</h2>
-        <p>
-            NK Enterprises is a premium furniture, fabrication, and interior solutions company
-            delivering custom-built environments for offices, retail spaces, and luxury residences.
-        </p>
-        <p>
-            From concept to completion, our experienced team ensures superior quality,
-            durability, and timeless design.
-        </p>
-        <div class="links">
-            <a href="about.html">Explore About Us →</a>
-            <a href="products.html">View Our Products →</a>
+    <footer>
+        <div class="container">
+            <p style="color: var(--luxury-gold);">© 2025 NK Enterprises. All Rights Reserved.</p>
         </div>
-    </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section class="section-light" style="background-image:url('images/home/services-home.png')">
-    <div class="section-content">
-        <h2>OUR SERVICES</h2>
-        <p>
-            We specialize in delivering high-quality furniture, fabrication,
-            and interior solutions tailored to diverse environments.
-        </p>
-        <ul>
-            <li><strong>Custom Furniture</strong> – Bespoke designs built to luxury standards.</li>
-            <li><strong>Retail & Mall Fixtures</strong> – Premium display units.</li>
-            <li><strong>Office Interiors</strong> – Functional, elegant workspaces.</li>
-            <li><strong>Residential Interiors</strong> – Complete home solutions.</li>
-        </ul>
-    </div>
-</section>
-
-<!-- ================= PRODUCTS ================= -->
-<section class="section-dark" style="background-image:url('images/home/products-home.png')">
-    <div class="section-content">
-        <h2>OUR PRODUCTS</h2>
-        <p>
-            We offer a curated range of premium furniture and interior products
-            crafted with precision and high-grade materials.
-        </p>
-        <div class="links">
-            <a href="products.html">Explore All Products →</a>
-            <a href="contact.html">Request a Custom Solution →</a>
-        </div>
-    </div>
-</section>
-
-<!-- ================= PROCESS + CTA ================= -->
-<section class="split-section">
-    <div class="split-left">
-        <h2>OUR PROCESS</h2>
-        <ol>
-            <li>Consultation</li>
-            <li>Design & Planning</li>
-            <li>Fabrication</li>
-            <li>Installation</li>
-            <li>Final Delivery</li>
-        </ol>
-    </div>
-
-    <div class="split-right">
-        <h2>Let’s Build Something Exceptional Together</h2>
-        <p>
-            From furniture to complete interior solutions,
-            we create spaces that define luxury and functionality.
-        </p>
-        <a href="contact.html" class="btn-dark">Request a Consultation</a>
-    </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-    <span>© 2025 NK Enterprises. All Rights Reserved.</span>
-</footer>
-
-<script>
-let slides = document.querySelectorAll('.hero-slide');
-let index = 0;
-setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-}, 5000);
-</script>
+    </footer>
 
 </body>
 </html>
