@@ -1,0 +1,114 @@
+main {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: calc(100vh - 200px);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--golden);
+    margin: 0.5rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--golden);
+    margin: 0.5rem 0;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.section-patch {
+    background: var(--patch-bg);
+    padding: 3rem;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card-3d {
+    background: var(--patch-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.5s, box-shadow 0.5s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card-3d:hover {
+    transform: translateY(-15px) perspective(1000px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.card-3d img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-3d h3 {
+    color: var(--golden);
+    padding: 1rem;
+}
+
+/* CTA */
+.cta-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cta-50-left, .cta-50-right {
+    flex: 1 1 50%;
+    min-height: 500px;
+}
+
+.cta-50-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.golden-bg {
+    background: var(--golden);
+    display: flex;
+    align-items: center;
+}
+
+.golden-bg .left-align {
+    max-width: 600px;
+    padding: 3rem;
+}
+
+.golden-bg h1, .golden-bg h2 {
+    color: var(--black);
+}
+
+.golden-bg p {
+    color: var(--black);
+}
+
+@media (max-width: 768px) {
+    .cta-50-left, .cta-50-right {
+        flex: 1 1 100%;
+    }
+    main {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    p { font-size: 1.1rem; }
+    .section-patch { padding: 2rem; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .cta-50-left, .cta-50-right { min-height: 400px; }
+}
