@@ -137,3 +137,171 @@ nav a:hover {
         text-align: center;
     }
 }
+/* common.css - Updated for Mobile Header & Footer */
+:root {
+    --golden: #D4AF37;
+    --dark-overlay: rgba(0, 0, 0, 0.6);
+    --patch-bg: rgba(0, 0, 0, 0.7);
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--white);
+    background: url('https://img.freepik.com/premium-vector/gold-background-luxury-gold-abstract-background-with-grainy-texture_794573-1316.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.full-width { width: 100%; }
+
+.left-align { text-align: left; }
+
+.fixed-header, .fixed-footer {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+}
+
+.fixed-header { top: 0; }
+.fixed-footer { bottom: 0; }
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo { font-size: 2rem; }
+.nk-bold { font-weight: bold; color: var(--white); }
+.enterprises-golden { color: var(--golden); }
+
+.desktop-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-nav li { margin: 0 1rem; }
+
+.desktop-nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.desktop-nav a:hover { color: var(--golden); }
+
+.cta-button {
+    background: var(--golden);
+    color: var(--white);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.cta-button.black-bg {
+    background: var(--black);
+    color: var(--golden);
+}
+
+.golden-divider {
+    height: 3px;
+    background: var(--golden);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.footer-logo { height: 50px; }
+.copyright { font-size: 0.9rem; }
+
+.social-icons img {
+    height: 35px;
+    margin: 0 0.8rem;
+}
+
+/* Mobile Header */
+.mobile-menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle img {
+    height: 30px;
+}
+
+.close-icon { display: none; }
+
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+}
+
+.mobile-nav-overlay.active {
+    transform: translateY(0);
+}
+
+.mobile-nav {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.mobile-nav li {
+    margin: 1.5rem 0;
+}
+
+.mobile-nav a {
+    color: var(--white);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.mobile-nav a:hover { color: var(--golden); }
+
+.mobile-cta {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 868px) {
+    .desktop-nav { display: none; }
+    .mobile-menu-toggle { display: block; }
+    .header-content { padding: 1rem; }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    .social-icons { order: -1; }
+}
