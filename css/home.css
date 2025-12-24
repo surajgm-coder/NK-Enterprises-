@@ -10,7 +10,70 @@
 .hero-slide:nth-child(2) { background-image: url('../images/home/hero2.jpg'); }
 .hero-slide:nth-child(3) { background-image: url('../images/home/hero3.jpg'); }
 .hero-slide:nth-child(4) { background-image: url('../images/home/hero4.jpg'); }
-/* Slideshow JS: Auto-slide every 5s, manual arrows (add via assets/slideshow.js) */
+/* Hero Navigation */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.nav-btn {
+    pointer-events: all;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    font-size: 2.5rem;
+    padding: 12px 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.nav-btn.prev {
+    border-radius: 0 8px 8px 0;
+}
+
+.nav-btn.next {
+    border-radius: 8px 0 0 8px;
+}
+
+/* Dots */
+.hero-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background: #d4af37; /* golden color */
+    transform: scale(1.2);
+}
 
 /* Sections General */
 section { padding: 50px 0; } /* 30px on mobile */
