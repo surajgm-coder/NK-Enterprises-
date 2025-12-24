@@ -1,257 +1,50 @@
-:root {
-    --nk-header-height: 80px;
-    --nk-footer-height: 80px;
-    --gold: #c9a44c;
-    --black: #000000;
-    --white: #ffffff;
-    --dark-text: #111111;
-    --gray-bg: #f8f8f8;
-}
+<!-- HEADER -->
+<header class="nk-header">
+    <div class="nk-header-inner container">
+        <a href="index.html" class="nk-brand">
+            <span class="nk-brand-nk">NK</span>
+            <span class="nk-brand-ent">Enterprises</span>
+        </a>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
 
-body {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    color: var(--dark-text);
-    background: var(--gray-bg);
-    line-height: 1.7;
-    padding-top: var(--nk-header-height);
-    padding-bottom: var(--nk-footer-height);
-}
+        <nav class="nk-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="#">Projects</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
 
-/* Headings - Modern & Premium */
-h1, h2, .section h2, .slide h1, .slide h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: var(--dark-text);
-}
+        <a href="contact.html" class="nk-cta">Get a Quote</a>
+    </div>
+    <div class="nk-divider"></div>
+</header>
 
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 0 25px;
-}
+<!-- ... your other content (hero, sections, etc.) ... -->
 
-/* HEADER - improved premium look */
-.nk-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--nk-header-height);
-    background: var(--black);
-    z-index: 1000;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-}
+<!-- FOOTER -->
+<footer class="nk-footer">
+    <div class="nk-footer-inner container">
+        <div class="footer-left">
+            <!-- Optional: if you have a small logo image, otherwise keep text -->
+            <span class="footer-brand">
+                <span class="nk-brand-nk">NK</span>
+                <span class="nk-brand-ent">Enterprises</span>
+            </span>
+        </div>
 
-.nk-header-inner {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+        <div class="footer-center">
+            © 2025 NK Enterprises. All Rights Reserved.
+        </div>
 
-.nk-brand {
-    text-decoration: none;
-    display: flex;
-    align-items: baseline;
-    font-family: 'Playfair Display', serif;
-}
-
-.nk-brand-nk {
-    color: var(--white);
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.nk-brand-ent {
-    color: var(--gold);
-    font-size: 24px;
-    font-weight: 700;
-    margin-left: 12px;
-    letter-spacing: 0.8px;
-    font-style: italic;
-}
-
-/* Hover effect on brand */
-.nk-brand:hover .nk-brand-nk {
-    color: var(--gold);
-    transition: color 0.3s ease;
-}
-
-.nk-nav {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.nk-nav a {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.nk-nav a:hover, .nk-nav a.active {
-    color: var(--gold);
-    border-bottom: 1px solid var(--gold);
-}
-
-.nk-cta {
-    background: var(--gold);
-    color: var(--black);
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.nk-cta:hover {
-    background: #d4b16f;
-    transform: translateY(-2px);
-}
-
-.nk-divider {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
-}
-
-/* Mobile toggle (hidden on desktop) */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 32px;
-    cursor: pointer;
-}
-
-/* FOOTER */
-.nk-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: var(--nk-footer-height);
-    background: var(--black);
-    color: var(--white);
-    z-index: 999;
-}
-
-.nk-footer-inner {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    font-size: 15px;
-}
-
-.footer-logo {
-    height: 50px;
-    width: auto;
-}
-
-.footer-center {
-    color: var(--gold);
-}
-
-.footer-right {
-    display: flex;
-    align-items: center;
-    gap: 26px;
-}
-
-.footer-right i {
-    font-size: 28px;
-    color: var(--gold);
-    transition: color 0.3s;
-}
-
-.footer-right a:hover i {
-    color: #d4b16f;
-}
-
-/* General section styles */
-.section {
-    height: calc(100vh - var(--nk-header-height) - var(--nk-footer-height));
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.58);
-    z-index: 1;
-}
-
-.section .container {
-    position: relative;
-    z-index: 2;
-}
-
-.section h2 {
-    color: var(--gold);
-}
-
-.section p {
-    color: var(--white);
-}
-
-.section-links a {
-    color: var(--gold);
-    margin-right: 2.5rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: opacity 0.3s;
-}
-
-.section-links a:hover {
-    opacity: 0.8;
-}
-
-/* Mobile responsive */
-@media (max-width: 992px) {
-    .nk-header {
-        height: 60px;
-    }
-    :root {
-        --nk-header-height: 60px;
-    }
-    .menu-toggle { display: block; margin-left: auto; margin-right: 20px; }
-    .nk-nav { display: none; flex-direction: column; position: absolute; top: var(--nk-header-height); left: 0; width: 100%; background: var(--black); padding: 20px 0; }
-    .nk-nav.active { display: flex; }
-    .nk-nav a { padding: 16px 40px; text-align: center; font-size: 14px; }
-    .nk-cta { margin: 20px 40px; display: block; text-align: center; }
-    .section { padding: 90px 0; }
-    .section h2 { font-size: 3rem; }
-    .slide h1 { font-size: 3.6rem; }
-    .slide h2 { font-size: 2.2rem; }
-    .nk-brand-nk { font-size: 24px; }
-    .nk-brand-ent { font-size: 18px; }
-    .nk-header-inner { justify-content: center; }
-    .nk-brand { margin: 0 auto; }
-    .footer-right { justify-content: center; width: 100%; }
-}
+        <div class="footer-right">
+            <span>Follow Us:</span>
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</footer>
