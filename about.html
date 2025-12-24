@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NK Enterprises - About Us</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="container header-content">
+            <div class="logo">
+                <span class="nk-bold">NK</span>
+                <span class="enterprises-golden">Enterprises</span>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <button class="cta-button">Get a Free Consultation</button>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <img src="images/menu/hamburger.png" alt="Menu" class="hamburger">
+                <img src="images/menu/close-icon.png" alt="Close" class="close-icon">
+            </div>
+        </div>
+        <div class="golden-divider"></div>
+    </header>
 
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <ul class="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><button class="cta-button mobile-cta">Get a Free Consultation</button></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- About Us Section (Expanded) -->
+        <section class="about-us full-width">
+            <div class="container">
+                <div class="section-patch left-align">
+                    <h1>About NK Enterprises</h1>
+                    <h2>Transforming Spaces with Expertise and Innovation</h2>
+                    <p>NK Enterprises is dedicated to working closely with clients to modify and enhance their spaces. We specialize in providing high-quality fixtures, furniture, and modular solutions for offices, homes, and factories. Our comprehensive services also include interior renovation and complete plant setup solutions.</p>
+                    <p>With a passion for craftsmanship and a commitment to excellence, we bring your vision to life—creating functional, elegant, and durable environments that stand the test of time. Our team combines innovative design with practical expertise to deliver tailored results that exceed expectations.</p>
+                    <p>Founded in 2010, NK Enterprises has grown from a small furniture supplier to a full-service interior solutions provider. Our team of 50+ experts includes designers, engineers, and craftsmen who have completed over 500 projects across India. We pride ourselves on using sustainable materials and the latest technology to ensure every project is eco-friendly and future-proof.</p>
+                    <p>Our mission is to create spaces that inspire productivity, comfort, and style. Whether it's a corporate office, a cozy home, or an efficient factory, we handle every detail with precision and care.</p>
+                    <button class="cta-button">Learn More About Our Team</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section full-width">
+            <div class="cta-50-left">
+                <img src="images/home/cta-project.png" alt="Team at Work">
+            </div>
+            <div class="cta-50-right golden-bg">
+                <div class="left-align container">
+                    <h1>Join Our Journey</h1>
+                    <h2>Discover How We Can Help You</h2>
+                    <p>Contact us today to start transforming your space with NK Enterprises.</p>
+                    <button class="cta-button black-bg">Contact Us</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fixed-footer">
+        <div class="golden-divider"></div>
+        <div class="container footer-content">
+            <img src="images/logo.png" alt="NK Enterprises Logo" class="footer-logo">
+            <p class="copyright">© 2025 NK Enterprises. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/social/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/social/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/social/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/social/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const overlay = document.querySelector('.mobile-nav-overlay');
+        const hamburger = toggle.querySelector('.hamburger');
+        const closeIcon = toggle.querySelector('.close-icon');
+
+        toggle.addEventListener('click', () => {
+            overlay.classList.toggle('active');
+            hamburger.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
