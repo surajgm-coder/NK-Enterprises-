@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +10,12 @@
 </head>
 <body>
     <header class="fixed-header">
-        <div class="header-content container">
+        <div class="container header-content">
             <div class="logo">
                 <span class="nk-bold">NK</span>
                 <span class="enterprises-golden">Enterprises</span>
             </div>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -24,17 +25,32 @@
                 </ul>
                 <button class="cta-button">Get a Free Consultation</button>
             </nav>
+            <div class="mobile-menu-toggle">
+                <img src="https://png.pngtree.com/png-vector/20251120/ourmid/pngtree-3d-gold-hamburger-menu-icon-png-image_18015363.webp" alt="Menu" class="hamburger">
+                <img src="https://www.shutterstock.com/image-illustration/luxury-golden-close-icon-red-260nw-1075191929.jpg" alt="Close" class="close-icon">
+            </div>
         </div>
         <div class="golden-divider"></div>
     </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <ul class="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><button class="cta-button mobile-cta">Get a Free Consultation</button></li>
+        </ul>
+    </div>
 
     <main>
         <!-- Hero Section - Slideshow -->
         <section class="hero full-width">
             <div class="slideshow-container">
-                <!-- Slide 1 -->
                 <div class="slide fade">
-                    <img src="https://www.flipspaces.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fm36fefkw%2Ffs-prod%2F51cabe54576f9c59be72bc83f9adf10a850747f9-917x638.webp&w=1920&q=75" alt="Luxury Office Interior">
+                    <img src="https://officebanao.com/wp-content/uploads/2023/08/Modern-Office-Design_hero.png" alt="Luxury Office Interior">
                     <div class="dark-overlay"></div>
                     <div class="slide-content container left-align">
                         <h1>Elevate Your Spaces with Timeless Elegance</h1>
@@ -43,9 +59,8 @@
                         <button class="cta-button">Discover More</button>
                     </div>
                 </div>
-                <!-- Slide 2 -->
                 <div class="slide fade">
-                    <img src="https://www.aprodoor.com/wp-content/uploads/2025/04/Modern-living-room-with-large-windows-and-garden-view.webp" alt="Modern Home Interior">
+                    <img src="https://cdn.home-designing.com/wp-content/uploads/2019/08/Modern-Moroccan-interior.jpg" alt="Modern Home Interior">
                     <div class="dark-overlay"></div>
                     <div class="slide-content container left-align">
                         <h1>Crafting Perfection for Offices, Homes & Factories</h1>
@@ -54,9 +69,8 @@
                         <button class="cta-button">Start Your Project</button>
                     </div>
                 </div>
-                <!-- Slide 3 -->
                 <div class="slide fade">
-                    <img src="https://www.starrco.com/wp-content/uploads/2023/01/Copy-of-Valeo1-Enhanced.jpg.webp" alt="Factory Plant Setup">
+                    <img src="http://www.starrco.com/wp-content/uploads/2023/01/two-story-inplant-office-1.jpg-1.webp" alt="Factory Plant Setup">
                     <div class="dark-overlay"></div>
                     <div class="slide-content container left-align">
                         <h1>Where Design Meets Durability</h1>
@@ -65,7 +79,6 @@
                         <button class="cta-button">Contact Us Today</button>
                     </div>
                 </div>
-                <!-- Controls -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
@@ -103,17 +116,17 @@
                         <p>Transform existing spaces with modern upgrades, including flooring, walls, lighting, and custom finishes for homes, offices, and factories.</p>
                     </div>
                     <div class="card-3d">
-                        <img src="https://omo-oss-image.thefastimg.com/portal-saas/new2022071417205406509/cms/image/233fd526-e448-45fe-86ae-6995eceee7e2.jpg" alt="Modular Furniture">
+                        <img src="https://www.cubicles.com/uploads/light-box/79/images/ais-modular-workstations-divi-6x8x50-cluster.jpg" alt="Modular Furniture">
                         <h3>Modular Furniture Design & Installation</h3>
                         <p>Customizable, flexible modular solutions that adapt to your changing needs—perfect for efficient and stylish layouts.</p>
                     </div>
                     <div class="card-3d">
-                        <img src="https://s2archviz.com/wp-content/uploads/2025/03/Luxury-Executive-Modern-Office-Interior-Design-Saudi-Arabia.webp" alt="Fixture Supply">
+                        <img src="https://www.dgicommunications.com/wp-content/uploads/2022/11/DGI-Communications-modern-office-design.jpg" alt="Fixture Supply">
                         <h3>Fixture & Furniture Supply</h3>
                         <p>Premium fixtures and furniture tailored for comfort, durability, and aesthetics in residential, commercial, and industrial settings.</p>
                     </div>
                     <div class="card-3d">
-                        <img src="http://www.starrco.com/wp-content/uploads/2023/01/two-story-inplant-office-1.jpg-1.webp" alt="Plant Setup">
+                        <img src="https://www.io-group.com/fileadmin/_processed_/5/c/csm_ProduktionUndProzesse_Fabrikhalle_Innenansicht.jpeg_d36ccd3d4d.jpg" alt="Plant Setup">
                         <h3>Complete Plant Setup</h3>
                         <p>End-to-end solutions for factory interiors, including layout planning, equipment integration, and functional enhancements.</p>
                     </div>
@@ -131,7 +144,7 @@
                 </div>
                 <div class="cards-grid">
                     <div class="card-3d">
-                        <img src="https://cdn11.bigcommerce.com/s-i16nt17fuj/images/stencil/500x500/products/10772/46787/office-source-variant-collection-4-person-open-concept-cluster-desk-ostyp300__80670.1704996186.jpg?c=2" alt="Office Workstations">
+                        <img src="https://cdn.autonomous.ai/production/ecm/250117/office-setup.webp" alt="Office Workstations">
                         <h3>Modular Office Workstations</h3>
                         <p>Ergonomic, reconfigurable desks and partitions for productive and modern workspaces.</p>
                     </div>
@@ -141,12 +154,12 @@
                         <p>Space-efficient, customizable storage and cabinetry for elegant home interiors.</p>
                     </div>
                     <div class="card-3d">
-                        <img src="https://www.apexwarehousesystems.com/wp-content/uploads/2021/05/Row-2.jpg" alt="Factory Storage">
+                        <img src="https://voltsmile.com/wp-content/uploads/2024/12/Wuta_20241114_140938.jpg" alt="Factory Storage">
                         <h3>Factory Storage Solutions</h3>
                         <p>Durable modular shelving and fixtures built for heavy-duty industrial use.</p>
                     </div>
                     <div class="card-3d">
-                        <img src="https://m.media-amazon.com/images/I/81LdbT3ILCL._AC_UF894,1000_QL80_.jpg" alt="Luxury Seating">
+                        <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/03/3d-rendering-luxury-house-interior-design-min.jpg" alt="Luxury Seating">
                         <h3>Luxury Seating & Tables</h3>
                         <p>Premium furniture collections combining comfort with sophisticated design.</p>
                     </div>
@@ -157,10 +170,10 @@
         <!-- Process / CTA Section -->
         <section class="cta-section full-width">
             <div class="cta-50-left">
-                <img src="https://images.squarespace-cdn.com/content/v1/650cd9d7534f0926f52d7adc/1718727508211-HNL5SIEDY0ZUPN196EJG/Copy+of+Budget+Calculator+%282%29.png" alt="Completed Project">
+                <img src="https://cdn.decorilla.com/online-decorating/wp-content/uploads/2024/05/Contemporary-executive-office-design-by-Decorilla-1024x574.jpeg?width=900" alt="Completed Project">
             </div>
             <div class="cta-50-right golden-bg">
-                <div class="left-align">
+                <div class="left-align container">
                     <h1>Ready to Transform Your Space?</h1>
                     <h2>Let's Bring Your Vision to Life</h2>
                     <p>Our streamlined process ensures a hassle-free experience—from consultation and design to installation and final reveal. Partner with NK Enterprises for innovative solutions that perfectly suit your office, home, or factory needs.</p>
@@ -174,48 +187,47 @@
 
     <footer class="fixed-footer">
         <div class="golden-divider"></div>
-        <div class="footer-content container">
+        <div class="container footer-content">
             <img src="images/logo.png" alt="NK Enterprises Logo" class="footer-logo">
             <p class="copyright">© 2025 NK Enterprises. All Rights Reserved.</p>
             <div class="social-icons">
-                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Facebook_Logo_2023.png" alt="Facebook"></a> <!-- Replace with golden versions -->
-                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/YouTube_social_white_simplified_logo.svg" alt="YouTube"></a>
-                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"></a>
-                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                <a href="#"><img src="https://i.pinimg.com/736x/a3/91/bc/a391bca4494d0bf1337a90561ed97e65.jpg" alt="Facebook"></a>
+                <a href="#"><img src="https://www.shutterstock.com/image-illustration/golden-youtube-play-icon-red-260nw-1077019322.jpg" alt="YouTube"></a>
+                <a href="#"><img src="https://img.freepik.com/premium-vector/luxury-golden-insta-logo-redesigned_929072-47.jpg" alt="Instagram"></a>
+                <a href="#"><img src="https://thumbs.dreamstime.com/b/link-208221179.jpg" alt="LinkedIn"></a>
             </div>
         </div>
     </footer>
 
     <script>
+        // Slideshow
         let slideIndex = 1;
         showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
+        function plusSlides(n) { showSlides(slideIndex += n); }
+        function currentSlide(n) { showSlides(slideIndex = n); }
         function showSlides(n) {
-            let i;
             let slides = document.getElementsByClassName("slide");
             let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
+            for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+            for (let i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
         }
-
-        // Auto slide
         setInterval(() => plusSlides(1), 6000);
+
+        // Mobile Menu Toggle
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const overlay = document.querySelector('.mobile-nav-overlay');
+        const hamburger = toggle.querySelector('.hamburger');
+        const closeIcon = toggle.querySelector('.close-icon');
+
+        toggle.addEventListener('click', () => {
+            overlay.classList.toggle('active');
+            hamburger.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>
