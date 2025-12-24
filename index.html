@@ -151,3 +151,132 @@
   <script src="assets/slideshow.js"></script> <!-- Implement slideshow logic -->
 </body>
 </html>
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.hero-slide');
+    const totalSlides = slides.length;
+
+    if (totalSlides === 0) return;
+
+    let currentSlide = 0;
+    let autoSlideInterval;
+
+    // =============================================
+    //  Basic show/hide function
+    // =============================================
+    function showSlide(index) {
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+
+        // Show the selected one
+        slides[index].style.display = 'block';
+    }
+
+    // =============================================
+    //  Navigation functions
+    // =============================================
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    // =============================================
+    //  Auto-sliding
+    // =============================================
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 5000); // change slide every 5 seconds
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+
+    // =============================================
+    //  Create navigation buttons (you can also put them in HTML)
+    // =============================================
+    function createNavigation() {
+        const navContainer = document.createElement('div');
+        navContainer.className = 'hero-nav';
+
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'nav-btn prev';
+        prevBtn.innerHTML = '&#10094;'; // left arrow
+        prevBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            prevSlide();
+            startAutoSlide(); // restart timer
+        });
+
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'nav-btn next';
+        nextBtn.innerHTML = '&#10095;'; // right arrow
+        nextBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            nextSlide();
+            startAutoSlide();
+        });
+
+        navContainer.appendChild(prevBtn);
+        navContainer.appendChild(nextBtn);
+
+        // Append to hero section
+        document.querySelector('.hero').appendChild(navContainer);
+    }
+
+    // =============================================
+    //  Optional: Dots navigation
+    // =============================================
+    function createDots() {
+        const dotsContainer = document.createElement('div');
+        dotsContainer.className = 'hero-dots';
+
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'dot';
+            if (i === 0) dot.classList.add('active');
+
+            dot.addEventListener('click', () => {
+                stopAutoSlide();
+                currentSlide = i;
+                showSlide(currentSlide);
+                updateDots();
+                startAutoSlide();
+            });
+
+            dotsContainer.appendChild(dot);
+        }
+
+        document.querySelector('.hero').appendChild(dotsContainer);
+    }
+
+    function updateDots() {
+        const dots = document.querySelectorAll('.hero-dots .dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    // =============================================
+    //  Initialize
+    // =============================================
+    function init() {
+        showSlide(0);
+        createNavigation();     // ← navigation arrows
+        createDots();           // ← dots (optional - comment out if not wanted)
+
+        startAutoSlide();
+
+        // Pause on hover (optional)
+        const hero = document.querySelector('.hero');
+        hero.addEventListener('mouseenter', stopAutoSlide);
+        hero.addEventListener('mouseleave', startAutoSlide);
+    }
+
+    init();
+});
