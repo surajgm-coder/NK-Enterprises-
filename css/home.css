@@ -197,3 +197,34 @@ p {
         max-width: 90%;
     }
 }
+/* home.css - Minor tweaks for mobile */
+main {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.8rem; }
+p { font-size: 1.1rem; }
+
+.hero { height: 80vh; }
+
+.slide-content {
+    max-width: 80%;
+    padding: 1rem;
+}
+
+.section-patch { padding: 2rem; }
+
+.cards-grid { grid-template-columns: 1fr; }
+
+.cta-section { flex-direction: column; }
+
+.cta-50-left, .cta-50-right { min-height: 400px; }
+
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    .slide-content { top: 40%; max-width: 90%; }
+    .cards-grid { grid-template-columns: 1fr; }
+}
