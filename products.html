@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NK Enterprises - Products</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="container header-content">
+            <div class="logo">
+                <span class="nk-bold">NK</span>
+                <span class="enterprises-golden">Enterprises</span>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <button class="cta-button">Get a Free Consultation</button>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <img src="images/menu/hamburger.png" alt="Menu" class="hamburger">
+                <img src="images/menu/close-icon.png" alt="Close" class="close-icon">
+            </div>
+        </div>
+        <div class="golden-divider"></div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <ul class="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><button class="cta-button mobile-cta">Get a Free Consultation</button></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Products Section (Expanded) -->
+        <section class="products full-width">
+            <div class="container">
+                <div class="section-patch left-align">
+                    <h1>Our Products</h1>
+                    <h2>Premium Modular & Custom Creations</h2>
+                    <p>Explore our curated selection of high-quality products designed for versatility and luxury. Each piece is crafted with precision to enhance functionality and style in any space.</p>
+                    <p>Our products are made from premium materials, ensuring longevity and style. Browse below for details and specifications.</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="card-3d">
+                        <img src="images/products/office-workstations.png" alt="Office Workstations">
+                        <h3>Modular Office Workstations</h3>
+                        <p>Ergonomic, reconfigurable desks and partitions for productive and modern workspaces. Available in various sizes and finishes, with options for integrated power and data ports.</p>
+                    </div>
+                    <div class="card-3d">
+                        <img src="images/products/home-kitchens.png" alt="Home Kitchens & Wardrobes">
+                        <h3>Home Modular Kitchens & Wardrobes</h3>
+                        <p>Space-efficient, customizable storage and cabinetry for elegant home interiors. Features soft-close drawers, LED lighting, and eco-friendly materials.</p>
+                    </div>
+                    <div class="card-3d">
+                        <img src="images/products/factory-storage.png" alt="Factory Storage">
+                        <h3>Factory Storage Solutions</h3>
+                        <p>Durable modular shelving and fixtures built for heavy-duty industrial use. Corrosion-resistant, with adjustable heights and load capacities up to 500kg per shelf.</p>
+                    </div>
+                    <div class="card-3d">
+                        <img src="images/products/luxury-seating.png" alt="Luxury Seating">
+                        <h3>Luxury Seating & Tables</h3>
+                        <p>Premium furniture collections combining comfort with sophisticated design. Upholstered in high-quality fabrics, with options for custom colors and sizes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section full-width">
+            <div class="cta-50-left">
+                <img src="images/home/cta-project.png" alt="Product Showcase">
+            </div>
+            <div class="cta-50-right golden-bg">
+                <div class="left-align container">
+                    <h1>Shop Our Products</h1>
+                    <h2>Find the Perfect Fit</h2>
+                    <p>Contact us for product catalogs or custom orders.</p>
+                    <button class="cta-button black-bg">Browse Catalog</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fixed-footer">
+        <div class="golden-divider"></div>
+        <div class="container footer-content">
+            <img src="images/logo.png" alt="NK Enterprises Logo" class="footer-logo">
+            <p class="copyright">© 2025 NK Enterprises. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/social/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/social/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/social/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/social/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const overlay = document.querySelector('.mobile-nav-overlay');
+        const hamburger = toggle.querySelector('.hamburger');
+        const closeIcon = toggle.querySelector('.close-icon');
+
+        toggle.addEventListener('click', () => {
+            overlay.classList.toggle('active');
+            hamburger.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
