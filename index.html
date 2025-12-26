@@ -1,149 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NK Enterprises - Home</title>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/home.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NK Enterprises - Fabricating Tomorrow's Innovation</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <!-- Top Header (Utility Bar) -->
-    <div class="top-header">
-        <p>
-            📧 <a href="mailto:support@nkenters.com">support@nkenters.com</a>
-            📞 +91 70215 40314 | +91 63723 52301
-        </p>
+
+<header>
+  <div class="top-bar">
+    <div class="container" style="max-width:1200px;margin:0 auto;padding:0 20px;">
+      support@nkenters.com | +91 70215 40314 | +91 63723 52301 &nbsp;&nbsp;
+      <a href="contact.html" class="btn">GET A QUOTE</a>
+    </div>
+  </div>
+  <div class="header-content">
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="NK Enterprises Logo"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Projects</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Carousel -->
+  <section class="hero">
+    <div class="slide active" style="background-image:url('images/home/hero1.jpg');">
+      <div class="hero-content">
+        <h1>Innovative Fabrication Solutions</h1>
+        <p>Crafting Excellence in Metal Fabrication & Fabrication Services</p>
+        <a href="services.html" class="btn">OUR SERVICES</a> &nbsp;
+        <a href="tel:+917021540314" class="btn">+91 70215 40314</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image:url('images/home/hero2.jpg');">
+      <div class="hero-content">
+        <h1>Precision Metal Fabrication</h1>
+        <p>Delivering custom solutions with cutting-edge technology and unmatched precision</p>
+        <a href="about.html" class="btn">READ MORE</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image:url('images/home/hero3.jpg');">
+      <div class="hero-content">
+        <h1>Quality You Can Trust</h1>
+        <p>From sheet metal work to custom components – built to exceed expectations</p>
+        <a href="contact.html" class="btn">GET A QUOTE</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image:url('images/home/hero4.jpg');">
+      <div class="hero-content">
+        <h1>Dedicated to Tomorrow's Innovation</h1>
+        <p>Partner with us for reliable, innovative, and timely fabrication services</p>
+        <a href="products.html" class="btn">VIEW GALLERY</a>
+      </div>
     </div>
 
-    <!-- Main Header (Navigation) -->
-    <header class="main-header">
-        <img src="images/logo.png" alt="NK Enterprises Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Projects</a></li> <!-- Assuming products.html covers Projects; adjust if needed -->
-                <li><a href="#">Gallery</a></li> <!-- Placeholder; add gallery.html if needed -->
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        <button class="cta-button">GET A QUOTE</button>
-    </header>
+    <div class="hero-dots">
+      <span class="dot active" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </section>
 
-    <!-- Hero Section (Banner Area) -->
-    <section class="hero">
-        <!-- Assuming a simple background or slider; use hero1-4.png as needed -->
-        <div class="hero-content">
-            <h1>Innovative Furniture & Interior Solutions</h1>
-            <strong class="highlight">Metal & Wooden Fabrication Excellence</strong>
-            <p>Crafting premium metal and wooden furniture, fixtures, and custom-designed interiors for offices, homes, and industrial spaces with precision, durability, and modern aesthetics.</p>
-            <div class="hero-buttons">
-                <button>OUR SERVICES</button>
-                <button>📞 +91 70215 40314</button>
-            </div>
-        </div>
-        <!-- Example: Add images as background or carousel if needed -->
-    </section>
+  <section class="welcome">
+    <h2>Welcome to NK Enterprises</h2>
+    <p>Your trusted partner for premium metal fabrication solutions. Founded in 2023, we specialize in delivering custom metal fabrication and fabrication services with a focus on innovation, precision, and quality that exceed expectations.</p>
+    <a href="about.html" class="btn">READ MORE</a>
 
-    <!-- Welcome Section (First Content Block) -->
-    <section class="welcome">
-        <h2>Welcome to NK Enterprises</h2>
-        <p>Your trusted manufacturing partner for metal and wooden furniture, custom fixtures, and complete interior solutions.</p>
-        <p>Founded in 2023, NK Enterprises is driven by innovation, craftsmanship, and a commitment to delivering functional yet visually striking spaces tailored to client needs.</p>
-        <p>We specialize in custom-designed furniture and interior fabrication for residential, commercial, and industrial environments.</p>
-        <button>READ MORE</button>
-    </section>
+    <div class="icons-row">
+      <div class="icon-box">
+        <h3>Expertise & Innovation</h3>
+        <p>Cutting-edge techniques and growing experience</p>
+      </div>
+      <div class="icon-box">
+        <h3>High-Quality Craftsmanship</h3>
+        <p>Delivering precision and top-notch fabrication results</p>
+      </div>
+      <div class="icon-box">
+        <h3>Customer-Centric Focus</h3>
+        <p>Tailored solutions to meet your unique project needs</p>
+      </div>
+    </div>
 
-    <!-- About Preview (Second Welcome Block - Image + Text) -->
-    <section class="about-preview">
-        <div class="text-content">
-            <h2>Welcome to NK Enterprises</h2>
-            <p>At NK Enterprises, we combine modern fabrication techniques with skilled workmanship to manufacture high-quality metal and wooden furniture, bespoke fixtures, and customized interior solutions.</p>
-            <p>From office furniture and home interiors to plant and industrial interior works, every project is designed with precision, durability, and attention to detail—ensuring long-lasting value and client satisfaction.</p>
-            <button>READ MORE</button>
-        </div>
-        <img src="images/home/about-home.png" alt="About NK Enterprises" class="preview-image">
-    </section>
+    <div class="stats">
+      <div class="stat-item"><h2>2+</h2><p>Years of Experience</p></div>
+      <div class="stat-item"><h2>100+</h2><p>Projects Completed</p></div>
+      <div class="stat-item"><h2>50+</h2><p>Skilled Workforce</p></div>
+      <div class="stat-item"><h2>99%</h2><p>Client Satisfaction</p></div>
+    </div>
+  </section>
 
-    <!-- Core Strengths (Icon Boxes) -->
-    <section class="core-strengths">
-        <div class="strength-box">
-            <span class="icon">🔧</span>
-            <h3>Expertise & Innovation</h3>
-            <p>Advanced fabrication techniques combined with modern design thinking to deliver innovative furniture and interior solutions.</p>
-        </div>
-        <div class="strength-box">
-            <span class="icon">🛠</span>
-            <h3>High-Quality Craftsmanship</h3>
-            <p>Precision manufacturing using premium metal and wood materials for durable, elegant, and functional results.</p>
-        </div>
-        <div class="strength-box">
-            <span class="icon">🤝</span>
-            <h3>Customer-Centric Focus</h3>
-            <p>Every project is custom-designed to match client requirements, space utilization, and aesthetic preferences.</p>
-        </div>
-    </section>
+  <section class="why-choose">
+    <h2 style="text-align:center;">Why Choose Us?</h2>
+    <ul>
+      <li>Experienced Team</li>
+      <li>Premium-Quality Craftsmanship</li>
+      <li>Cutting-Edge Technology</li>
+      <li>Timely Delivery</li>
+      <li>Innovative approach to every project</li>
+      <li>Commitment to precision and durability</li>
+    </ul>
+    <div style="text-align:center;"><a href="contact.html" class="btn">GET A QUOTE</a></div>
+  </section>
+</main>
 
-    <!-- Side CTA Section (Right Image Text) -->
-    <section class="side-cta">
-        <div class="cta-text">
-            <h2>Dedicated to Designing & Manufacturing Tomorrow’s Interiors</h2>
-            <button>GET A QUOTE</button>
-        </div>
-        <img src="images/home/services-home.png" alt="Side CTA Image" class="cta-image">
-    </section>
+<footer>
+  <div class="footer-content">
+    <div class="footer-column">
+      <h3>Our Services</h3>
+      <ul>
+        <li>Metal Fabrication</li>
+        <li>Custom Fabrication</li>
+        <li>Sheet Metal Work</li>
+        <li>Welding & Assembly</li>
+        <li>Industrial Fabrication Projects</li>
+        <li>Architectural Fabrication</li>
+        <li>Equipment Fabrication</li>
+        <li>Custom Metal Components</li>
+      </ul>
+      <a href="services.html" class="btn">READ MORE</a>
+    </div>
+    <div class="footer-column">
+      <h3>Recent Projects</h3>
+      <p>Explore our portfolio of completed projects showcasing precision and innovation.</p>
+      <a href="products.html" class="btn">VIEW GALLERY</a>
+    </div>
+    <div class="footer-column">
+      <h3>Why Choose Us</h3>
+      <ul>
+        <li>Experienced Team</li>
+        <li>Premium-Quality Craftsmanship</li>
+        <li>Cutting-Edge Technology</li>
+        <li>Timely Delivery</li>
+      </ul>
+      <a href="contact.html" class="btn">GET A QUOTE</a>
+    </div>
+    <div class="footer-column">
+      <div class="logo"><img src="images/logo.png" alt="NK Enterprises" style="height:50px;"></div>
+      <p>Fabricating Tomorrow's Innovation</p>
+      <p>Established in 2023, NK Enterprises is a growing provider of metal fabrication solutions in Bhiwandi.</p>
+      <p>📍 A2/A/001, Sai Residency, Bhadwad Naka, Bhiwandi – 421302</p>
+      <p>📞 +91 70215 40314 | +91 63723 52301</p>
+      <p>📧 support@nkenters.com</p>
+      <a href="contact.html" class="btn">GET A QUOTE</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 NK Enterprises. All Rights Reserved. &nbsp; | &nbsp;
+    Privacy Policy | Terms of Service | Sitemap
+    <div class="social-icons">
+      <a href="#">Facebook</a> <a href="#">Twitter</a> <a href="#">LinkedIn</a> <a href="#">Instagram</a>
+    </div>
+  </div>
+</footer>
 
-    <!-- Company Stats (Dark Strip) -->
-    <section class="company-stats">
-        <div class="stat">
-            <h3>2023</h3>
-            <p>Company Established</p>
-        </div>
-        <div class="stat">
-            <h3>100+</h3>
-            <p>Custom Designs Delivered</p>
-        </div>
-        <div class="stat">
-            <h3>Skilled Workforce</h3>
-            <p>Trained Fabrication Team</p>
-        </div>
-        <div class="stat">
-            <h3>99%</h3>
-            <p>Client Satisfaction</p>
-        </div>
-    </section>
+<script>
+  // Hero Slideshow
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose">
-        <h2>WHY CHOOSE US?</h2>
-        <div class="choose-box">
-            <h3>Our Services</h3>
-            <p>Manufacturing of metal & wooden furniture, custom fixtures, modular designs, and complete interior works.</p>
-        </div>
-        <div class="choose-box">
-            <h3>Recent Projects</h3>
-            <p>Office interiors, residential furniture, plant interiors, and bespoke fabrication solutions.</p>
-        </div>
-        <div class="choose-box">
-            <h3>Why NK Enterprises</h3>
-            <p>Precision manufacturing, custom designs, quality materials, and timely project execution.</p>
-        </div>
-        <div class="choose-box">
-            <h3>About NK Enterprises</h3>
-            <p>A growing fabrication company delivering modern furniture and interior solutions since 2023.</p>
-        </div>
-    </section>
+  function showSlide(n) {
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    slides[n].classList.add('active');
+    dots[n].classList.add('active');
+  }
 
-    <!-- Footer Content (Company Details) -->
-    <footer>
-        <h3>NK ENTERPRISES</h3>
-        <p>Manufacturing of Metal & Wooden Furniture, Fixtures & Custom Interior Solutions</p>
-        <p>📍 Address: A2/A/001, Sai Residency, Bhadwad Naka, Bhiwandi – 421302</p>
-        <p>📞 Contact: +91 70215 40314 | +91 63723 52301</p>
-        <p>📧 <a href="mailto:support@nkenters.com">support@nkenters.com</a></p>
-        <p>🧾 GST: 27AVVPP0654M1ZR 🏭 MSME: MH-33-0391366</p>
-    </footer>
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  function currentSlide(n) {
+    slideIndex = n;
+    showSlide(n);
+  }
+
+  setInterval(nextSlide, 6000); // Auto every 6 seconds
+  showSlide(0); // Initial
+</script>
+
 </body>
 </html>
