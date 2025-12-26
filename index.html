@@ -1,124 +1,149 @@
-/* home.css - Home page specific layout & content styles */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NK Enterprises - Home</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- Top Header (Utility Bar) -->
+    <div class="top-header">
+        <p>
+            📧 <a href="mailto:support@nkenters.com">support@nkenters.com</a>
+            📞 +91 70215 40314 | +91 63723 52301
+        </p>
+    </div>
 
-/* Hero Section */
-.hero {
-    background-color: var(--secondary-color); /* Or use background-image with hero1.png etc. */
-    text-align: center;
-    padding: 100px 20px;
-}
+    <!-- Main Header (Navigation) -->
+    <header class="main-header">
+        <img src="images/logo.png" alt="NK Enterprises Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Projects</a></li> <!-- Assuming products.html covers Projects; adjust if needed -->
+                <li><a href="#">Gallery</a></li> <!-- Placeholder; add gallery.html if needed -->
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button class="cta-button">GET A QUOTE</button>
+    </header>
 
-.hero .highlight {
-    color: var(--accent-color);
-    font-size: 1.2em;
-}
+    <!-- Hero Section (Banner Area) -->
+    <section class="hero">
+        <!-- Assuming a simple background or slider; use hero1-4.png as needed -->
+        <div class="hero-content">
+            <h1>Innovative Furniture & Interior Solutions</h1>
+            <strong class="highlight">Metal & Wooden Fabrication Excellence</strong>
+            <p>Crafting premium metal and wooden furniture, fixtures, and custom-designed interiors for offices, homes, and industrial spaces with precision, durability, and modern aesthetics.</p>
+            <div class="hero-buttons">
+                <button>OUR SERVICES</button>
+                <button>📞 +91 70215 40314</button>
+            </div>
+        </div>
+        <!-- Example: Add images as background or carousel if needed -->
+    </section>
 
-.hero-buttons {
-    margin-top: 20px;
-}
+    <!-- Welcome Section (First Content Block) -->
+    <section class="welcome">
+        <h2>Welcome to NK Enterprises</h2>
+        <p>Your trusted manufacturing partner for metal and wooden furniture, custom fixtures, and complete interior solutions.</p>
+        <p>Founded in 2023, NK Enterprises is driven by innovation, craftsmanship, and a commitment to delivering functional yet visually striking spaces tailored to client needs.</p>
+        <p>We specialize in custom-designed furniture and interior fabrication for residential, commercial, and industrial environments.</p>
+        <button>READ MORE</button>
+    </section>
 
-.hero-buttons button {
-    margin: 0 10px;
-}
+    <!-- About Preview (Second Welcome Block - Image + Text) -->
+    <section class="about-preview">
+        <div class="text-content">
+            <h2>Welcome to NK Enterprises</h2>
+            <p>At NK Enterprises, we combine modern fabrication techniques with skilled workmanship to manufacture high-quality metal and wooden furniture, bespoke fixtures, and customized interior solutions.</p>
+            <p>From office furniture and home interiors to plant and industrial interior works, every project is designed with precision, durability, and attention to detail—ensuring long-lasting value and client satisfaction.</p>
+            <button>READ MORE</button>
+        </div>
+        <img src="images/home/about-home.png" alt="About NK Enterprises" class="preview-image">
+    </section>
 
-/* Welcome Section */
-.welcome {
-    padding: 50px 20px;
-    text-align: center;
-}
+    <!-- Core Strengths (Icon Boxes) -->
+    <section class="core-strengths">
+        <div class="strength-box">
+            <span class="icon">🔧</span>
+            <h3>Expertise & Innovation</h3>
+            <p>Advanced fabrication techniques combined with modern design thinking to deliver innovative furniture and interior solutions.</p>
+        </div>
+        <div class="strength-box">
+            <span class="icon">🛠</span>
+            <h3>High-Quality Craftsmanship</h3>
+            <p>Precision manufacturing using premium metal and wood materials for durable, elegant, and functional results.</p>
+        </div>
+        <div class="strength-box">
+            <span class="icon">🤝</span>
+            <h3>Customer-Centric Focus</h3>
+            <p>Every project is custom-designed to match client requirements, space utilization, and aesthetic preferences.</p>
+        </div>
+    </section>
 
-/* About Preview */
-.about-preview {
-    display: flex;
-    padding: 50px 20px;
-    align-items: center;
-}
+    <!-- Side CTA Section (Right Image Text) -->
+    <section class="side-cta">
+        <div class="cta-text">
+            <h2>Dedicated to Designing & Manufacturing Tomorrow’s Interiors</h2>
+            <button>GET A QUOTE</button>
+        </div>
+        <img src="images/home/services-home.png" alt="Side CTA Image" class="cta-image">
+    </section>
 
-.about-preview .text-content {
-    flex: 1;
-    padding-right: 20px;
-}
+    <!-- Company Stats (Dark Strip) -->
+    <section class="company-stats">
+        <div class="stat">
+            <h3>2023</h3>
+            <p>Company Established</p>
+        </div>
+        <div class="stat">
+            <h3>100+</h3>
+            <p>Custom Designs Delivered</p>
+        </div>
+        <div class="stat">
+            <h3>Skilled Workforce</h3>
+            <p>Trained Fabrication Team</p>
+        </div>
+        <div class="stat">
+            <h3>99%</h3>
+            <p>Client Satisfaction</p>
+        </div>
+    </section>
 
-.about-preview .preview-image {
-    flex: 1;
-    max-width: 50%;
-}
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <h2>WHY CHOOSE US?</h2>
+        <div class="choose-box">
+            <h3>Our Services</h3>
+            <p>Manufacturing of metal & wooden furniture, custom fixtures, modular designs, and complete interior works.</p>
+        </div>
+        <div class="choose-box">
+            <h3>Recent Projects</h3>
+            <p>Office interiors, residential furniture, plant interiors, and bespoke fabrication solutions.</p>
+        </div>
+        <div class="choose-box">
+            <h3>Why NK Enterprises</h3>
+            <p>Precision manufacturing, custom designs, quality materials, and timely project execution.</p>
+        </div>
+        <div class="choose-box">
+            <h3>About NK Enterprises</h3>
+            <p>A growing fabrication company delivering modern furniture and interior solutions since 2023.</p>
+        </div>
+    </section>
 
-/* Core Strengths */
-.core-strengths {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 20px;
-}
-
-.strength-box {
-    text-align: center;
-    width: 30%;
-}
-
-.icon {
-    font-size: 40px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-/* Side CTA */
-.side-cta {
-    display: flex;
-    padding: 50px 20px;
-    background-color: var(--secondary-color);
-}
-
-.side-cta .cta-text {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.side-cta .cta-image {
-    flex: 1;
-    max-width: 50%;
-}
-
-/* Company Stats */
-.company-stats {
-    display: flex;
-    justify-content: space-around;
-    background-color: var(--dark-bg);
-    color: #FFF;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.stat h3 {
-    font-size: 40px;
-}
-
-/* Why Choose Us */
-.why-choose {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.why-choose .choose-box {
-    margin: 20px 0;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .about-preview, .side-cta {
-        flex-direction: column;
-    }
-
-    .about-preview .preview-image, .side-cta .cta-image {
-        max-width: 100%;
-        margin-top: 20px;
-    }
-
-    .core-strengths, .company-stats {
-        flex-direction: column;
-    }
-
-    .strength-box, .stat {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
+    <!-- Footer Content (Company Details) -->
+    <footer>
+        <h3>NK ENTERPRISES</h3>
+        <p>Manufacturing of Metal & Wooden Furniture, Fixtures & Custom Interior Solutions</p>
+        <p>📍 Address: A2/A/001, Sai Residency, Bhadwad Naka, Bhiwandi – 421302</p>
+        <p>📞 Contact: +91 70215 40314 | +91 63723 52301</p>
+        <p>📧 <a href="mailto:support@nkenters.com">support@nkenters.com</a></p>
+        <p>🧾 GST: 27AVVPP0654M1ZR 🏭 MSME: MH-33-0391366</p>
+    </footer>
+</body>
+</html>
