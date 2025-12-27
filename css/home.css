@@ -1,78 +1,371 @@
-/* home.css - Home page specific layout */
-
-main { margin-top: 120px; } /* space for fixed header */
-
-/* Hero Carousel */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
   position: relative;
-  height: 80vh;
+  width: 100%;
+  height: 90vh;
   overflow: hidden;
 }
 
-.slide {
+/* SLIDES */
+.hero-slide {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  inset: 0;
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 1s ease-in-out;
 }
 
-.slide.active { opacity: 1; }
+.hero-slide.active {
+  opacity: 1;
+}
 
-.hero-content {
+/* OVERLAY */
+.hero-overlay {
   position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.65) 40%,
+    rgba(0,0,0,0.25) 60%,
+    rgba(0,0,0,0) 100%
+  );
+  display: flex;
+  align-items: center;
 }
 
-.hero-content h1 { font-size: 3.5em; margin-bottom: 10px; }
-.hero-content p { font-size: 1.8em; margin-bottom: 30px; }
+/* CONTENT */
+.hero-content {
+  max-width: 620px;
+  margin-left: 8%;
+  color: #ffffff;
+}
 
-.hero-dots {
+.hero-content h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hero-content h1 span {
+  color: #c28a4b;
+}
+
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary {
+  background: linear-gradient(to bottom, #9c6233, #6f421f);
+  color: #ffffff;
+  padding: 12px 22px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* =========================
+   ABOUT INTRO
+========================= */
+.about-intro {
+  background: #f7f3ef;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-intro h2 {
+  font-size: 36px;
+  color: #3b2a1f;
+  margin-bottom: 20px;
+}
+
+.about-intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #5a4636;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+.features-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.features-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* LEFT */
+.features-left {
+  flex: 1.2;
+}
+
+.features-left h2 {
+  font-size: 34px;
+  margin-bottom: 18px;
+  color: #3b2a1f;
+}
+
+.features-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  color: #5a4636;
+}
+
+.features-list {
+  display: flex;
+  gap: 25px;
+}
+
+.feature-item {
+  background: #f7f3ef;
+  padding: 30px 22px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(to bottom, #9c6233, #6f421f);
+  color: #f5e6d2;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.feature-item h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #3b2a1f;
+}
+
+.feature-item p {
+  font-size: 14px;
+  color: #6b5544;
+}
+
+/* RIGHT */
+.features-right {
+  flex: 0.9;
+  position: relative;
+}
+
+.features-right img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* CTA OVER IMAGE */
+.feature-cta {
   position: absolute;
   bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
+  left: 30px;
+  background: rgba(0,0,0,0.65);
+  padding: 22px 26px;
+  border-radius: 8px;
+  color: #ffffff;
 }
 
-.dot {
-  width: 12px; height: 12px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 50%;
-  margin: 0 8px;
-  cursor: pointer;
+.feature-cta h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
 }
 
-.dot.active { background: white; }
+.feature-cta span {
+  color: #c28a4b;
+}
 
-/* Sections */
-section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+/* =========================
+   WHY CHOOSE US – STATS
+========================= */
+.wcu-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  padding: 40px 8%;
+  background: url("../images/home/industrial.png") center/cover no-repeat;
+}
 
-.welcome { background: var(--light-beige); text-align: center; }
-.stats {
-  background: var(--dark-brown);
-  color: white;
-  display: flex;
-  justify-content: space-around;
+.wcu-stats h3 {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.wcu-stats p {
+  color: #e6d6c4;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* =========================
+   WHY CHOOSE US – CREAM
+========================= */
+.wcu-cream {
+  background: url("../images/home/cta-cream.png") center/cover no-repeat;
+  padding: 60px 6% 70px;
+  text-align: center;
+}
+
+.wcu-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3b2a1f;
+  margin-bottom: 40px;
+}
+
+.wcu-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.wcu-card {
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  padding: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wcu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.18);
+}
+
+.wcu-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.wcu-card p {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #3b2a1f;
+  font-size: 14px;
+}
+
+/* =========================
+   CTA SECTION
+========================= */
+.cta-section {
+  width: 100%;
+}
+
+.cta-top {
+  background: url("../images/home/cta-cream.png") center/cover no-repeat;
   padding: 30px 0;
   text-align: center;
 }
 
-.stat-item h2 { font-size: 2.5em; margin: 0; color: var(--accent-orange); }
-
-.icons-row {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin: 40px 0;
+.cta-top img {
+  height: 55px;
 }
 
-.icon-box { text-align: center; max-width: 250px; }
+.cta-top p {
+  font-size: 13px;
+  margin-top: 6px;
+  color: #5a4638;
+}
 
-.why-choose { background: #f9f9f9; }
+.cta-heading-strip {
+  background: url("../images/home/cta-wooden-strip.png") center/cover no-repeat;
+  padding: 22px 0;
+}
+
+.cta-headings {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.cta-headings .divider {
+  width: 1px;
+  height: 22px;
+  background: rgba(255,255,255,0.4);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .features-container {
+    flex-direction: column;
+  }
+
+  .features-list {
+    flex-direction: column;
+  }
+
+  .wcu-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .hero {
+    height: 85vh;
+  }
+
+  .hero-content {
+    margin: 0 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .features-left h2 {
+    font-size: 26px;
+  }
+
+  .feature-cta {
+    position: relative;
+    margin-top: 15px;
+  }
+
+  .wcu-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .wcu-cards {
+    grid-template-columns: 1fr;
+  }
+}
