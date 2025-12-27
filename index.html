@@ -9,29 +9,52 @@
 </head>
 <body>
 
-<header>
-  <div class="top-bar">
-    <div class="container" style="max-width:1200px;margin:0 auto;padding:0 20px;">
-      support@nkenters.com | +91 70215 40314 | +91 63723 52301 &nbsp;&nbsp;
-      <a href="contact.html" class="btn">GET A QUOTE</a>
-    </div>
-  </div>
-  <div class="header-content">
-    <div class="logo">
-      <a href="index.html"><img src="images/logo.png" alt="NK Enterprises Logo"></a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="products.html">Projects</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<!-- HEADER (Fixed across all pages) -->
+<header class="nk-header">
+  <!-- 1. Top Bronze Strip -->
+  <div class="nk-bronze-strip"></div>
 
+  <!-- 2. Top Info Bar -->
+  <div class="nk-info-bar container">
+    <div class="nk-info-left">
+      <i class="fas fa-envelope"></i> info@nkenterprises.com
+    </div>
+    <div class="nk-info-right">
+      <span class="nk-phones">
+        <i class="fas fa-phone"></i> +91 98765 43210 | +91 98765 098762
+      </span>
+      <a href="contact.html" class="nk-cta">GET A QUOTE</a>
+    </div>
+  </div>
+
+  <!-- 3. Main Header (Logo Section) -->
+  <div class="nk-logo-section container">
+    <div class="nk-logo">
+      <a href="index.html">
+        <h1>NK ENTERPRISES</h1>
+        <p>Furniture & Fixture Manufacturing</p>
+      </a>
+    </div>
+    <!-- Right side empty for balanced spacing -->
+    <div class="nk-logo-right"></div>
+  </div>
+
+  <!-- 4. Navigation Menu -->
+  <nav class="nk-nav container">
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul class="nk-nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- 5. Thin Bronze Divider Line -->
+  <div class="nk-bronze-divider"></div>
+</header>
 <main>
   <!-- Hero Carousel -->
   <section class="hero">
