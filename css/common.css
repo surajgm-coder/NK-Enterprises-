@@ -1,5 +1,4 @@
 /* common.css - Shared design system: colors, header, footer, buttons, typography */
-
 :root {
   --primary-brown: #8B4513;
   --dark-brown: #5D4037;
@@ -30,9 +29,10 @@ button, .btn {
   font-weight: bold;
   transition: background 0.3s;
 }
+
 button:hover, .btn:hover { background: var(--primary-brown); }
 
-/* Header - Main container (light background, unchanged) */
+/* Header - Main container */
 header {
   background: var(--text-light);
   border-bottom: 3px solid var(--primary-brown);
@@ -44,12 +44,12 @@ header {
   box-shadow: 0 2px 10px rgba(0,0,0,0.12);
 }
 
-/* Top bar - Wooden texture only (no overlay) */
+/* Top bar - Wooden texture (no overlay, image fully visible) */
 .top-bar {
-  background: var(--dark-brown);                    /* fallback if image fails */
+  background: var(--dark-brown);                    /* fallback */
   background-image: url('images/header-strip.png');
-  background-size: cover;                           /* try '100% 100%' or 'contain' if it looks stretched */
-  background-repeat: repeat-x;                      /* best for horizontal strip textures */
+  background-size: cover;                           /* or try 100% 100% if needed */
+  background-repeat: repeat-x;                      /* good for horizontal strips */
   background-position: center;
   color: var(--text-light);
   padding: 8px 0;
@@ -57,14 +57,14 @@ header {
   text-align: right;
 }
 
-/* Links - clean white color, optional minimal shadow for readability */
+/* Links in top bar - clean white */
 .top-bar a {
   color: var(--text-light);
   margin-left: 15px;
   text-decoration: none;
-  /* Optional: very light shadow if text disappears on dark wood areas */
-  /* text-shadow: 0 1px 2px rgba(0,0,0,0.4); */ 
 }
+
+/* Rest of header */
 .header-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -84,6 +84,7 @@ nav ul {
 }
 
 nav ul li { margin-left: 30px; }
+
 nav ul li a {
   color: var(--primary-brown);
   font-weight: bold;
@@ -94,7 +95,7 @@ nav ul li a {
 footer {
   background: var(--dark-brown);
   color: var(--text-light);
-  padding: 40px 0 20px;
+  padding: 40px 0 0; /* reduced bottom padding since we style .footer-bottom separately */
   margin-top: 50px;
 }
 
@@ -104,19 +105,38 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  padding: 0 20px;
+  padding: 0 20px 40px;
 }
 
 .footer-column h3 { color: var(--accent-orange); margin-bottom: 15px; }
 .footer-column ul { list-style: none; padding: 0; }
 .footer-column ul li { margin-bottom: 10px; }
 
+/* Footer bottom bar - wooden texture + copyright + social icons */
 .footer-bottom {
+  background: var(--dark-brown);                    /* fallback */
+  background-image: url('images/header-strip.png'); /* same wood texture as top bar */
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-position: center;
   text-align: center;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.2);
+  padding: 18px 0;
   font-size: 0.9em;
+  border-top: 1px solid rgba(255,255,255,0.15);
 }
 
-.social-icons a { margin: 0 10px; font-size: 1.5em; color: var(--text-light); }
+/* Social icons in footer bottom */
+.social-icons {
+  margin-top: 8px;
+}
+
+.social-icons a {
+  color: var(--text-light);
+  margin: 0 12px;
+  font-size: 1.6em;
+  transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+  opacity: 0.8;
+}
