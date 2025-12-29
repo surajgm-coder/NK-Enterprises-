@@ -1,101 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NK Enterprises - Contact Us</title>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/contact.css">
-</head>
-<body>
-    <header class="fixed-header">
-        <div class="container header-content">
-            <div class="logo">
-                <span class="nk-bold">NK</span>
-                <span class="enterprises-golden">Enterprises</span>
-            </div>
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-                <button class="cta-button">Get a Free Consultation</button>
-            </nav>
-            <div class="mobile-menu-toggle">
-                <img src="images/menu/hamburger.png" alt="Menu" class="hamburger">
-                <img src="images/menu/close-icon.png" alt="Close" class="close-icon">
-            </div>
-        </div>
-        <div class="golden-divider"></div>
-    </header>
+  <meta charset="UTF-8">
+  <title>NK Enterprises | Fabricating Tomorrow’s Innovation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay">
-        <ul class="mobile-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><button class="cta-button mobile-cta">Get a Free Consultation</button></li>
-        </ul>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+<!-- TOP BRONZE STRIP -->
+<div class="top-strip"></div>
+
+<!-- HEADER -->
+<!-- HEADER -->
+<header class="main-header">
+  <div class="header-container">
+
+    <!-- LOGO (LEFT – SPANS BOTH ROWS) -->
+    <div class="logo">
+      <img src="images/logo.png" alt="NK Enterprises">
     </div>
 
-    <main>
-        <!-- Contact Section -->
-        <section class="contact full-width">
-            <div class="container">
-                <div class="section-patch left-align">
-                    <h1>Contact Us</h1>
-                    <h2>Get in Touch for Your Next Project</h2>
-                    <p>We're here to help! Fill out the form below or reach us via email or phone.</p>
-                    <p>Email: info@nkenterprises.com | Phone: +1-123-456-7890 | Address: 123 Luxury Lane, City, State, ZIP</p>
-                </div>
-                <form class="contact-form">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                    
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
+    <!-- MOBILE TOGGLE (KEEP THIS) -->
+    <button class="nav-toggle" aria-label="Toggle Menu">☰</button>
 
-    <footer class="fixed-footer">
-        <div class="golden-divider"></div>
-        <div class="container footer-content">
-            <img src="images/logo.png" alt="NK Enterprises Logo" class="footer-logo">
-            <p class="copyright">© 2025 NK Enterprises. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="#"><img src="images/social/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="images/social/youtube.png" alt="YouTube"></a>
-                <a href="#"><img src="images/social/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="images/social/linkedin.png" alt="LinkedIn"></a>
-            </div>
+    <!-- HEADER MENU (WRAPPER FOR MOBILE) -->
+    <div class="header-menu">
+
+      <!-- ROW 1 : CONTACT + CTA -->
+      <div class="header-top-right">
+        <span class="email">support@nkenters.com</span>
+        <span class="phone">+91 63723 52301 | +91 96995 40314</span>
+        <a href="contact.html" class="btn-quote">GET A QUOTE</a>
+      </div>
+
+      <!-- ROW 2 : NAVIGATION -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </div>
+</header>
+
+<!-- NAV DIVIDER -->
+<div class="nav-divider"></div>
+
+<!-- CONTACT HERO SECTION -->
+<section class="contact-hero">
+  <div class="contact-hero-overlay">
+    <div class="contact-hero-content">
+      <h1>Contact Us</h1>
+      <p>Home <span>/</span> Contact Us</p>
+    </div>
+  </div>
+</section>
+<!-- CONTACT DETAILS SECTION -->
+<section class="contact-details">
+  <div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-left">
+
+      <div class="info-card">
+        <h4><i class="fa-solid fa-location-dot"></i> Visit Us</h4>
+        <p>
+          NK Enterprises<br>
+          Gala No. 6, Raj Rajeshwari Compound,<br>
+          Sonale Village, Bhiwandi,<br>
+          Maharashtra – 421302
+        </p>
+        <a href="#" class="card-btn">READ MORE</a>
+      </div>
+
+      <div class="info-card">
+        <h4><i class="fa-solid fa-phone"></i> Call Us</h4>
+        <p>
+          +91 63723 52301<br>
+          +91 96995 40314
+        </p>
+        <a href="#" class="card-btn">VIEW GALLERY</a>
+      </div>
+
+      <div class="info-card">
+        <h4><i class="fa-solid fa-envelope"></i> Email Us</h4>
+        <p>support@nkenters.com</p>
+      </div>
+
+      <div class="info-card">
+        <h4>Follow Us:</h4>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-youtube"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-instagram"></i>
         </div>
-    </footer>
+      </div>
 
-    <script>
-        // Mobile Menu Toggle
-        const toggle = document.querySelector('.mobile-menu-toggle');
-        const overlay = document.querySelector('.mobile-nav-overlay');
-        const hamburger = toggle.querySelector('.hamburger');
-        const closeIcon = toggle.querySelector('.close-icon');
+    </div>
 
-        toggle.addEventListener('click', () => {
-            overlay.classList.toggle('active');
-            hamburger.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
-        });
-    </script>
+    <!-- RIGHT SIDE FORM -->
+    <div class="contact-right">
+      <h3>Get in Touch</h3>
+
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Last Name">
+        </div>
+
+        <input type="email" placeholder="Email Address">
+        <input type="tel" placeholder="Contact Number">
+
+        <select>
+          <option>Select Subject</option>
+          <option>General Inquiry</option>
+          <option>Fabrication Requirement</option>
+          <option>Custom Furniture</option>
+          <option>Quotation Request</option>
+        </select>
+
+        <textarea placeholder="Message"></textarea>
+
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- MAP -->
+  <div class="contact-map">
+    <iframe 
+      src="https://www.google.com/maps?q=Sonale%20Village%20Bhiwandi%20Maharashtra&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- QUOTE BUTTON -->
+  <div class="quote-center">
+    <a href="#" class="quote-btn-main">GET A QUOTE</a>
+  </div>
+</section>
+
+
+<!-- ================= CTA + INFO SECTION ================= -->
+
+<!-- BROWN CTA STRIP -->
+<section class="contact-cta">
+  <div class="contact-cta-overlay">
+    <h2>Ready to Discuss Your Project Needs?</h2>
+    <p>
+      Get in touch with us today to discuss your next fabrication project
+      or to request a personalized quote. Our team is here to help.
+    </p>
+  </div>
+</section>
+
+<!-- CREAM INFO COLUMNS -->
+<section class="contact-info-columns">
+  <div class="container">
+
+    <!-- OUR SERVICES -->
+    <div class="info-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li>Metal Fabrication</li>
+        <li>Custom Fabrication</li>
+        <li>Sheet Metal Work</li>
+        <li>Welding & Assembly</li>
+      </ul>
+    </div>
+
+    <!-- RECENT PROJECTS -->
+    <div class="info-col">
+      <h4>Recent Projects</h4>
+      <ul>
+        <li>Industrial Fabrication</li>
+        <li>Architectural Fabrication</li>
+        <li>Equipment Fabrication</li>
+        <li>Custom Metal Components</li>
+      </ul>
+    </div>
+
+    <!-- WHY CHOOSE US -->
+    <div class="info-col">
+      <h4>Why Choose Us</h4>
+      <ul>
+        <li>Experienced Team</li>
+        <li>Premium-Quality Craftsmanship</li>
+        <li>Cutting-Edge Technology</li>
+        <li>Timely Delivery</li>
+      </ul>
+    </div>
+
+    <!-- CONTACT US -->
+    <div class="info-col">
+      <h4>Contact Us</h4>
+      <p>
+        Gala No. 6, Raj Rajeshwari Compound,<br>
+        Sonale Village, Bhiwandi,<br>
+        Maharashtra – 421302
+      </p>
+      <p>
+        +91 63723 52301<br>
+        +91 96995 40314
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">© 2024 NK Enterprises. All Rights Reserved.</div>
+
+    <!-- CENTER -->
+    <div class="footer-center">
+      <a href="#">Privacy Policy</a>
+      <span>|</span>
+      <a href="#">Terms of Service</a>
+      <span>|</span>
+      <a href="#">Sitemap</a>
+    </div>
+    
+    <div class="footer-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/slider.js"></script>
 </body>
 </html>
