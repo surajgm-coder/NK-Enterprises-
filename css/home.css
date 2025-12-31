@@ -1,3 +1,8 @@
+/* ==================================================
+   HOME PAGE STYLES ONLY
+   (Common layout handled in common.css)
+================================================== */
+
 /* =========================
    HERO SECTION
 ========================= */
@@ -47,6 +52,7 @@
   font-size: 52px;
   line-height: 1.1;
   margin-bottom: 16px;
+  font-weight: 700;
 }
 
 .hero-content h1 span {
@@ -68,7 +74,7 @@
 .btn-primary {
   background: linear-gradient(to bottom, #9c6233, #6f421f);
   color: #ffffff;
-  padding: 12px 22px;
+  padding: 12px 24px;
   text-decoration: none;
   font-weight: 600;
   border-radius: 4px;
@@ -90,14 +96,13 @@
 
 .about-intro h2 {
   font-size: 36px;
-  color: #3b2a1f;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .about-intro p {
   font-size: 16px;
   line-height: 1.8;
-  color: #5a4636;
   margin-bottom: 30px;
 }
 
@@ -106,7 +111,6 @@
 ========================= */
 .features-section {
   padding: 80px 0;
-  background: #ffffff;
 }
 
 .features-container {
@@ -125,14 +129,12 @@
 .features-left h2 {
   font-size: 34px;
   margin-bottom: 18px;
-  color: #3b2a1f;
 }
 
 .features-left p {
   font-size: 15px;
   line-height: 1.7;
   margin-bottom: 35px;
-  color: #5a4636;
 }
 
 .features-list {
@@ -153,23 +155,22 @@
   height: 60px;
   background: linear-gradient(to bottom, #9c6233, #6f421f);
   color: #f5e6d2;
-  font-size: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   margin: 0 auto 15px;
+  font-size: 22px;
 }
 
 .feature-item h4 {
   font-size: 16px;
   margin-bottom: 10px;
-  color: #3b2a1f;
+  font-weight: 600;
 }
 
 .feature-item p {
   font-size: 14px;
-  color: #6b5544;
 }
 
 /* RIGHT */
@@ -183,7 +184,7 @@
   border-radius: 10px;
 }
 
-/* CTA OVER IMAGE */
+/* CTA OVER IMAGE (DESKTOP ONLY) */
 .feature-cta {
   position: absolute;
   bottom: 30px;
@@ -223,7 +224,6 @@
 .wcu-stats p {
   color: #e6d6c4;
   font-size: 13px;
-  margin-top: 6px;
 }
 
 /* =========================
@@ -237,9 +237,8 @@
 
 .wcu-heading {
   font-size: 28px;
-  font-weight: 700;
-  color: #3b2a1f;
   margin-bottom: 40px;
+  font-weight: 600;
 }
 
 .wcu-cards {
@@ -269,7 +268,6 @@
 .wcu-card p {
   margin-top: 12px;
   font-weight: 600;
-  color: #3b2a1f;
   font-size: 14px;
 }
 
@@ -419,13 +417,13 @@
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
-
 /* =========================
-   RESPONSIVE
+   RESPONSIVE (HOME ONLY)
 ========================= */
 
-/* Tablets */
+/* TABLETS */
 @media (max-width: 1024px) {
+
   .features-container {
     flex-direction: column;
   }
@@ -439,27 +437,32 @@
   }
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 768px) {
 
   .hero {
-    height: 85vh;
+    height: auto;
+    min-height: 85vh;
   }
 
   .hero-content {
-    margin: 0 5%;
+    margin: 0 6%;
   }
 
   .hero-content h1 {
     font-size: 34px;
+    line-height: 1.25;
   }
 
   .features-left h2 {
     font-size: 26px;
   }
 
+  /* CTA IMAGE CARD STACK */
   .feature-cta {
     position: relative;
+    left: 0;
+    bottom: 0;
     margin-top: 15px;
   }
 
