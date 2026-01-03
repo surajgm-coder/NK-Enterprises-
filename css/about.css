@@ -1,81 +1,439 @@
-main {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    min-height: calc(100vh - 200px);
+/* ==================================================
+   ABOUT PAGE – ALIGNED WITH HOME
+================================================== */
+
+/* PAGE HERO */
+.page-hero {
+  background: url("../images/about/about-hero.png") center/cover no-repeat;
+  height: 260px;
 }
 
-h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: var(--golden);
-    margin: 0.5rem 0;
+.page-hero-overlay {
+  background: rgba(0,0,0,0.55);
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-h2 {
-    font-size: 2rem;
-    color: var(--golden);
-    margin: 0.5rem 0;
+.page-hero-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  color: #ffffff;
 }
 
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+.page-hero-content h1 {
+  font-size: 42px;
 }
 
-.section-patch {
-    background: var(--patch-bg);
-    padding: 3rem;
-    border-radius: 10px;
-    max-width: 800px;
+.page-hero-content p {
+  color: #e0c097;
+  margin-top: 6px;
 }
 
-/* CTA */
-.cta-section {
-    display: flex;
-    flex-wrap: wrap;
+/* ABOUT INTRO – WHO WE ARE */
+.about-intro {
+  padding: 80px 0;
+  background: #faf7f3;
 }
 
-.cta-50-left, .cta-50-right {
-    flex: 1 1 50%;
-    min-height: 500px;
+.about-intro .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* LEFT text, RIGHT image */
+  gap: 50px;
+  align-items: center;
 }
 
-.cta-50-left img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* LEFT CONTENT */
+.about-content h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.golden-bg {
-    background: var(--golden);
-    display: flex;
-    align-items: center;
+.about-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+  color: #333;
 }
 
-.golden-bg .left-align {
-    max-width: 600px;
-    padding: 3rem;
+.about-content .strength-title {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.golden-bg h1, .golden-bg h2 {
-    color: var(--black);
+/* Strength List */
+.strength-list {
+  list-style: none;
+  padding: 0;
 }
 
-.golden-bg p {
-    color: var(--black);
+.strength-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14.5px;
+}
+
+.strength-list li i {
+  color: var(--gold);
+  font-size: 15px;
+}
+
+/* RIGHT IMAGE */
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* Image Caption */
+.image-caption {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #666;
+}
+
+.image-caption i {
+  color: var(--gold);
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .about-intro .container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    margin-top: 30px;
+  }
+}
+/* MISSION & VISION */
+
+.mission-vision {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.mission-vision .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* IMAGE LEFT | CONTENT RIGHT */
+  gap: 50px;
+  align-items: center;
+}
+
+/* IMAGE */
+.mission-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* CONTENT */
+.mission-content h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mission-content h2 i {
+  color: var(--gold);
+}
+
+.mission-content h4 {
+  font-size: 17px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mission-content h4 i {
+  color: var(--gold);
+}
+
+.mission-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .mission-vision .container {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-image {
+    margin-bottom: 30px;
+  }
+}
+
+/* ==========================
+   WHAT WE DO
+========================== */
+
+.what-we-do {
+  padding: 70px 0 50px;
+  background: #faf7f3;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #2b1d14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 45px;
+}
+
+.section-title svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--gold);
+}
+
+.what-we-do-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+.service-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 18px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  transition: all 0.35s ease;
+  cursor: default;
+}
+
+.service-box svg {
+  width: 42px;
+  height: 42px;
+  fill: var(--gold);
+  margin-bottom: 15px;
+}
+
+.service-box h4 {
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #2b1d14;
+}
+
+/* HOVER */
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* ==========================
+   WHY CHOOSE US
+========================== */
+
+.why-choose {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.why-box {
+  text-align: center;
+  padding: 20px 10px;
+  transition: all 0.35s ease;
+}
+
+.why-box svg {
+  width: 38px;
+  height: 38px;
+  fill: var(--gold);
+  margin-bottom: 12px;
+}
+
+.why-box h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2b1d14;
+}
+
+.why-box p {
+  font-size: 13.5px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* HOVER */
+.why-box:hover {
+  transform: translateY(-6px);
+}
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 1200px) {
+  .what-we-do-grid,
+  .why-choose-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-    .cta-50-left, .cta-50-right {
-        flex: 1 1 100%;
-    }
-    main {
-        padding-top: 80px;
-        padding-bottom: 100px;
-    }
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 1.8rem; }
-    p { font-size: 1.1rem; }
-    .section-patch { padding: 2rem; }
-    .cta-50-left, .cta-50-right { min-height: 400px; }
+  .what-we-do-grid,
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .what-we-do-grid,
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   FULL WIDTH CTA
+========================= */
+
+.cta-full {
+  position: relative;
+  width: 100%;
+  min-height: 360px;
+
+  background: url("../images/about/cta.png") center center / cover no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  /* IMPORTANT: removes side gaps */
+  margin: 0;
+  padding: 0;
+}
+
+/* Dark overlay */
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* adjust darkness if needed */
+  z-index: 1;
+}
+
+/* CTA content */
+.cta-content {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  color: #ffffff;
+}
+
+/* Icon */
+.cta-icon {
+  font-size: 34px;
+  color: #b07a3c; /* golden brown */
+  margin-bottom: 18px;
+  display: block;
+}
+
+/* Heading */
+.cta-content h2 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+/* Button */
+.cta-btn {
+  display: inline-block;
+  background: #b07a3c;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #8b5a2b;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .cta-content h2 {
+    font-size: 30px;
+  }
+}
+
+
+/* =====================================
+   GOLDEN ICON COLOR – ABOUT PAGE
+===================================== */
+
+/* Section title icons */
+.section-title i {
+  color: #8b5a2b;
+}
+
+/* What We Do icons */
+.service-box i {
+  color: #8b5a2b;
+  font-size: 28px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Why Choose icons */
+.why-box i {
+  color: #8b5a2b;
+  font-size: 26px;
+  margin-bottom: 10px;
+  display: block;
 }
