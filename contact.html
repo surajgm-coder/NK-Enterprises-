@@ -5,63 +5,74 @@
   <title>NK Enterprises | Fabricating Tomorrow’s Innovation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font Awesome -->
+  <!-- GOOGLE FONT (GLOBAL BRAND FONT) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS -->
+  <!-- GLOBAL & PAGE CSS -->
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/contact.css">
 </head>
 
 <body>
 
-<!-- TOP BRONZE STRIP -->
-<div class="top-strip"></div>
+<!-- =========================
+     FIXED HEADER WRAPPER
+========================= -->
+<div class="site-header-wrap">
 
-<!-- HEADER -->
-<!-- HEADER -->
-<header class="main-header">
-  <div class="header-container">
-
-    <!-- LOGO (LEFT – SPANS BOTH ROWS) -->
-    <div class="logo">
-      <img src="images/logo.png" alt="NK Enterprises">
-    </div>
-
-    <!-- MOBILE TOGGLE (KEEP THIS) -->
-    <button class="nav-toggle" aria-label="Toggle Menu">☰</button>
-
-    <!-- HEADER MENU (WRAPPER FOR MOBILE) -->
-    <div class="header-menu">
-
-      <!-- ROW 1 : CONTACT + CTA -->
-      <div class="header-top-right">
-        <span class="email">support@nkenters.com</span>
-        <span class="phone">+91 63723 52301 | +91 96995 40314</span>
+  <!-- TOP INFO BAR -->
+  <div class="top-info-bar">
+    <div class="info-container">
+      <div class="info-left">
+        <span><i class="fa-solid fa-envelope"></i> support@nkenters.com</span>
+        <span><i class="fa-solid fa-phone"></i> +91 63723 52301 | +91 96995 40314</span>
+      </div>
+      <div class="info-right">
         <a href="contact.html" class="btn-quote">GET A QUOTE</a>
       </div>
+    </div>
+  </div>
 
-      <!-- ROW 2 : NAVIGATION -->
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="header-container">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="images/logo.png" alt="NK Enterprises Logo">
+        <span class="logo-underline"></span>
+      </div>
+
+      <!-- MOBILE TOGGLE -->
+      <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false">
+        <span class="hamburger">☰</span>
+      </button>
+
+      <!-- NAVIGATION -->
       <nav class="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="products.html">Products</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html" class="active">Contact Us</a></li>
         </ul>
       </nav>
 
     </div>
+    <div class="nav-divider"></div>
+  </header>
 
-  </div>
-</header>
+</div>
 
-<!-- NAV DIVIDER -->
-<div class="nav-divider"></div>
-
-<!-- CONTACT HERO SECTION -->
+ 
+  <!-- CONTACT HERO SECTION -->
 <section class="contact-hero">
   <div class="contact-hero-overlay">
     <div class="contact-hero-content">
@@ -226,12 +237,16 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-left">© 2024 NK Enterprises. All Rights Reserved.</div>
 
-    <!-- CENTER -->
+    <div class="footer-left">
+      © 2023 NK Enterprises. All Rights Reserved.
+    </div>
+
     <div class="footer-center">
       <a href="#">Privacy Policy</a>
       <span>|</span>
@@ -239,16 +254,19 @@
       <span>|</span>
       <a href="#">Sitemap</a>
     </div>
-    
+
     <div class="footer-right">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.youtube.com/@spadhyfun" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
     </div>
+
   </div>
 </footer>
 
-  <script src="js/slider.js"></script>
+<!-- JS -->
+<script src="js/slider.js"></script>
+
 </body>
-</html>
+</html>v
