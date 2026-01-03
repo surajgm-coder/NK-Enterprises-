@@ -1,126 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NK Enterprises - Services</title>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/services.css">
-</head>
-<body>
-    <header class="fixed-header">
-        <div class="container header-content">
-            <div class="logo">
-                <span class="nk-bold">NK</span>
-                <span class="enterprises-golden">Enterprises</span>
-            </div>
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-                <button class="cta-button">Get a Free Consultation</button>
-            </nav>
-            <div class="mobile-menu-toggle">
-                <img src="images/menu/hamburger.png" alt="Menu" class="hamburger">
-                <img src="images/menu/close-icon.png" alt="Close" class="close-icon">
-            </div>
-        </div>
-        <div class="golden-divider"></div>
-    </header>
+  <meta charset="UTF-8">
+  <title>NK Enterprises | Fabricating Tomorrow’s Innovation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay">
-        <ul class="mobile-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><button class="cta-button mobile-cta">Get a Free Consultation</button></li>
+  <!-- GOOGLE FONT (GLOBAL BRAND FONT) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- GLOBAL & PAGE CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/services.css">
+</head>
+
+<body>
+
+<!-- =========================
+     FIXED HEADER WRAPPER
+========================= -->
+<div class="site-header-wrap">
+
+  <!-- TOP INFO BAR -->
+  <div class="top-info-bar">
+    <div class="info-container">
+      <div class="info-left">
+        <span><i class="fa-solid fa-envelope"></i> support@nkenters.com</span>
+        <span><i class="fa-solid fa-phone"></i> +91 63723 52301 | +91 96995 40314</span>
+      </div>
+      <div class="info-right">
+        <a href="contact.html" class="btn-quote">GET A QUOTE</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="header-container">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="images/logo.png" alt="NK Enterprises Logo">
+        <span class="logo-underline"></span>
+      </div>
+
+      <!-- MOBILE TOGGLE -->
+      <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false">
+        <span class="hamburger">☰</span>
+      </button>
+
+      <!-- NAVIGATION -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
+      </nav>
+
+    </div>
+    <div class="nav-divider"></div>
+  </header>
+
+</div>
+  
+  <!-- =========================
+   SERVICES HERO
+========================= -->
+<section class="services-hero">
+  <div class="services-hero-overlay">
+    <div class="container">
+      <h1>Services</h1>
+      <p>Home / Services</p>
+    </div>
+  </div>
+</section>
+  
+<!-- =========================
+   SERVICES INTRO SECTION
+========================= -->
+<section class="services-intro-feature">
+  <div class="container">
+
+    <!-- LEFT: IMAGE -->
+    <div class="services-intro-image">
+      <img
+        src="images/services/services-intro.png"
+        alt="Furniture & Fixture Manufacturing"
+      />
     </div>
 
-    <main>
-        <!-- Services Section (Expanded) -->
-        <section class="services full-width">
-            <div class="container">
-                <div class="section-patch left-align">
-                    <h1>Our Services</h1>
-                    <h2>Comprehensive Solutions for Every Space</h2>
-                    <p>We offer a full range of services designed to elevate and optimize your environments. From initial consultation to final installation, our expert team ensures seamless execution and superior results.</p>
-                    <p>Our services are tailored to meet the unique needs of offices, homes, and factories, ensuring high-quality outcomes that blend aesthetics with functionality.</p>
-                </div>
-                <div class="cards-grid">
-                    <div class="card-3d">
-                        <img src="images/services/interior-renovation.png" alt="Interior Renovation">
-                        <h3>Interior Renovation</h3>
-                        <p>Transform existing spaces with modern upgrades, including flooring, walls, lighting, and custom finishes for homes, offices, and factories. We handle everything from design to execution, ensuring minimal disruption.</p>
-                    </div>
-                    <div class="card-3d">
-                        <img src="images/services/modular-furniture.png" alt="Modular Furniture">
-                        <h3>Modular Furniture Design & Installation</h3>
-                        <p>Customizable, flexible modular solutions that adapt to your changing needs—perfect for efficient and stylish layouts. Includes ergonomic designs and quick assembly options.</p>
-                    </div>
-                    <div class="card-3d">
-                        <img src="images/services/fixture-supply.png" alt="Fixture Supply">
-                        <h3>Fixture & Furniture Supply</h3>
-                        <p>Premium fixtures and furniture tailored for comfort, durability, and aesthetics in residential, commercial, and industrial settings. Sourced from top manufacturers with customization options.</p>
-                    </div>
-                    <div class="card-3d">
-                        <img src="images/services/plant-setup.png" alt="Plant Setup">
-                        <h3>Complete Plant Setup</h3>
-                        <p>End-to-end solutions for factory interiors, including layout planning, equipment integration, and functional enhancements. We ensure compliance with safety standards and optimal workflow.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- RIGHT: CONTENT -->
+    <div class="services-intro-content">
+      <h2>Comprehensive Furniture & Fixture Manufacturing Solutions</h2>
 
-        <!-- CTA Section -->
-        <section class="cta-section full-width">
-            <div class="cta-50-left">
-                <img src="images/home/cta-project.png" alt="Service Project">
-            </div>
-            <div class="cta-50-right golden-bg">
-                <div class="left-align container">
-                    <h1>Ready for Our Services?</h1>
-                    <h2>Get Started Today</h2>
-                    <p>Contact us to discuss how our services can transform your space.</p>
-                    <button class="cta-button black-bg">Request Service Quote</button>
-                </div>
-            </div>
-        </section>
-    </main>
+      <p class="intro-text">
+        Delivering quality, precision, and reliability in every project through
+        custom furniture, fixtures, and metal fabrication solutions.
+      </p>
 
-    <footer class="fixed-footer">
-        <div class="golden-divider"></div>
-        <div class="container footer-content">
-            <img src="images/logo.png" alt="NK Enterprises Logo" class="footer-logo">
-            <p class="copyright">© 2025 NK Enterprises. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="#"><img src="images/social/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="images/social/youtube.png" alt="YouTube"></a>
-                <a href="#"><img src="images/social/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="images/social/linkedin.png" alt="LinkedIn"></a>
-            </div>
-        </div>
-    </footer>
+      <ul class="intro-points">
+        <li>
+          <strong>Precision Manufacturing</strong><br>
+          Advanced fabrication techniques ensuring accuracy, durability,
+          and superior finish across all projects.
+        </li>
+        <li>
+          <strong>End-to-End Solutions</strong><br>
+          From concept and design to production and installation, we deliver
+          complete manufacturing solutions.
+        </li>
+      </ul>
 
-    <script>
-        // Mobile Menu Toggle
-        const toggle = document.querySelector('.mobile-menu-toggle');
-        const overlay = document.querySelector('.mobile-nav-overlay');
-        const hamburger = toggle.querySelector('.hamburger');
-        const closeIcon = toggle.querySelector('.close-icon');
+      <div class="intro-actions">
+        <a href="contact.html" class="intro-cta">
+          Get in Touch
+        </a>
+      </div>
+    </div>
 
-        toggle.addEventListener('click', () => {
-            overlay.classList.toggle('active');
-            hamburger.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
-        });
-    </script>
+  </div>
+</section>
+
+<!-- =========================
+   SERVICES GRID
+========================= -->
+<section class="services-grid">
+  <div class="container">
+
+    <div class="service-card">
+      <img src="images/services/service1.png" alt="Service 1">
+      <h3>Industrial Fabrication</h3>
+      <p>
+        Precision-engineered industrial fabrication solutions for
+        manufacturing and infrastructure projects.
+      </p>
+      <a href="#" class="card-btn">Read More</a>
+    </div>
+
+    <div class="service-card">
+      <img src="images/services/service2.png" alt="Service 2">
+      <h3>Metal Works</h3>
+      <p>
+        Custom metal works including welding, cutting, and assembly
+        with high durability standards.
+      </p>
+      <a href="#" class="card-btn">Read More</a>
+    </div>
+
+    <div class="service-card">
+      <img src="images/services/service3.png" alt="Service 3">
+      <h3>Commercial Interiors</h3>
+      <p>
+        Interior fabrication solutions for offices, warehouses,
+        and industrial spaces.
+      </p>
+      <a href="#" class="card-btn">Read More</a>
+    </div>
+
+    <div class="service-card">
+      <img src="images/services/service4.png" alt="Service 4">
+      <h3>Custom Engineering</h3>
+      <p>
+        Tailored engineering solutions designed to meet
+        complex industrial requirements.
+      </p>
+      <a href="#" class="card-btn">Read More</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+   WHY CHOOSE – CARDS
+========================= -->
+<section class="why-choose-cards">
+  <div class="container">
+
+    <!-- Card 1 -->
+    <div class="info-card">
+      <div class="card-header">
+        <span class="card-icon">
+          <i class="fas fa-cogs"></i>
+        </span>
+        <h3>Why Choose NK Enterprises</h3>
+      </div>
+
+      <ul class="card-list">
+        <li>Expertise & Skilled Workforce</li>
+        <li>Precision Engineering & Craftsmanship</li>
+        <li>Fully Customized Solutions</li>
+        <li>On-Time Project Delivery</li>
+      </ul>
+
+      <a href="about.html" class="card-btn">
+        Learn More About Us →
+      </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="info-card">
+      <div class="card-header">
+        <span class="card-icon">
+          <i class="fas fa-industry"></i>
+        </span>
+        <h3>Industries We Serve</h3>
+      </div>
+
+      <ul class="card-list">
+        <li>Manufacturing & Industrial Plants</li>
+        <li>Chemical & Process Industry</li>
+        <li>Workshops & Tool Rooms</li>
+        <li>Commercial Offices & Warehouses</li>
+      </ul>
+
+      <a href="projects.html" class="card-btn">
+        View All Industries →
+      </a>
+    </div>
+
+  </div>
+</section>
+  
+<!-- =========================
+   SERVICE PAGE FINAL CTA
+========================= -->
+<section class="service-final-cta">
+  <div class="service-final-cta-inner">
+    <div class="cta-text">
+      <h2>Get in Touch for Your Next Project</h2>
+
+      <p>
+        NK Enterprises can take your next project across the finish line.
+        We establish design processes for innovative furniture, interiors,
+        products, and metal fabrication.
+      </p>
+
+      <a href="contact.html" class="cta-button">
+       Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+  
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-left">
+      © 2023 NK Enterprises. All Rights Reserved.
+    </div>
+
+    <div class="footer-center">
+      <a href="#">Privacy Policy</a>
+      <span>|</span>
+      <a href="#">Terms of Service</a>
+      <span>|</span>
+      <a href="#">Sitemap</a>
+    </div>
+
+    <div class="footer-right">
+      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.youtube.com/@spadhyfun" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/slider.js"></script>
+
 </body>
 </html>
