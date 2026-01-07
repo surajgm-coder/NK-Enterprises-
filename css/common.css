@@ -45,7 +45,7 @@ body {
   margin: auto;
   padding: 6px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Ensure content is spaced out */
   align-items: center;
 }
 
@@ -57,6 +57,11 @@ body {
 
 .info-left i {
   margin-right: 6px;
+}
+
+.info-right {
+  display: flex;
+  justify-content: flex-end; /* Align the button to the right side */
 }
 
 /* =========================
