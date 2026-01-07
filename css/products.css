@@ -1,281 +1,334 @@
-/* ==================================================
-   PRODUCTS PAGE – ALIGNED WITH HOME
-================================================== */
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
 
 /* =========================
-   HERO
+   HERO SECTION
 ========================= */
 .products-hero {
-  background: url("../images/products/products-hero.jpg") center / cover no-repeat;
-  height: 260px;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.products-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-}
-
-.products-hero .container {
-  position: relative;
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  background: url('images/products/products-hero.png') center / cover no-repeat;
+  padding: 80px 0;
+  text-align: center;
   color: #fff;
 }
 
 .products-hero h1 {
-  font-size: 38px;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 48px;
 }
 
 .products-hero p {
-  font-size: 14px;
-  opacity: 0.9;
+  font-size: 18px;
+  opacity: 0.7;
 }
 
 /* =========================
-   INTRO
+   MAIN PRODUCT CATEGORIES
 ========================= */
-.products-intro {
-  background: #f6f1ec;
-  padding: 70px 0 30px;
+.product-categories {
+  padding: 100px 0;
+  background-color: #fff;
 }
 
-.products-intro .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+.category-header {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-.products-intro h2 {
-  font-size: 28px;
-  color: #5c3617;
-  margin-bottom: 8px;
+.category-header h2 {
+  font-size: 34px;
 }
 
-.products-intro p {
-  color: #8a6b52;
-}
-
-/* =========================
-   FILTER BAR
-========================= */
-.product-filter {
-  background: #f6f1ec;
-  padding-bottom: 40px;
-}
-
-.product-filter .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.filter-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.filters button {
-  border: 1px solid #c7a17a;
-  background: transparent;
-  color: #5c3617;
-  padding: 6px 14px;
-  font-size: 14px;
-  border-radius: 4px;
-  margin-right: 6px;
-  cursor: pointer;
-}
-
-.filters .active {
-  background: #c7a17a;
-  color: #fff;
-}
-
-.product-count {
-  font-size: 14px;
-  color: #7b5a41;
-}
-
-/* =========================
-   PRODUCTS GRID
-========================= */
-.products-grid {
-  background: #f6f1ec;
-  padding-bottom: 80px;
-}
-
-.products-grid .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+.categories-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 26px;
-}
-
-.product-card {
-  background: #ffffff;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
-}
-
-.product-card img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 15px;
-  flex-grow: 1;
-}
-
-.card-body h4 {
-  font-size: 16px;
-  color: #4b2a14;
-  margin-bottom: 4px;
-}
-
-.category {
-  font-size: 13px;
-  color: #999;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.price {
-  font-size: 15px;
-  font-weight: 600;
-  color: #c17a2d;
-  display: block;
-  margin-bottom: 10px;
-}
-
-/* =========================
-   MID CTA
-========================= */
-.products-cta {
-  background: #efe6dd;
-  padding: 80px 0;
-}
-
-.products-cta .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.products-cta .cta-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.products-cta h2 {
-  font-size: 26px;
-  color: #5c3617;
-}
-
-.products-cta p {
-  color: #7d5d46;
-  max-width: 520px;
-}
-
-.products-cta img {
-  max-width: 360px;
-  border-radius: 6px;
-}
-
-/* =========================
-   OUR SERVICES (PRODUCTS PAGE)
-========================= */
-.services-products {
-  background: #f6f1ec;
-  padding: 80px 0;
-}
-
-.services-products .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.services-products h2 {
-  font-size: 28px;
-  color: #5c3617;
-  margin-bottom: 30px;
-}
-
-.services-products .services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 26px;
-}
-
-/* =========================
-   BOTTOM CTA
-========================= */
-.bottom-cta {
-  background: url("../images/wooden-strip.png") center / cover no-repeat;
-  padding: 40px 0;
-  color: #fff;
-}
-
-.bottom-cta .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.bottom-cta .cta-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 30px;
 }
 
-.bottom-cta h3 {
-  font-size: 22px;
-  margin-bottom: 6px;
+.category-card {
+  background-color: #f4f4f4;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
 }
 
-.bottom-cta p {
-  font-size: 14px;
-  opacity: 0.9;
-  max-width: 500px;
+.category-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 /* =========================
-   RESPONSIVE (MATCH HOME)
+   WHY CHOOSE US
 ========================= */
-@media (max-width: 991px) {
-
-  .products-grid .container,
-  .services-products .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .products-cta .cta-flex,
-  .bottom-cta .cta-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .products-cta img {
-    max-width: 100%;
-  }
+.why-choose-section {
+  background-color: #f8f8f8;
+  padding: 100px 0;
 }
+
+.why-choose-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-choose-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.why-choose-header h2 {
+  font-size: 34px;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.why-card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.why-card h3 {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.why-card p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.why-icon svg {
+  width: 50px;
+  height: 50px;
+  fill: #8b5a2b;
+}
+
+/* =========================
+   ORDER PROCESS STEPS
+========================= */
+.order-process-section {
+  background-color: #fff;
+  padding: 100px 0;
+}
+
+.order-process-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.order-process-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+.process-step {
+  background-color: #f8f8f8;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #8b5a2b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.process-step h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.process-step p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* =========================
+   FEATURED PRODUCTS
+========================= */
+.featured-products-section {
+  background-color: #fff;
+  padding: 100px 0;
+}
+
+.featured-products-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.featured-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.featured-product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.fp-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.fp-content {
+  padding: 20px;
+}
+
+.fp-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.fp-content p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.fp-btn {
+  padding: 10px 20px;
+  background-color: #8b5a2b;
+  color: white;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+/* =========================
+   INDUSTRIES WE SERVE
+========================= */
+.industries-section {
+  background-color: #f8f8f8;
+  padding: 100px 0;
+}
+
+.industries-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.industry-card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.industry-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.industry-card p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+.products-cta-split {
+  position: relative;
+  background: url("images/products/products-cta.png") center / cover no-repeat;
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.products-cta-inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta-left {
+  max-width: 650px;
+}
+
+.cta-left h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.cta-left p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.cta-right {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn.primary {
+  background: #8b5a2b;
+  color: white;
+}
+
+.cta-btn.primary:hover {
+  background: #
